@@ -1,0 +1,74 @@
+//--------------header
+.main-logo
+  display flex
+  justify-content center
+  align-items flex-end
+  margin 0 auto
+  padding-bottom 20px
+  width 100%
+  max-width 1440px
+  min-height 110px
+  
+  &__link
+    display block
+    width 130px
+    line-height 0
+
+.lang
+  display flex
+  align-items center
+  font-size 13px
+
+  &__item
+    display flex
+    justify-content center
+    min-width 30px
+    color #838383
+  
+    &--active
+      position relative
+      color #343434
+      
+    &--active::after
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      width 30px
+      height 1px
+      background linear-gradient(#b6926f, #d6bf98)
+  
+.main-nav
+  display flex
+  justify-content space-between
+
+.main-menu
+  display flex
+  
+  &__item
+    display flex
+    align-items center
+    min-height 50px
+  
+  &__item + &__item
+    margin-left 20px
+
+  &__link
+    line-height 18px
+    text-transform uppercase
+   
+
+.user-bag
+  display flex
+  justify-content space-between
+  align-items center
+  min-width 90px
+  
+  &__img
+    line-height 0
+
+  &__number
+    color #838383
+  
+  &__number:hover
+    color #343434
