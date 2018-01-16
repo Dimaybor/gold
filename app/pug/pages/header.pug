@@ -1,15 +1,16 @@
-header.main-header
-  .main-logo
-    a.main-logo__link(href="#")
-      img(src='img/big-logo.png' alt='alt')
+header#header.main-header
   .wrapper
+    .main-logo
+      a.main-logo__link(href="#")
+        img.logo-static(src='img/big-logo.png' alt='alt')
+        img.logo-scroll(src='img/small-logo.png' alt='alt')
     nav.main-nav
       .lang
         a.lang__item.lang__item--active(href='#') eng
         a.lang__item(href='#') рус
       ul.main-menu
         li.main-menu__item
-          a.main-menu__link(href='#t') vintage collection
+          a.main-menu__link(href='#') vintage collection
         li.main-menu__item
           a.main-menu__link(href='#') gold comission
         li.main-menu__item

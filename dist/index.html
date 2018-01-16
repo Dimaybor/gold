@@ -9,13 +9,13 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-logo"><a class="main-logo__link" href="#"><img src="img/big-logo.png" alt="alt"></a></div>
+    <header class="main-header" id="header">
       <div class="wrapper">
+        <div class="main-logo"><a class="main-logo__link" href="#"><img class="logo-static" src="img/big-logo.png" alt="alt"><img class="logo-scroll" src="img/small-logo.png" alt="alt"></a></div>
         <nav class="main-nav">
           <div class="lang"><a class="lang__item lang__item--active" href="#">eng</a><a class="lang__item" href="#">рус</a></div>
           <ul class="main-menu">
-            <li class="main-menu__item"><a class="main-menu__link" href="#t">vintage collection</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">vintage collection</a></li>
             <li class="main-menu__item"><a class="main-menu__link" href="#">gold comission</a></li>
             <li class="main-menu__item"><a class="main-menu__link" href="#">blog</a></li>
             <li class="main-menu__item"><a class="main-menu__link" href="#">contacts and faq</a></li>
@@ -26,5 +26,105 @@
         </nav>
       </div>
     </header>
+    <section class="main-offer main-offer--indent">
+      <div class="main-offer__content">
+        <div class="main-offer__item">
+          <h2 class="main-offer__header"> <a href="#">Gold Comission</a></h2>
+          <p class="main-offer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><a class="arrow-link" href="#"></a>
+        </div>
+        <div class="main-offer__item">
+          <h2 class="main-offer__header"><a href="#">Vintage Collection</a></h2>
+          <p class="main-offer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><a class="arrow-link arrow-link--reverse" href="#"></a>
+        </div>
+      </div>
+    </section>
+    <section class="sign-up">
+      <div class="wrapper">
+        <form action="#" method="post">
+          <label>
+            <p class="sign-up__name">Sign up for our exclusive newsletter</p>
+            <div class="sign-up__container">
+              <input class="sign-up__email" type="email" autocomplete="on" name="login" placeholder="Enter your Email">
+              <input class="sign-up__btn" type="submit" value="submit">
+            </div>
+          </label>
+        </form>
+      </div>
+    </section>
+    <article class="main-event">
+      <div class="wrapper">
+        <div class="main-event__container">
+          <div class="block-img"><img src="img/article-photo.png" alt="alt"></div>
+          <div class="block-content">
+            <div class="block-content__wrapper">
+              <p class="block-content__data">17.04.2016 | <a href="#">Events</a></p>
+              <h2 class="block-content__header">Monday to Friday</h2>
+              <p class="block-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit. </p><a class="arrow-link" href="#"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="main-footer__container">
+          <div class="main-footer__list">
+            <p class="name-list">vintage collection</p>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Collection 1</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Collection 2</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Collection 3</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">All collections</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__list">
+            <p class="name-list">gold comission</p>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Clothes</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Shoes</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Assessories</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Sale</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__list">
+            <p class="name-list">blog</p>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link" href="#">News</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Interesting</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Events</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__list">
+            <p class="name-list">contacts and faq</p>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link" href="#">info@goldvintage.net</a></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#"> <span>Kyiv, Redutnaya str., 8 </span></a><span>+38 095 353 33 42</span></li>
+              <li class="footer-list__item"><a class="footer-list__link" href="#"> <span>Kyiv, Redutnaya str., 8 </span></a><span>+38 095 353 33 42</span></li>
+            </ul>
+          </div>
+          <div class="main-footer__list">
+            <p class="name-list">my bag</p>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer-list__link" href="#">Оферта</a></li>
+            </ul>
+          </div>
+          <div class="feedback">
+            <p class="feedback__name">Got vintage stuff?</p><a class="feedback__btn" href="#">contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__copyright">
+        <div class="wrapper">
+          <div class="main-footer__container">
+            <div class="copyright"><small>© 2016 GoldVintage</small></div>
+            <div class="footer-socials">
+              <p class="footer-socials__title">Follow us:</p><a class="footer-socials__link" href="#"><img src="img/insta.png" alt="alt"></a><a class="footer-socials__link" href="#"><img src="img/tweet.png" alt="alt"></a><a class="footer-socials__link" href="#"><img src="img/fb.png" alt="alt"></a><a class="footer-socials__link" href="#"><img src="img/vk.png" alt="alt"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
