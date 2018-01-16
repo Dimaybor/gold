@@ -69,7 +69,7 @@
     background-color #fff
     border 1px solid #eaeaea
     text-transform uppercase
-    
+
 .copyright
   height 50px
   text-align left
@@ -87,4 +87,55 @@
   &__title
     display block
     margin-right 15px
+    
+//---------------Popup
+.overlay
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  left 0
+  z-index 9999
+  background-color alpha(#000, 0.7)
+  display none
+  overflow-y hidden
+
+.body-inactive
+  overflow hidden
+
+.popup
+  position absolute
+  width 600px
+  height 450px
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  background-color #fff
+    
+.close
+  position absolute
+  top 20px
+  right 20px
+  width 20px
+  height 20px
+  cursor pointer
+
+.close:before
+  content ''
+  position absolute
+  background-color #b6926f
+  height 3px
+  width 15px
+  top 11px
+  left -4px
+  transform translate(6px, -4px) rotate(45deg)
   
+.close:after
+  content ''
+  position absolute
+  background-color #b6926f
+  height 3px
+  width 15px
+  top 11px
+  left -4px
+  transform translate(6px, -4px) rotate(-45deg)  
