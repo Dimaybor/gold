@@ -49,13 +49,32 @@ footer.main-footer
         p.name-list my bag
         ul.footer-list
           li.footer-list__item
-            a.footer-list__link(href='#') Оферта
+            a.footer-list__link(href='offer.html') Оферта
       .feedback
         p.feedback__name Got vintage stuff?
-        button.feedback__btn contact us
+        button#open-modal.feedback__btn contact us
         .overlay
           .popup
             span.close
+            .popup__content
+              .popup__wrapper
+                h1.main-heading Got vintage stuff?
+                p Если вы хотели бы продать или передать на реализацию  произведения искусства моды, мы готовы рассмотреть   варианты покупки или приема на комиссию таких вещей.
+                p.popup-properties Наш наибольший интерес вызывают предметы, обладающие  двумя основными свойствами:
+                  span.popup-properties__item знаменитый модный бренд;
+                  span.popup-properties__item непосредственное отношение к нашему ассортименту:  одежда, сумки, часы, украшения, аксессуары, предметы   интерьера.
+                p Свяжитесь с нами по телефону, чтобы договориться о  времени и привезти вещи в один из наших шоурумов.
+                .popup-showrooms
+                  .popup-showrooms__item
+                    p.popup-showrooms__name Шоурум 1
+                    span Kyiv, Redutnaya str., 8 
+                    span.popup-showrooms__number +38 095 353 33 42
+                  .popup-showrooms__item
+                    p.popup-showrooms__name Шоурум 2
+                    span Kyiv, Redutnaya str., 8 
+                    span.popup-showrooms__number +38 095 353 33 42
+              .popup__btn-container
+                button.feedback__btn got it
   .main-footer__copyright
     .wrapper
       .main-footer__container
