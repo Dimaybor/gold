@@ -2,11 +2,6 @@
 .offer
   padding 50px 0 100px
   
-  &__header
-    font-size 28px 
-    line-height 56px
-    font-weight normal
-  
   &__header + &__paragraph
     margin-top 10px
     
@@ -14,6 +9,14 @@
     padding-right 80px
 
 //---------accordeon
+
+.accordeon-header
+  font-size 28px 
+  line-height 56px
+  font-weight normal
+
+.accordeon-header + .accordeon
+  margin-top 50px
 
 .accordeon-trigger
   display flex
@@ -29,17 +32,16 @@
   
 .accordeon-inner
   display none
-  padding 0 0 45px 125px
+  padding 0 15px 45px 120px
   max-width 900px
   
   &__item
     margin-top 30px
   
 .accordeon
-  margin-top 55px
   width 100%
   height 100%
-  
+
   &__list
     display flex
     flex-direction column
@@ -53,20 +55,18 @@
   &__item + &__item
     margin-top 2px
     
-  &__item .helper
-    transform rotate(180deg)
+//&__item .helper
+  //transform rotate(180deg)
 
-  &__arrow
-    position relative
-    width 50px
-    height 50px
-    border 2px solid red
-    border-width 0 0 0 2px
+.accordeon-arrow
+  position relative
+  display block
+  width 50px
+  height 50px
+  border 2px solid red
+  border-width 0 0 0 2px
 
-
-
-  
-  &__arrow:before
+  &:before
     content ''
     position absolute
     bottom 23px
@@ -76,7 +76,7 @@
     background-color #d7c099
     transform rotate(90deg)
     
-  &__arrow:after
+  &:after
     content ''
     position absolute
     bottom 23px

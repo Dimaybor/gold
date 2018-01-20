@@ -1,0 +1,103 @@
+//---------------Blog
+.blog
+  padding-bottom 100px
+  
+.news-filter
+  height 50px
+  background-color #fbfbfb
+  
+  &__container
+    display flex
+    justify-content space-between
+  
+  &__list
+    display flex
+    align-items center
+    
+  &__item
+    display flex
+    align-items center
+    min-height 50px
+  
+    & + &
+      margin-left 5px
+      
+  &__link
+    padding 0 5px
+    display block
+    font-size 13px
+    color #838383
+    
+    &--active
+      position relative
+      color #343434
+      
+      &::after
+        content ''
+        position absolute
+        bottom 4px
+        left 0
+        width 100%
+        height 1px
+        background linear-gradient(#b6926f, #d7c099)
+        
+.button-new
+  display flex
+  
+.button-new .accordeon-arrow
+  width 10px
+  border none
+    
+  &:before
+    right 0
+      
+  &:after
+    right 0
+      
+.button-new__link
+  display flex
+      
+.button-new__name
+  display flex
+  align-items center
+  margin-left 5px
+  font-size 13px
+  
+//---------------Publication
+.blog .main-event
+  padding 60px 0 80px
+  
+.publications
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  
+  &__item
+    display flex
+    flex-direction column
+    margin-bottom 45px
+    padding-bottom 20px
+    max-width 470px
+    min-height 700px
+    
+  &__img
+    max-width 470px
+    line-height 0
+    
+  &__text
+    max-width 400px
+    
+  &__content
+    min-height 210px
+    
+  &__content .content-data
+    margin 25px 0 10px
+    
+  &__content .arrow-link
+    margin-top 20px
+    
+  
+  
+  
+    
+  

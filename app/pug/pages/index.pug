@@ -22,8 +22,8 @@ block content
         label
           p.sign-up__name Sign up for our exclusive newsletter
           .sign-up__container
-            input.sign-up__email(type='email' autocomplete='on' name='login' placeholder='Enter your Email')
-            input.sign-up__btn(type='submit' value='submit')
+            input.sign-up__email.form-ask__item(type='email' autocomplete='on' name='login' placeholder='Enter your Email')
+            input.form-ask__btn.form-ask__item(type='submit' value='submit')
   article.main-event
     .wrapper
       .main-event__container
@@ -31,9 +31,9 @@ block content
           img(src='img/article-photo.png' alt='alt')
         .block-content
           .block-content__wrapper
-            p.block-content__data 17.04.2016 | 
+            p.content-data 17.04.2016 | 
               a(href='#') Events
-            h2.block-content__header Monday to Friday
+            h2.main-heading Monday to Friday
             p.block-content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit. 
             a.arrow-link(href='#')
   include footer
