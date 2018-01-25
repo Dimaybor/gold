@@ -54,5 +54,25 @@ $(document).ready(function(){
       }
   });
 
+//----------------Slider-some-product
+
+  $('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider',
+    centerMode: true,
+    adaptiveHeight: true,
+    centerPadding: '0px',
+    focusOnSelect: true,
+    vertical: true,
+  });
+  $('.slider__item').zoom();
 
 });

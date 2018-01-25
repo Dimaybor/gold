@@ -2,7 +2,7 @@
 .blog
   padding-bottom 100px
   
-.news-filter
+.filter
   height 50px
   background-color #fbfbfb
   
@@ -44,6 +44,21 @@
 .button-new
   display flex
   
+  &__link
+    display flex
+    
+    & + &
+      margin-left 22px
+    
+  &__name
+    display flex
+    align-items center
+    margin-left 5px
+    font-size 13px
+    
+    &--inactive
+      color #838383
+  
 .button-new .accordeon-arrow
   width 10px
   border none
@@ -54,15 +69,6 @@
   &:after
     right 0
       
-.button-new__link
-  display flex
-      
-.button-new__name
-  display flex
-  align-items center
-  margin-left 5px
-  font-size 13px
-  
 //---------------Publication
 .blog .main-event
   padding 60px 0 80px
@@ -79,11 +85,11 @@
     padding-bottom 20px
     max-width 470px
     min-height 700px
-    
+
   &__img
     max-width 470px
     line-height 0
-    
+
   &__text
     max-width 400px
     
@@ -96,8 +102,177 @@
   &__content .arrow-link
     margin-top 20px
     
+//---------------Blog-news
+.blog-news
+  padding-bottom 100px
   
+  &__container
+    display flex
+    justify-content space-between
+    padding-top 40px
+
+.roadmap
+  display flex
+  align-items center
+  height 50px
+  font-size 13px
   
-  
+  &__item
+    position relative
+    color #343434
     
+    &--inactive
+      color #838383
+      
+      &:after
+        content ''
+        position absolute
+        top 55%
+        right -10px
+        width 5px
+        height 5px
+        border 1px solid #343434
+        border-width 0 1px 1px 0
+        transform translateY(-50%) rotate(-45deg)
+
+    & + &
+      margin-left 17px
+
+.share
+  display flex
+  flex-direction column
+  align-items center
+  width 42px
   
+  &__social
+    display flex
+    justify-content center
+    align-items center
+    width 40px
+    height 40px
+    background-color #d7c099
+    transition all 0.3s ease
+    
+    &:hover
+      background-color #b6926f
+    
+    & + &
+      margin-top 6px
+      
+  &__quantity
+    margin-bottom 10px
+    font-size 18px
+    font-weight bold
+    text-align center
+    color #b6926f
+    
+    & span
+      display block
+      font-weight normal
+      font-size 13px 
+      color #838383
+
+.blog-content
+  padding 0 10px 0
+  max-width 552px
+  
+  &__text
+    margin 15px 0 40px
+    margin-bottom 40px
+  
+  &__subtitle
+    margin-top 50px
+    font-weight bold
+    
+  &__list
+    padding-left 55px
+    
+    & + img
+      margin-top 70px
+    
+  &__item
+    position relative
+    
+    &:before
+      content ''
+      position absolute
+      top 13px
+      left -10px
+      width 5px
+      height 5px
+      border 1px solid #c99b5e
+      transform translate(-50%, -50% )
+
+  &__item + &__item
+    margin-top 30px
+
+.quote
+  display flex
+  
+  &__author
+    display flex
+    align-items flex-end
+    margin-left 5px
+    font-size 13px
+    line-height 18px
+    color #838383
+    
+  & + .uttering
+    margin-top 15px
+
+.quotes
+  max-width 50px
+
+.uttering
+  margin-left 55px
+  
+.blog-content blockquote
+  margin-bottom 65px
+
+
+.side-bar
+  width 232px
+  
+  &__social
+    display flex
+    justify-content center
+    align-items center
+    width 232px
+    height 236px
+    border 1px solid #fbfbfb
+    text-transform uppercase
+    color #979797
+    
+    &:hover
+      background-color #dedede
+      transition all 0.3s ease
+      
+    & + &
+      margin-top 23px
+      
+  & .sign-up__container
+    flex-wrap wrap
+    
+  & .form-ask__item
+    width 100%
+    
+  & .form-ask__item + .form-ask__item
+    margin-top 10px
+  
+.side-news
+  display block
+  max-width 100%
+
+  &__name
+    margin-top 20px
+    font-weight bold
+  
+  &__name + &__text
+    margin-top 5px
+    
+  &__text
+    font-size 13px
+    line-height 22px
+    
+  & + &
+    margin-top 50px

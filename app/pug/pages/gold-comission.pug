@@ -1,0 +1,176 @@
+extends layout/main.pug
+
+block title
+  | Gold Comission
+block content
+  include header
+  .gold-filter.header-indent
+    .filter
+      .wrapper
+        .filter__container
+          ul.filter__list
+            li.filter__item
+              a.filter__link.filter__link--active(href='#') All
+            li.filter__item
+              a.filter__link(href='#') Clothes
+            li.filter__item
+              a.filter__link(href='#') Shoes
+            li.filter__item
+              a.filter__link(href='#') Bags
+            li.filter__item
+              a.filter__link(href='#') Accessories
+            li.filter__item
+              a.filter__link(href='#') Sale
+          .filter-sex
+            form(action='#' method='post')
+              label.filter-sex__item
+                input.radio(type='radio' name='sex')
+                span.radio-custom
+                span.label Man
+              label.filter-sex__item
+                input.radio(type='radio' name='sex' checked)
+                span.radio-custom
+                span.label Woman
+          .selection
+            a.selection-list(href='#') Brands
+            a.selection-list(href='#') All sizes
+          .button-new
+            a.button-new__link(href='#')
+              span.arrow-inactive
+              span.button-new__name.button-new__name--inactive New
+            a.button-new__link(href='#')
+              span.accordeon-arrow
+              span.button-new__name Price
+  section.gold
+    .wrapper
+      .product
+        ul.product-list
+          li.product-item
+            .product-item__img
+              img(src='img/product-1.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-2.png' alt='alt')
+            a.product-title(href='#') Cross-body small bag
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-3.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-4.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-5.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-6.png' alt='alt')
+            a.product-title(href='#') Cross-body small bag
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-7.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-8.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-9.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-10.png' alt='alt')
+            a.product-title(href='#') Cross-body small bag
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-11.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-2.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-4.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-13.png' alt='alt')
+            a.product-title(href='#') Cross-body small bag
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-3.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-6.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-7.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-14.png' alt='alt')
+            a.product-title(href='#') Cross-body small bag
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-9.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+          li.product-item
+            .product-item__img
+              img(src='img/product-2.png' alt='alt')
+            a.product-title(href='#') Long printed jumpsuit
+            p.product-price $ 259
+      .pages
+        .pages__container
+          .pages__numbers
+            a.pages__item.pages__item--active(href='#') 1
+            a.pages__item(href='#') 2
+            a.pages__item(href='#') 3
+            a.pages__item(href='#') 4
+            a.pages__item(href='#') 5
+            a.pages__item(href='#') 6
+            a.pages__item(href='#') ...
+            a.pages__item(href='#') 117
+          .pages-toggle
+            a.pages-toggle__item.pages-toggle--prev(href='#')
+            a.pages-toggle__item.pages-toggle--next(href='#')
+  include footer
+
+
+
+
+
+
+
+
+
+
+
+
+  script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='js/common.js')
