@@ -26,6 +26,8 @@
     text-align right
 
   &__item
+    display flex
+    flex-direction column
     width 100%
     min-height 200px
 
@@ -47,29 +49,53 @@
   display block
   width 52px
   height 15px
-  
-  &--reverse
-    transform translateX(158px) rotate(180deg)
+  transition all 0.3s ease
     
-.arrow-link:before
-  content ''
-  position absolute
-  bottom 6.5px
-  left 38px
-  width 10px
-  height 10px
-  border solid #b6926f
-  border-width 0 2px 2px 0
-  transform translateY(42%) rotate(-45deg)
+  &:hover
+    width 65px
+    
+  &--normal:before
+    content ''
+    position absolute
+    bottom 6.5px
+    left 98%
+    width 10px
+    height 10px
+    border solid #b6926f
+    border-width 0 2px 2px 0
+    transform translate(-100%, 42%) rotate(-45deg)
   
-.arrow-link:after
-  content ''
-  position absolute
-  bottom 6.5px
-  left 0px
-  width 50px
-  height 2px
-  background-color #b6926f
+  &--normal:after
+    content ''
+    position absolute
+    bottom 6.5px
+    left 0px
+    width 98%
+    height 2px
+    background-color #b6926f
+    
+  &--reverse
+    align-self flex-end
+    
+    &:before
+      content ''
+      position absolute
+      bottom 6.5px
+      right 98%
+      width 10px
+      height 10px
+      border solid #b6926f
+      border-width 0 2px 2px 0
+      transform translate(100%, 42%) rotate(135deg)
+    
+    &:after
+      content ''
+      position absolute
+      bottom 6.5px
+      right 0px
+      width 98%
+      height 2px
+      background-color #b6926f
 
 
 //---------------Main Offer
@@ -128,8 +154,7 @@
     padding-top 45px
     
   &__wrapper .arrow-link
-    align-self flex-end
-    margin-top 70px
+    margin 70px 0 0 170px
   
   &__text
     line-height 26px
