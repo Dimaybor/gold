@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $("#header").removeClass("default");
   $(window).scroll(function(){
@@ -7,6 +8,26 @@ $(document).ready(function(){
       $("#header").removeClass("main-header--scroll").fadeIn("fast");
     };
   });
+
+// -------- Фільтр
+
+  $("#brands").on('click', function() {
+    if ($('#sizes-items').hasClass('selection-items--active')) {
+      $('#sizes-items').removeClass('selection-items--active');
+      $('#sizes').removeClass('selection-list--active');
+      };
+    $("#brands-items").toggleClass('selection-items--active');
+    $(this).toggleClass('selection-list--active');
+  });
+  $("#sizes").on('click', function() {
+    if ($('#brands-items').hasClass('selection-items--active')) {
+      $('#brands-items').removeClass('selection-items--active');
+      $('#brands').removeClass('selection-list--active');
+      };
+    $("#sizes-items").toggleClass('selection-items--active');
+    $(this).toggleClass('selection-list--active');
+  });
+
 
 // Відкриття попапа нажаттям на button
   $('#open-modal').click(function() {
@@ -39,6 +60,8 @@ $(document).ready(function(){
     var $this = $(this),
         item = $this.closest('.accordeon__item'),
         list = $this.closest('.accordeon__list'),
+        otherArrow = list.find('.accordeon-arrow'),
+        itemArrow = $this.find('.accordeon-arrow'),
         items = list.find('.accordeon__item'),
         content = item.find('.accordeon-inner'),
         otherContent = list.find('.accordeon-inner'),
@@ -48,11 +71,16 @@ $(document).ready(function(){
         item.addClass('active');
         otherContent.slideUp(duration);
         content.slideDown(duration);
+        otherArrow.removeClass('accordeon-arrow--rotate');
+        itemArrow.addClass('accordeon-arrow--rotate');
       } else {
         content.slideUp(duration);
         item.removeClass('active');
-      }
+        itemArrow.removeClass('accordeon-arrow--rotate');
+      };
   });
+
+
 
 //----------------Slider-some-product
 

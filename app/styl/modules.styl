@@ -1,0 +1,805 @@
+//------------------- Filter
+.filter
+  position relative
+  height 50px
+  background-color #fbfbfb
+  
+  &__container
+    display flex
+    justify-content space-between
+  
+  &__list
+    display flex
+    align-items center
+    
+  &__item
+    display flex
+    align-items center
+    min-height 50px
+  
+    & + &
+      margin-left 5px
+      
+  &__link
+    padding 0 5px
+    display block
+    font-size 13px
+    color #838383
+    
+    &:hover 
+      color #343434
+      
+    &--active
+      position relative
+      color #343434
+      
+      &::after
+        content ''
+        position absolute
+        bottom 4px
+        left 0
+        width 100%
+        height 1px
+        background linear-gradient(#b6926f, #d7c099)
+        
+.button-new
+  display flex
+  
+  &__link
+    display flex
+    
+    & + &
+      margin-left 22px
+    
+  &__name
+    display flex
+    align-items center
+    margin-left 5px
+    font-size 13px
+    
+    &--inactive
+      color #838383
+  
+.button-new .accordeon-arrow
+  width 10px
+  border none
+    
+  &:before
+    right 0
+      
+  &:after
+    right 0
+
+.filter-sex
+  display flex
+  align-items center
+  font-size 13px
+  
+  &__item
+    cursor pointer
+    
+    & + &
+      margin-left 20px
+
+.radio
+  display none
+  
+.radio-custom
+  position relative
+  width 10px
+  height 10px
+  border 1px solid #ebebeb
+  border-radius 50%
+  
+  & + .label
+    margin-left 5px
+  
+.radio-custom,
+.label
+  display inline-block
+  vertical-align middle
+  color #838383
+
+.radio:checked + .radio-custom
+  border-color #d9c39e
+
+.radio:checked + .label
+  color #343434
+
+.radio:checked + .radio-custom::before 
+  content ""
+  position absolute
+  top 50%
+  left 50%
+  display block
+  width 4px
+  height 4px
+  background #bf9f81
+  transform translate(-50%, -50%)
+  border-radius 50%
+  
+.arrow-inactive
+  position relative
+  display block
+  width 10px
+  height 50px
+
+  &:before
+    content ''
+    position absolute
+    bottom 23px
+    right 0px
+    width 10px
+    height 2px
+    background-color #eaeaea
+    transform rotate(90deg)
+    
+  &:after
+    content ''
+    position absolute
+    bottom 23px
+    right 0px
+    width 6px
+    height 6px
+    border 2px solid #eaeaea
+    border-width 0 0 2px 2px
+    transform translate(-1px, 3.5px) rotate(-45deg)
+  
+.selection
+  display flex
+  
+  &-list 
+    padding-right 13px
+  
+  &-list + &-list
+    margin-left 50px
+
+.selection-list
+  position relative
+  line-height 50px
+  font-size 13px
+  cursor pointer
+  
+  &:after
+    content ''
+    position absolute
+    bottom 50%
+    right -5px
+    width 5px
+    height 5px
+    border 2px solid #838383
+    border-width 0 0 2px 2px
+    transform translate(-1px, 3.5px) rotate(-45deg)
+    
+  &--active
+    display block
+    
+    &:after
+      content ''
+      position absolute
+      bottom 0
+      width 0
+      height 0
+      border 5px solid transparent
+      border-bottom-color  #343434
+      border-top 0
+      transform none
+        
+.selection-items 
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  display none
+  margin 0 auto
+  width 100%
+  max-width 1440px
+  border-top 1px solid #ededed
+  background-color #343434
+  z-index 1
+  transform translateY(100%)
+  
+  &--small
+    width 120px
+    border-top none
+    
+    & .selection-items__item
+      width 100%
+      min-width 35px
+      text-align center
+      text-transform uppercase
+  
+  &--active
+    display block
+
+  &__container
+    display flex
+    flex-flow column wrap
+    align-content space-between
+    padding 30px 0
+    max-height 453px
+    
+  
+  &__item
+    margin 5px 0
+    min-width 250px
+    line-height 18px 
+
+  &__link
+    font-size 13px
+    color #fff
+    
+    &:hover
+      color #d7c099
+      
+//------------------- Roadmap
+
+.roadmap
+  display flex
+  align-items center
+  height 50px
+  font-size 13px
+  
+  &__item
+    position relative
+    color #343434
+    
+    &:hover
+      color #343434
+    
+    &--inactive
+      color #838383
+      
+      &:after
+        content ''
+        position absolute
+        top 55%
+        right -10px
+        width 5px
+        height 5px
+        border 1px solid #343434
+        border-width 0 1px 1px 0
+        transform translateY(-50%) rotate(-45deg)
+
+    & + &
+      margin-left 17px
+      
+//-------------------  Pages
+.pages
+  padding-bottom 90px
+  
+  &__container
+    display flex
+    justify-content space-between
+  
+  &__item
+    display flex
+    justify-content center
+    align-items center
+    width 32px
+    height 32px
+    color #838383
+    font-size 13px
+    border 1px solid #eaeaea
+    
+    & + &
+      margin-left 5px
+      
+    &--active
+      color #343434
+      border 2px solid #d7c099
+    
+    &:hover
+      border 2px solid #eaeaea
+      
+  &__numbers
+    display flex
+    
+    & .pages__item--active:hover
+      border 2px solid #d7c099
+  
+  &-toggle
+    display flex
+    
+    &__item
+      width 32px
+      height 32px
+      border 1px solid #eaeaea
+      
+      & + &
+        margin-left 5px
+        
+      &:hover
+        border 2px solid #eaeaea
+
+.pages-toggle--prev
+  position relative
+
+  &:after
+    content ''
+    position absolute
+    bottom 50%
+    right 50%
+    width 5px
+    height 5px
+    border 2px solid #838383
+    border-width 0 0 2px 2px
+    transform translate(50%, 50%) rotate(45deg)
+      
+.pages-toggle--next
+  position relative
+      
+  &:after
+    content ''
+    position absolute
+    bottom 50%
+    right 50%
+    width 5px
+    height 5px
+    border 2px solid #838383
+    border-width 0 0 2px 2px
+    transform translate(50%, 50%) rotate(-135deg)
+    
+//---------------------- Forms
+.to-ask
+  width 100%
+  max-width 350px
+
+.form-ask
+  display flex
+  flex-direction column
+  
+  &__item
+    padding 0 28px
+    height 55px
+    border 1px solid #eaeaea
+    outline none
+    
+  &__btn
+    line-height 18px
+    text-transform uppercase
+    color #b6926f
+    background-color transparent
+    cursor pointer
+    transition all 0.3s ease
+  
+    &:hover
+      background-color #d7c099
+    
+  &__textarea
+    padding-top 17px
+    padding-bottom 16px
+    width 100%
+    resize none
+
+  & * 
+    text-align center  
+
+  & * + *
+    margin-top 15px
+    
+.form-ask .form-ask__btn
+  margin-top 27px
+  
+//--------------- Arrow-link
+
+.arrow-link
+  position relative
+  display block
+  width 52px
+  height 15px
+  transition all 0.3s ease
+    
+  &:hover
+    width 65px
+    
+  &--normal:before
+    content ''
+    position absolute
+    bottom 6.5px
+    left 98%
+    width 10px
+    height 10px
+    border solid #b6926f
+    border-width 0 2px 2px 0
+    transform translate(-100%, 42%) rotate(-45deg)
+  
+  &--normal:after
+    content ''
+    position absolute
+    bottom 6.5px
+    left 0px
+    width 98%
+    height 2px
+    background-color #b6926f
+    
+  &--reverse
+    align-self flex-end
+    
+    &:before
+      content ''
+      position absolute
+      bottom 6.5px
+      right 98%
+      width 10px
+      height 10px
+      border solid #b6926f
+      border-width 0 2px 2px 0
+      transform translate(100%, 42%) rotate(135deg)
+    
+    &:after
+      content ''
+      position absolute
+      bottom 6.5px
+      right 0px
+      width 98%
+      height 2px
+      background-color #b6926f
+      
+//----------------- Main Event
+.main-event
+  padding-bottom 100px
+  
+  &__container
+    display flex
+    background-color #fbfbfb
+
+.block-img
+  width 62.105263157894736842105263157895%
+  line-height 0
+  
+.block-content
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-items center
+  width 37.894736842105263157894736842105%
+  
+  &__wrapper
+    display flex
+    flex-direction column
+    max-width 235px
+    min-height 480px
+    padding-top 45px
+    
+  &__wrapper .arrow-link
+    margin 70px 0 0 170px
+  
+  &__text
+    line-height 26px
+
+.content-data
+  font-size 13px
+  line-height 18px
+  color #838383
+  
+  & + .main-heading
+    margin 20px 40px 15px 0
+    
+  & a
+    color #838383
+    
+.publications-heading
+  font-size 28px 
+  line-height 42px
+  font-weight normal
+  
+//------------------ Accordeon
+
+.accordeon-header
+  font-size 28px 
+  line-height 56px
+  font-weight normal
+
+.accordeon-header + .accordeon
+  margin-top 50px
+
+.accordeon-trigger
+  display flex
+  justify-content space-between
+  align-items center
+  padding-left 25px
+  width 100%
+  min-height 50px
+  font-size 13px
+  line-height 18px
+  color #838383
+  background-color #fbfbfb
+  
+.accordeon-inner
+  display none
+  padding 0 15px 45px 120px
+  max-width 900px
+  
+  &__item
+    margin-top 30px
+  
+.accordeon
+  width 100%
+  height 100%
+
+  &__list
+    display flex
+    flex-direction column
+    align-items center
+    
+  &__item
+    display block
+    width 100%
+    min-height 50px
+  
+  &__item + &__item
+    margin-top 2px
+    
+  &__item .accordeon-arrow--rotate
+    transform rotate(180deg)
+
+.accordeon-arrow
+  position relative
+  flex-shrink 0
+  display block
+  width 50px
+  height 50px
+  border 2px solid #fff
+  border-width 0 0 0 2px
+
+  &:before
+    content ''
+    position absolute
+    bottom 23px
+    right 20px
+    width 10px
+    height 2px
+    background-color #d7c099
+    transform rotate(90deg)
+    
+  &:after
+    content ''
+    position absolute
+    bottom 23px
+    right 20px
+    width 6px
+    height 6px
+    border 2px solid #d7c099
+    border-width 0 0 2px 2px
+    transform translate(-1px, 3.5px) rotate(-45deg)
+    
+//----------------------- Product
+
+@keyframes appearance
+  0%
+    transform scale(0)
+  
+  50%
+    transform scale(.01,  .8)  
+    
+  100%
+    transform scale(1)
+
+.product
+  padding 60px 0 10px
+
+  &-list
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+  
+  &-item
+    max-width 230px
+    min-height 430px
+    margin-bottom 18px
+  
+    &__img
+      position relative
+      line-height 0
+      
+      &:hover > .product-size
+        visibility visible
+        transform scale(1)
+        animation appearance 0.4s
+        
+      &:hover .product-size__content
+        transform translateY(0)
+        transition all 0.4s ease-in-out 0.1s
+        
+      &:hover .product-size__arrow
+        left 50%     
+        transition all 0.5s ease 0.1s
+
+      & + .product-title
+        margin-top 20px
+        
+  &-size
+    position absolute
+    top 20px
+    left 20px
+    width 190px
+    height 287px
+    background-color #3e3e3e
+    opacity 0.95
+    text-align center
+    transform scale(0)
+    visibility hidden
+    
+    &__link
+      position relative
+      display block
+      padding-top 32px
+      width 100%
+      height 100%
+
+    &__arrow
+      position absolute
+      display flex
+      top 50%
+      left 40%
+      width 18px
+      height 12px
+      transform translate(-50%, -50%)
+      
+    &__line
+      position relative
+      display block
+      width 17px
+      height 2px
+      margin auto 0
+      background-color #d7c099
+      
+      &:after
+        content ''
+        position absolute
+        top 0
+        right 0
+        width 6px
+        height 6px
+        border 2px solid #d7c099
+        border-width 0 2px 2px 0
+        transform translateY(-40%) rotate(-45deg)
+
+    &__content
+      font-size 13px
+      line-height 20px
+      color #fff
+      transform translateY(7px)    
+      
+      & span
+        margin-top 5px
+        display block
+        text-transform uppercase
+      
+  &-price
+    font-weight bold
+    color #b6926f
+    
+  &-title
+    display block
+    
+//----------------------- Similar
+.similar-products
+  padding 20px 0 25px
+  
+  &__head
+    display flex
+    justify-content space-between
+    align-items center
+    
+  &__head + &__content
+    margin-top 40px
+    
+  &__link
+    display flex
+    align-items center
+    text-transform uppercase
+    color #b6926f
+    vertical-align middle
+    
+    img
+      order -1
+      margin-right 17px
+      
+.recently-viewed
+  padding-bottom 100px
+  
+  & .main-heading + &__content
+    margin-top 40px 
+    
+//---------------One Staff
+.one-product
+  display flex
+  justify-content space-between
+  padding 24px 0 70px
+  padding-top 24px
+  
+  &__slider
+    display flex
+
+  &__about
+    display flex
+    flex-direction column
+    max-width 360px
+  
+.slider-nav
+  width 52px
+
+  &__img
+    margin-bottom 10px
+    opacity 0.5
+
+  &__item
+    cursor pointer
+    
+    &:focus
+      outline none
+    
+    &.slick-current .slider-nav__img
+      padding 2px
+      opacity 1
+      border 1px solid #b6926f
+ 
+    & img
+      display block
+      max-height 100%
+
+.slider
+  margin-left 10px
+  max-width 470px
+  
+  &__item img
+    display block
+    max-height 100%
+  
+.product-buy
+  margin-top 15px
+  padding 5px 0
+  display flex
+  justify-content space-between
+  align-items center
+    
+  & .product-price
+    font-size 28px
+    line-height 42px
+    
+  & + *
+    margin-top 55px
+
+.description-list
+  margin-bottom 50px
+  display flex
+  flex-direction column
+  
+  &__item
+    display flex
+    justify-content space-between
+    align-items center
+    min-height 41px
+    border 1px solid #eaeaea
+    border-width 1px 0 0 0
+    
+    &:last-child
+      border-width 1px 0
+      
+.description-name__size
+  font-size 13px
+  color #838383
+  text-decoration underline
+  
+.description-definition--uncover
+  position relative
+  width 44px
+  height 41px
+  cursor pointer
+  
+  &:after
+    content ''
+    position absolute
+    bottom 50%
+    right 50%
+    width 5px
+    height 5px
+    border 2px solid #838383
+    border-width 0 0 2px 2px
+    transform translate(50%, 50%) rotate(-45deg)
+
+.description-text
+  font-size 13px
+  line-height 24px

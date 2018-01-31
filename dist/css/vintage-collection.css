@@ -1,0 +1,14 @@
+.vintage-recommendations {
+  background-color: #f7f6f2;
+}
+.collection .product-buy {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.collection .description-list {
+  margin-bottom: 25px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpbnRhZ2UtY29sbGVjdGlvbi5zdHlsIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0Usa0JBQWlCLFFBQWpCOztBQUVGO0VBQ0UsT0FBTSxFQUFOOztBQUVGO0VBQ0UsZUFBYyxLQUFkIiwiZmlsZSI6InZpbnRhZ2UtY29sbGVjdGlvbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLy0tLS0tLS0tLS0tLS0tLS1Db2xsZWN0aW9uXHJcbi52aW50YWdlLXJlY29tbWVuZGF0aW9uc1xyXG4gIGJhY2tncm91bmQtY29sb3IgI2Y3ZjZmMlxyXG4gIFxyXG4uY29sbGVjdGlvbiAucHJvZHVjdC1idXlcclxuICBvcmRlciAxXHJcblxyXG4uY29sbGVjdGlvbiAuZGVzY3JpcHRpb24tbGlzdFxyXG4gIG1hcmdpbi1ib3R0b20gMjVweCAgXHJcbiJdfQ== */

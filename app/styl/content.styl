@@ -43,60 +43,6 @@
   &__info
     margin-bottom 30px
     line-height 26px
-    
-.arrow-link
-  position relative
-  display block
-  width 52px
-  height 15px
-  transition all 0.3s ease
-    
-  &:hover
-    width 65px
-    
-  &--normal:before
-    content ''
-    position absolute
-    bottom 6.5px
-    left 98%
-    width 10px
-    height 10px
-    border solid #b6926f
-    border-width 0 2px 2px 0
-    transform translate(-100%, 42%) rotate(-45deg)
-  
-  &--normal:after
-    content ''
-    position absolute
-    bottom 6.5px
-    left 0px
-    width 98%
-    height 2px
-    background-color #b6926f
-    
-  &--reverse
-    align-self flex-end
-    
-    &:before
-      content ''
-      position absolute
-      bottom 6.5px
-      right 98%
-      width 10px
-      height 10px
-      border solid #b6926f
-      border-width 0 2px 2px 0
-      transform translate(100%, 42%) rotate(135deg)
-    
-    &:after
-      content ''
-      position absolute
-      bottom 6.5px
-      right 0px
-      width 98%
-      height 2px
-      background-color #b6926f
-
 
 //---------------Main Offer
 
@@ -125,52 +71,4 @@
 
 :focus::placeholder
   color transparent
-    
-//---------------Main Event    
 
-.main-event
-  padding-bottom 100px
-  
-  &__container
-    display flex
-    background-color #fbfbfb
-
-.block-img
-  width 62.105263157894736842105263157895%
-  line-height 0
-  
-.block-content
-  display flex
-  flex-direction column
-  justify-content flex-start
-  align-items center
-  width 37.894736842105263157894736842105%
-  
-  &__wrapper
-    display flex
-    flex-direction column
-    max-width 235px
-    min-height 480px
-    padding-top 45px
-    
-  &__wrapper .arrow-link
-    margin 70px 0 0 170px
-  
-  &__text
-    line-height 26px
-
-.content-data
-  font-size 13px
-  line-height 18px
-  color #838383
-  
-  & + .main-heading
-    margin 20px 40px 15px 0
-    
-  & a
-    color #838383
-    
-.publications-heading
-  font-size 28px 
-  line-height 42px
-  font-weight normal

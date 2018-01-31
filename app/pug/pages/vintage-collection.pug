@@ -1,0 +1,166 @@
+extends layout/main.pug
+
+block title
+  | Vintage Collection
+block content
+  include header
+  .collection-roadmap.header-indent
+    .wrapper
+      .roadmap
+        a.roadmap__item.roadmap__item--inactive(href='#') Main
+        a.roadmap__item.roadmap__item--inactive(href='#') Vintage collection 
+        a.roadmap__item(href='#') Collection name
+  section.collection
+    .wrapper
+      article.one-product
+        .one-product__slider
+          .slider-nav
+            .slider-nav__item
+              .slider-nav__img
+                img(src='img/one-staff-2.png' alt='alt')
+            .slider-nav__item
+              .slider-nav__img
+                img(src='img/one-staff-2.png' alt='alt')
+            .slider-nav__item
+              .slider-nav__img
+                img(src='img/one-staff-2.png' alt='alt')
+            .slider-nav__item
+              .slider-nav__img
+                img(src='img/one-staff-2.png' alt='alt')
+            .slider-nav__item
+              .slider-nav__img
+                img(src='img/one-staff-2.png' alt='alt')
+          .slider
+            .slider__item
+              img(src='img/one-staff-2.png' alt='alt')
+            .slider__item
+              img(src='img/one-staff-2.png' alt='alt')
+            .slider__item
+              img(src='img/one-staff-2.png' alt='alt')
+            .slider__item
+              img(src='img/one-staff-2.png' alt='alt')
+            .slider__item
+              img(src='img/one-staff-2.png' alt='alt')
+        .one-product__about
+          h2.main-heading The best dress ever
+          .product-buy
+            p.product-price $ 259
+            a.product-buy__button.main-btn(href='#') shop now
+          ul.description-list
+            li.description-list__item
+              p.description-name Article
+              p.description-definition 123456
+            li.description-list__item
+              p.description-name Color
+              p.description-definition Black
+            li.description-list__item
+              p.description-name Size (
+                a.description-name__size(href='#') size table
+                |)
+              p.description-definition 10.63x3.94x9.45 mm
+            li.description-list__item
+              p.description-name Material & care
+              p.description-definition.description-definition--uncover
+  .vintage-recommendations
+    .wrapper
+      .similar-products
+        .similar-products__head
+          h2.main-heading You might also like
+          a.similar-products__link(href='#')
+            img(src='img/4cub.svg' alt='alt') 
+            | all comissions
+        .similar-products__content
+          ul.product-list
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/vintage-1.png' alt='alt')
+              a.product-title(href='#') Long printed jumpsuit
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/vintage-2.png' alt='alt')
+              a.product-title(href='#') Cross-body small bag
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/vintage-3.png' alt='alt')
+              a.product-title(href='#') Long printed jumpsuit
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/vintage-4.png' alt='alt')
+              a.product-title(href='#') Cross-body small bag
+              p.product-price $ 259
+      .recently-viewed
+        h2.main-heading Recently viewed
+        .recently-viewed__content
+          ul.product-list
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/product-6.png' alt='alt')
+              a.product-title(href='#') Long printed jumpsuit
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/product-16.png' alt='alt')
+              a.product-title(href='#') Cross-body small bag
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/product-4.png' alt='alt')
+              a.product-title(href='#') Long printed jumpsuit
+              p.product-price $ 259
+            li.product-item
+              .product-item__img
+                .product-size
+                  a.product-size__link(href='one-staff.html')
+                    p.product-size__content Size
+                      span xs
+                    span.product-size__arrow
+                      span.product-size__line
+                img(src='img/product-15.png' alt='alt')
+              a.product-title(href='#') Long printed jumpsuit
+              p.product-price $ 259
+  include footer
