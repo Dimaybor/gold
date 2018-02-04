@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+block title
+  | My bag
+block content
+  include header
+  .bag-roadmap.header-indent
+    .wrapper
+      .roadmap
+        a.roadmap__item.roadmap__item--inactive(href='#') Main
+        a.roadmap__item(href='#') My bag
+  section.in-bag
+    .wrapper
+      .in-bag__container
+        .in-bag__item
+          .in-bag__header Item
+          .in-bag__content
+            .in-bag__img
+              img(src='img/bag-item.png' alt='alt')
+            .in-bag__about Leather stripes clutch
+              span 1837652
+        .in-bag__item
+          .in-bag__header Description
+          .in-bag__content
+            .in-bag__about Color: Black
+              p.in-bag__size Size (
+                a.auxiliary-link(href='#') size table
+                |): 10.63x3.94x9.45 mm
+        .in-bag__item
+          .in-bag__header Price
+          .in-bag__content.in-bag__content--indent
+            p.in-bag__price $ 160
+            a.auxiliary-link(href='#') Delete
+      .bag-payment
+        a.auxiliary-link(href='#') Continue Shopping
+        .bag-payment__money
+          a.bag-payment__paypal(href='#')
+            img(src='img/paypal-buttons.png' alt='alt')
+          p.bag-payment__amount Total:
+            span $ 160
+          a.bag-payment__pay(href='shipping-info.html') pay
+  include footer

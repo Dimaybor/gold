@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Gold Vintage
+    <title> Shipping info
     </title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -40,45 +40,63 @@
         </nav>
       </div>
     </header>
-    <section class="main-offer">
-      <div class="main-offer__content">
-        <div class="main-offer__item">
-          <h2 class="offer-header"> <a href="#">Gold Comission</a></h2>
-          <p class="main-offer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><a class="arrow-link arrow-link--normal" href="#"></a>
-        </div>
-        <div class="main-offer__item">
-          <h2 class="offer-header"><a href="#">Vintage Collection</a></h2>
-          <p class="main-offer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><a class="arrow-link arrow-link--reverse" href="#"></a>
-        </div>
-      </div>
-    </section>
-    <section class="sign-up">
+    <div class="shipping-roadmap header-indent">
       <div class="wrapper">
-        <form action="#" method="post">
-          <label>
-            <p class="sign-up__name">Sign up for our exclusive newsletter</p>
-            <div class="sign-up__container">
-              <input class="sign-up__email form-ask__item" type="email" autocomplete="on" name="login" placeholder="Enter your Email">
-              <input class="form-ask__btn form-ask__item" type="submit" value="submit">
+        <div class="roadmap"><a class="roadmap__item roadmap__item--inactive" href="#">Main</a><a class="roadmap__item roadmap__item--inactive" href="#">My bag</a><a class="roadmap__item" href="#">Shipping info</a></div>
+      </div>
+    </div>
+    <section class="shipping">
+      <div class="wrapper">
+        <div class="cart-summary">
+          <p class="cart-summary__heading">Cart summary<a class="auxiliary-link" href="#">Edit</a></p>
+          <div class="cart-summary__container">
+            <div class="cart-summary__items">
+              <div class="cart-summary__item"><img src="img/bag-item.png" alt="alt">
+                <div class="cart-summary__info">
+                  <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
+                  <p class="cart-summary__about">1837652</p>
+                </div>
+              </div>
+              <div class="cart-summary__item"><img src="img/bag-item.png" alt="alt">
+                <div class="cart-summary__info">
+                  <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
+                  <p class="cart-summary__about">1837652</p>
+                </div>
+              </div>
             </div>
-          </label>
-        </form>
-      </div>
-    </section>
-    <article class="main-event">
-      <div class="wrapper">
-        <div class="main-event__container">
-          <div class="block-img"><img src="img/article-photo.png" alt="alt"></div>
-          <div class="block-content">
-            <div class="block-content__wrapper">
-              <p class="content-data">17.04.2016 | Events</p>
-              <h2 class="main-heading">Monday to Friday</h2>
-              <p class="block-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit. </p><a class="arrow-link arrow-link--normal" href="#"></a>
+            <div class="summary-amount">
+              <div class="summary-amount__item"><span class="summary-amount__name">Subtotal:</span><span class="summary-amount__price">$ 320.00</span></div>
+              <div class="summary-amount__item"><span class="summary-amount__name">Shipping:</span><span class="summary-amount__price">$ 10.20</span></div>
+              <div class="summary-amount__item summary-amount__item--line"><span class="summary-amount__name">Total:</span><span class="summary-amount__price">$ 330.20</span></div>
             </div>
           </div>
         </div>
+        <section class="shipping-steps">
+          <form action="#" method="post">
+            <section class="shipping-method step-1">
+              <div class="shipping-heading"><span class="step-number">1/3</span>
+                <h1 class="shipping-header">Shipping method & gift options</h1>
+              </div>
+              <p class="shipping-subtitle">Shipping method</p>
+              <div class="choose-method">
+                <label class="choose-method__item">
+                  <input class="radio" type="radio" name="shipping-method" value="5.50" checked><span class="radio-custom"></span><span class="label">5.50 $</span><span class="choose-method__hint">Postal (5 - 8 business days)</span>
+                </label>
+                <label class="choose-method__item">
+                  <input class="radio" type="radio" name="shipping-method" value="9.85"><span class="radio-custom"></span><span class="label">9.85 $</span><span class="choose-method__hint">Fast (1 - 5 business days)</span>
+                </label>
+                <label class="choose-method__item">
+                  <input class="radio" type="radio" name="shipping-method" value="16.50"><span class="radio-custom"></span><span class="label">16.50 $</span><span class="choose-method__hint">Faster (2 business days)</span>
+                </label>
+                <label class="choose-method__item">
+                  <input class="radio" type="radio" name="shipping-method" value="30.80"><span class="radio-custom"></span><span class="label">30.80 $</span><span class="choose-method__hint">Fastest (Next business day)</span>
+                </label>
+              </div>
+            </section>
+          </form>
+        </section>
       </div>
-    </article>
+    </section>
     <footer class="main-footer">
       <div class="wrapper">
         <div class="main-footer__container">

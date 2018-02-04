@@ -436,6 +436,36 @@
       height 2px
       background-color #b6926f
       
+.arrow-vertical
+  position relative
+  display block
+  width 15px
+  height 52px
+  transition all 0.3s ease
+  
+  &:before
+    content ''
+    position absolute
+    left 2px
+    top 98%
+    width 10px
+    height 10px
+    border solid #b6926f
+    border-width 0 2px 2px 0
+    transform translateY(-100%) rotate(45deg)
+  
+  &:after
+    content ''
+    position absolute
+    left 6.5px
+    top 0px
+    width 2px
+    height 98%
+    background-color #b6926f
+  
+  &:hover
+    height 65px
+    
 //----------------- Main Event
 .main-event
   padding-bottom 100px
@@ -777,11 +807,6 @@
     
     &:last-child
       border-width 1px 0
-      
-.description-name__size
-  font-size 13px
-  color #838383
-  text-decoration underline
   
 .description-definition--uncover
   position relative
@@ -803,3 +828,11 @@
 .description-text
   font-size 13px
   line-height 24px
+  
+.auxiliary-link
+  font-size 13px
+  color #838383
+  text-decoration underline
+    
+  &:hover
+    color #343434

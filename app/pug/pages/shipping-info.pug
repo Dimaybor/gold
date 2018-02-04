@@ -1,0 +1,73 @@
+extends layout/main.pug
+
+block title
+  | Shipping info
+block content
+  include header
+  .shipping-roadmap.header-indent
+    .wrapper
+      .roadmap
+        a.roadmap__item.roadmap__item--inactive(href='#') Main
+        a.roadmap__item.roadmap__item--inactive(href='#') My bag
+        a.roadmap__item(href='#') Shipping info
+  section.shipping
+    .wrapper
+      .cart-summary
+        p.cart-summary__heading Cart summary
+          a.auxiliary-link(href='#') Edit
+        .cart-summary__container
+          .cart-summary__items
+            .cart-summary__item
+              img(src='img/bag-item.png' alt='alt')
+              .cart-summary__info
+                p.cart-summary__name Leather stripes clutch
+                  span.cart-summary__price $ 160.00
+                p.cart-summary__about 1837652
+            .cart-summary__item
+              img(src='img/bag-item.png' alt='alt')
+              .cart-summary__info
+                p.cart-summary__name Leather stripes clutch
+                  span.cart-summary__price $ 160.00
+                p.cart-summary__about 1837652
+          .summary-amount
+            .summary-amount__item
+              span.summary-amount__name Subtotal:
+              span.summary-amount__price $ 320.00
+            .summary-amount__item
+              span.summary-amount__name Shipping:
+              span.summary-amount__price $ 10.20
+            .summary-amount__item.summary-amount__item--line
+              span.summary-amount__name Total:
+              span.summary-amount__price $ 330.20
+      section.shipping-steps
+        form(action='#' method='post')
+          section.shipping-method.step-1
+            .shipping-heading
+              span.step-number 1/3
+              h1.shipping-header Shipping method & gift options
+            p.shipping-subtitle Shipping method
+            .choose-method
+              label.choose-method__item
+                input.radio(type='radio' name='shipping-method' value='5.50' checked)
+                span.radio-custom
+                span.label 5.50 $
+                span.choose-method__hint Postal (5 - 8 business days)
+              label.choose-method__item
+                input.radio(type='radio' name='shipping-method' value='9.85')
+                span.radio-custom
+                span.label 9.85 $
+                span.choose-method__hint Fast (1 - 5 business days)
+              label.choose-method__item
+                input.radio(type='radio' name='shipping-method' value='16.50')
+                span.radio-custom
+                span.label 16.50 $
+                span.choose-method__hint Faster (2 business days)
+              label.choose-method__item
+                input.radio(type='radio' name='shipping-method' value='30.80')
+                span.radio-custom
+                span.label 30.80 $
+                span.choose-method__hint Fastest (Next business day)
+
+
+
+  include footer

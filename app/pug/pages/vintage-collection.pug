@@ -5,13 +5,40 @@ block title
 block content
   include header
   .collection-roadmap.header-indent
+      .wrapper
+        .roadmap
+          a.roadmap__item.roadmap__item--inactive(href='#') Main
+          a.roadmap__item.roadmap__item--inactive(href='#') Vintage   collection 
+          a.roadmap__item(href='#') Collection name
+  .collection-bg
+  .collection-head
     .wrapper
-      .roadmap
-        a.roadmap__item.roadmap__item--inactive(href='#') Main
-        a.roadmap__item.roadmap__item--inactive(href='#') Vintage collection 
-        a.roadmap__item(href='#') Collection name
+      .collection-info
+        .collection-content
+          .collection-content__container
+            h2.main-heading
+              a(href='#') The best dress ever
+            p.collection-content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.
+            a.details-link(href='#') details
+            .product-buy
+              p.product-price $ 259
+              a.product-buy__button.main-btn(href='#') shop now
+          a.arrow-vertical(href='#')
+        .collection-img
+          img(src='img/collection-girl.png' alt='alt')
   section.collection
     .wrapper
+      .collection-photos
+        .collection-photos__item
+          img(src='img/collection-1.png' alt='alt')
+        .collection-photos__item
+          img(src='img/collection-2.png' alt='alt')
+        .collection-photos__video
+          img(src='img/collection-video.png' alt='alt')
+        .collection-photos__item
+          img(src='img/collection-3.png' alt='alt')
+        .collection-photos__item
+          img(src='img/collection-4.png' alt='alt')
       article.one-product
         .one-product__slider
           .slider-nav

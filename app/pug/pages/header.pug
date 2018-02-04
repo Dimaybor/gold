@@ -2,8 +2,8 @@ header#header.main-header
   .wrapper
     .main-logo
       a.main-logo__link(href="index.html")
-        img.logo-static(src='img/big-logo.png' alt='alt')
-        img.logo-scroll(src='img/small-logo.png' alt='alt')
+        img.logo-static(src='img/big-logo.svg' alt='alt')
+        img.logo-scroll(src='img/small-logo.svg' alt='alt')
     nav.main-nav
       .lang
         a.lang__item.lang__item--active(href='#') eng
@@ -18,8 +18,21 @@ header#header.main-header
         li.main-menu__item
           a.main-menu__link(href='contacts.html') contacts and faq
       .user-bag
-        .user-bag__img
-          img(src='img/bag.png' alt='alt')
-        a.user-bag__number(href='#') My bag (4)
+        .user-bag__container
+          .user-bag__img
+            img(src='img/bag.png' alt='alt')
+          .user-bag__number My bag (4)
+        .open-bag
+          .open-bag__container
+            span.open-bag__close
+            .open-bag__product
+              img(src='img/bag-photo.png' alt='alt')
+              p.open-bag__name Leather stripes clutch
+                span $ 160.00
+            .open-bag__price Total:
+              span $ 330.00
+          .open-bag__links
+            a.auxiliary-link(href="bag.html") View bag
+            a.open-bag__pay(href="shipping-info.html") pay now
 
 

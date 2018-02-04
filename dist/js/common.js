@@ -9,6 +9,15 @@ $(document).ready(function(){
     };
   });
 
+
+// -------- Корзина
+  $(".user-bag__container").on('click', function() {
+    $('.open-bag').toggleClass('open-bag--active');
+  });
+  $(".open-bag__close").on('click', function() {
+    $('.open-bag').removeClass('open-bag--active');
+  });
+
 // -------- Фільтр
 
   $("#brands").on('click', function() {
