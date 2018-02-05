@@ -13,22 +13,24 @@ block content
   section.shipping
     .wrapper
       .cart-summary
-        p.cart-summary__heading Cart summary
+        p.form-roadmap Cart summary
           a.auxiliary-link(href='#') Edit
         .cart-summary__container
           .cart-summary__items
             .cart-summary__item
-              img(src='img/bag-item.png' alt='alt')
-              .cart-summary__info
-                p.cart-summary__name Leather stripes clutch
-                  span.cart-summary__price $ 160.00
-                p.cart-summary__about 1837652
+              a.cart-summary__link(href='#')
+                img(src='img/bag-item.png' alt='alt')
+                .cart-summary__info
+                  p.cart-summary__name Leather stripes clutch
+                    span.cart-summary__price $ 160.00
+                  p.cart-summary__about 1837652
             .cart-summary__item
-              img(src='img/bag-item.png' alt='alt')
-              .cart-summary__info
-                p.cart-summary__name Leather stripes clutch
-                  span.cart-summary__price $ 160.00
-                p.cart-summary__about 1837652
+              a.cart-summary__link(href='#')
+                img(src='img/bag-item.png' alt='alt')
+                .cart-summary__info
+                  p.cart-summary__name Leather stripes clutch
+                    span.cart-summary__price $ 160.00
+                  p.cart-summary__about 1837652
           .summary-amount
             .summary-amount__item
               span.summary-amount__name Subtotal:
@@ -39,9 +41,35 @@ block content
             .summary-amount__item.summary-amount__item--line
               span.summary-amount__name Total:
               span.summary-amount__price $ 330.20
+      .shipping-informations
+        .shipping-informations__step#infoStep-1
+          p.form-roadmap Shipping method & gift options
+            a.auxiliary-link(href='#') Edit
+          .shipping-informations__item
+            .shipping-informations__inner
+              .shipping-informations__name Shipping method
+              .shipping-informations__content
+                p 5.50 $ 
+                p Postal (5 - 8 business days)
+        .shipping-informations__step#infoStep-2
+          p.form-roadmap Shipping info
+            a.auxiliary-link(href='#') Edit
+          .shipping-informations__item
+            .shipping-informations__inner
+              .shipping-informations__name Shipping address
+              .shipping-informations__content
+                p Alyona Zhelezniak
+                p 1341 Stanford str.
+                p Santa Monica, CA 90404
+                p US
+            .shipping-informations__inner
+              .shipping-informations__name Contact info
+              .shipping-informations__content
+                p kjhgdsxcuik@ukr.net
+                p +380931430064
       section.shipping-steps
         form(action='#' method='post')
-          section.shipping-method.step-1
+          section#step-1.shipping-step.shipping-step--hide
             .shipping-heading
               span.step-number 1/3
               h1.shipping-header Shipping method & gift options
@@ -67,6 +95,145 @@ block content
                 span.radio-custom
                 span.label 30.80 $
                 span.choose-method__hint Fastest (Next business day)
+            .checkbox-message
+              label.checkbox-inner
+                input(type='checkbox' name='add-message')
+                p.checkbox-text Add a gift message to this order
+            .button-container
+              button#btnStep-1.main-btn continue
+          section#step-2.shipping-step.shipping-step--hide
+            .shipping-heading
+              span.step-number 2/3
+              h1.shipping-header Shipping info
+            p.shipping-subtitle Shipping adress
+            .buyer-info
+              .buyer-info-row
+                label.buyer-info__item
+                  p.buyer-info__label Country
+                  input.buyer-info-field.buyer-info-field--long(type='text' name='country'   placeholder='Start typyng or select')
+                label.buyer-info__item
+                  p.buyer-info__label First name
+                  input.buyer-info-field.buyer-info-field--short(type='text' name='first-name')
+                label.buyer-info__item
+                  p.buyer-info__label Last name
+                  input.buyer-info-field.buyer-info-field--short(type='text' name='last-name')
+              .buyer-info-row
+                label.buyer-info__item
+                  p.buyer-info__label Street address
+                  input.buyer-info-field.buyer-info-field--street(type='text' name='street')
+                label.checkbox-inner
+                  input(type='checkbox' name='add-message')
+                  p.checkbox-text This is a PO, APO or AE box
+              .buyer-info-row
+                label.buyer-info__item
+                  p.buyer-info__label City
+                  input.buyer-info-field.buyer-info-field--long(type='text' name='city'   placeholder='Start typyng or select')
+                label.buyer-info__item
+                  p.buyer-info__label State / Province / Region
+                  input.buyer-info-field.buyer-info-field--short(type='text' name='state' placeholder='Start typyng or select')
+                label.buyer-info__item
+                  p.buyer-info__label Postal code
+                  input.buyer-info-field.buyer-info-field--code(type='text' name='state' placeholder='XXXXXX')
+            p.shipping-subtitle Contact info
+            .buyer-info
+              .buyer-info-row
+                label.buyer-info__item
+                  p.buyer-info__label Email
+                  input.buyer-info-field.buyer-info-field--long(type='email' autocomplete='on' name='login')
+                label.checkbox-inner
+                  input(type='checkbox' name='add-message')
+                  p.checkbox-text Join our weekly newsletter
+                label.buyer-info__item
+                  p.buyer-info__label Phone (international orders only)
+                  input.buyer-info-field.buyer-info-field--long(type='text' name='phone')
+            .button-container
+              button#btnStep-2.main-btn continue
+          section#step-3.shipping-step
+            .shipping-heading
+              span.step-number 3/3
+              h1.shipping-header Payment info
+            p.shipping-subtitle Secure payment info
+            .buyer-info
+              .buyer-info-row.buyer-info-row--indent
+                label.buyer-info__payment
+                  input.radio(type='radio' name='choice-payment' checked)
+                  span.radio-custom
+                  span.label
+                    .buyer-info__img
+                      img(src='img/card.png' alt='alt')
+                label.buyer-info__payment
+                  input.radio(type='radio' name='choice-payment')
+                  span.radio-custom
+                  span.label
+                    .buyer-info__img
+                      img(src='img/paypal.png' alt='alt')
+                label.buyer-info__payment
+                  input.radio(type='radio' name='choice-payment')
+                  span.radio-custom
+                  span.label
+                    .buyer-info__img
+                      img(src='img/liqpay.png' alt='alt')
+            .payment
+              p.shipping-subtitle Card info
+              .buyer-info
+                .buyer-info-row
+                  label.buyer-info__item
+                    p.buyer-info__label Name on card
+                    input.buyer-info-field.buyer-info-field--long(type='text' name='card')
+                  label.buyer-info__item
+                    p.buyer-info__label Card number
+                    input.buyer-info-field.buyer-info-field--long(type='text' name='card')
+                  .input-container
+                    label.buyer-info__item
+                      p.buyer-info__label Expiry date
+                        input.buyer-info-field.buyer-info-field--smaller(type='text'  placeholder='MM / YY' name=' last-name')
+                    label.buyer-info__item
+                      p.buyer-info__label Security code
+                        input.buyer-info-field.buyer-info-field--smaller(type='text' name=' last-name')
+              p.shipping-subtitle Billing adress
+              .buyer-info
+                .buyer-info-row
+                  label.checkbox-inner
+                    input(type='checkbox' name='add-message')
+                    p.checkbox-text Same as my shipping address
+                .buyer-info-row
+                  label.buyer-info__item
+                    p.buyer-info__label Country
+                    input.buyer-info-field.buyer-info-field--long(type='text' name='  country'   placeholder='Start typyng or select')
+                  label.buyer-info__item
+                    p.buyer-info__label First name
+                    input.buyer-info-field.buyer-info-field--short(type='text' name=' first-name')
+                  label.buyer-info__item
+                    p.buyer-info__label Last name
+                    input.buyer-info-field.buyer-info-field--short(type='text' name=' last-name')
+                .buyer-info-row
+                  label.buyer-info__item
+                    p.buyer-info__label Street address
+                    input.buyer-info-field.buyer-info-field--street(type='text' name='  street')
+                  label.checkbox-inner
+                    input(type='checkbox' name='add-message')
+                    p.checkbox-text This is a PO, APO or AE box
+                .buyer-info-row
+                  label.buyer-info__item
+                    p.buyer-info__label City
+                    input.buyer-info-field.buyer-info-field--long(type='text' name='city' placeholder='Start typyng or select')
+                  label.buyer-info__item
+                    p.buyer-info__label State / Province / Region
+                    input.buyer-info-field.buyer-info-field--short(type='text' name='state' placeholder='Start typyng or select')
+                  label.buyer-info__item
+                    p.buyer-info__label Postal code
+                    input.buyer-info-field.buyer-info-field--code(type='text' name='state' placeholder='XXXXXX')
+              .button-container
+                button#btnStep-3.main-btn 
+                  img.main-btn__img(src='img/buy-lock.svg' alt='alt')
+                  | pay $330.20
+            .payment
+              .button-container
+                button.main-btn continue
+            .payment
+              .button-container
+                button.main-btn continue
+                
 
 
 

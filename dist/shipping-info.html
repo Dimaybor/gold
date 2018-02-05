@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
   </head>
   <body>
     <header class="main-header" id="header">
@@ -48,21 +48,19 @@
     <section class="shipping">
       <div class="wrapper">
         <div class="cart-summary">
-          <p class="cart-summary__heading">Cart summary<a class="auxiliary-link" href="#">Edit</a></p>
+          <p class="form-roadmap">Cart summary<a class="auxiliary-link" href="#">Edit</a></p>
           <div class="cart-summary__container">
             <div class="cart-summary__items">
-              <div class="cart-summary__item"><img src="img/bag-item.png" alt="alt">
-                <div class="cart-summary__info">
-                  <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
-                  <p class="cart-summary__about">1837652</p>
-                </div>
-              </div>
-              <div class="cart-summary__item"><img src="img/bag-item.png" alt="alt">
-                <div class="cart-summary__info">
-                  <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
-                  <p class="cart-summary__about">1837652</p>
-                </div>
-              </div>
+              <div class="cart-summary__item"><a class="cart-summary__link" href="#"><img src="img/bag-item.png" alt="alt">
+                  <div class="cart-summary__info">
+                    <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
+                    <p class="cart-summary__about">1837652</p>
+                  </div></a></div>
+              <div class="cart-summary__item"><a class="cart-summary__link" href="#"><img src="img/bag-item.png" alt="alt">
+                  <div class="cart-summary__info">
+                    <p class="cart-summary__name">Leather stripes clutch<span class="cart-summary__price">$ 160.00</span></p>
+                    <p class="cart-summary__about">1837652</p>
+                  </div></a></div>
             </div>
             <div class="summary-amount">
               <div class="summary-amount__item"><span class="summary-amount__name">Subtotal:</span><span class="summary-amount__price">$ 320.00</span></div>
@@ -71,9 +69,44 @@
             </div>
           </div>
         </div>
+        <div class="shipping-informations">
+          <div class="shipping-informations__step" id="infoStep-1">
+            <p class="form-roadmap">Shipping method & gift options<a class="auxiliary-link" href="#">Edit</a></p>
+            <div class="shipping-informations__item">
+              <div class="shipping-informations__inner">
+                <div class="shipping-informations__name">Shipping method</div>
+                <div class="shipping-informations__content">
+                  <p>5.50 $ </p>
+                  <p>Postal (5 - 8 business days)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping-informations__step" id="infoStep-2">
+            <p class="form-roadmap">Shipping info<a class="auxiliary-link" href="#">Edit</a></p>
+            <div class="shipping-informations__item">
+              <div class="shipping-informations__inner">
+                <div class="shipping-informations__name">Shipping address</div>
+                <div class="shipping-informations__content">
+                  <p>Alyona Zhelezniak</p>
+                  <p>1341 Stanford str.</p>
+                  <p>Santa Monica, CA 90404</p>
+                  <p>US</p>
+                </div>
+              </div>
+              <div class="shipping-informations__inner">
+                <div class="shipping-informations__name">Contact info</div>
+                <div class="shipping-informations__content">
+                  <p>kjhgdsxcuik@ukr.net</p>
+                  <p>+380931430064</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="shipping-steps">
           <form action="#" method="post">
-            <section class="shipping-method step-1">
+            <section class="shipping-step shipping-step--hide" id="step-1">
               <div class="shipping-heading"><span class="step-number">1/3</span>
                 <h1 class="shipping-header">Shipping method & gift options</h1>
               </div>
@@ -91,6 +124,190 @@
                 <label class="choose-method__item">
                   <input class="radio" type="radio" name="shipping-method" value="30.80"><span class="radio-custom"></span><span class="label">30.80 $</span><span class="choose-method__hint">Fastest (Next business day)</span>
                 </label>
+              </div>
+              <div class="checkbox-message">
+                <label class="checkbox-inner">
+                  <input type="checkbox" name="add-message">
+                  <p class="checkbox-text">Add a gift message to this order</p>
+                </label>
+              </div>
+              <div class="button-container">
+                <button class="main-btn" id="btnStep-1">continue</button>
+              </div>
+            </section>
+            <section class="shipping-step shipping-step--hide" id="step-2">
+              <div class="shipping-heading"><span class="step-number">2/3</span>
+                <h1 class="shipping-header">Shipping info</h1>
+              </div>
+              <p class="shipping-subtitle">Shipping adress</p>
+              <div class="buyer-info">
+                <div class="buyer-info-row">
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Country</p>
+                    <input class="buyer-info-field buyer-info-field--long" type="text" name="country" placeholder="Start typyng or select">
+                  </label>
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">First name</p>
+                    <input class="buyer-info-field buyer-info-field--short" type="text" name="first-name">
+                  </label>
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Last name</p>
+                    <input class="buyer-info-field buyer-info-field--short" type="text" name="last-name">
+                  </label>
+                </div>
+                <div class="buyer-info-row">
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Street address</p>
+                    <input class="buyer-info-field buyer-info-field--street" type="text" name="street">
+                  </label>
+                  <label class="checkbox-inner">
+                    <input type="checkbox" name="add-message">
+                    <p class="checkbox-text">This is a PO, APO or AE box</p>
+                  </label>
+                </div>
+                <div class="buyer-info-row">
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">City</p>
+                    <input class="buyer-info-field buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                  </label>
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">State / Province / Region</p>
+                    <input class="buyer-info-field buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                  </label>
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Postal code</p>
+                    <input class="buyer-info-field buyer-info-field--code" type="text" name="state" placeholder="XXXXXX">
+                  </label>
+                </div>
+              </div>
+              <p class="shipping-subtitle">Contact info</p>
+              <div class="buyer-info">
+                <div class="buyer-info-row">
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Email</p>
+                    <input class="buyer-info-field buyer-info-field--long" type="email" autocomplete="on" name="login">
+                  </label>
+                  <label class="checkbox-inner">
+                    <input type="checkbox" name="add-message">
+                    <p class="checkbox-text">Join our weekly newsletter</p>
+                  </label>
+                  <label class="buyer-info__item">
+                    <p class="buyer-info__label">Phone (international orders only)</p>
+                    <input class="buyer-info-field buyer-info-field--long" type="text" name="phone">
+                  </label>
+                </div>
+              </div>
+              <div class="button-container">
+                <button class="main-btn" id="btnStep-2">continue</button>
+              </div>
+            </section>
+            <section class="shipping-step" id="step-3">
+              <div class="shipping-heading"><span class="step-number">3/3</span>
+                <h1 class="shipping-header">Payment info</h1>
+              </div>
+              <p class="shipping-subtitle">Secure payment info</p>
+              <div class="buyer-info">
+                <div class="buyer-info-row buyer-info-row--indent">
+                  <label class="buyer-info__payment">
+                    <input class="radio" type="radio" name="choice-payment" checked><span class="radio-custom"></span><span class="label">
+                      <div class="buyer-info__img"><img src="img/card.png" alt="alt"></div></span>
+                  </label>
+                  <label class="buyer-info__payment">
+                    <input class="radio" type="radio" name="choice-payment"><span class="radio-custom"></span><span class="label">
+                      <div class="buyer-info__img"><img src="img/paypal.png" alt="alt"></div></span>
+                  </label>
+                  <label class="buyer-info__payment">
+                    <input class="radio" type="radio" name="choice-payment"><span class="radio-custom"></span><span class="label">
+                      <div class="buyer-info__img"><img src="img/liqpay.png" alt="alt"></div></span>
+                  </label>
+                </div>
+              </div>
+              <div class="payment">
+                <p class="shipping-subtitle">Card info</p>
+                <div class="buyer-info">
+                  <div class="buyer-info-row">
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Name on card</p>
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card">
+                    </label>
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Card number</p>
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card">
+                    </label>
+                    <div class="input-container">
+                      <label class="buyer-info__item">
+                        <p class="buyer-info__label">Expiry date
+                          <input class="buyer-info-field buyer-info-field--smaller" type="text" placeholder="MM / YY" name=" last-name">
+                        </p>
+                      </label>
+                      <label class="buyer-info__item">
+                        <p class="buyer-info__label">Security code
+                          <input class="buyer-info-field buyer-info-field--smaller" type="text" name=" last-name">
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <p class="shipping-subtitle">Billing adress</p>
+                <div class="buyer-info">
+                  <div class="buyer-info-row">
+                    <label class="checkbox-inner">
+                      <input type="checkbox" name="add-message">
+                      <p class="checkbox-text">Same as my shipping address</p>
+                    </label>
+                  </div>
+                  <div class="buyer-info-row">
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Country</p>
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="  country" placeholder="Start typyng or select">
+                    </label>
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">First name</p>
+                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" first-name">
+                    </label>
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Last name</p>
+                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" last-name">
+                    </label>
+                  </div>
+                  <div class="buyer-info-row">
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Street address</p>
+                      <input class="buyer-info-field buyer-info-field--street" type="text" name="  street">
+                    </label>
+                    <label class="checkbox-inner">
+                      <input type="checkbox" name="add-message">
+                      <p class="checkbox-text">This is a PO, APO or AE box</p>
+                    </label>
+                  </div>
+                  <div class="buyer-info-row">
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">City</p>
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                    </label>
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">State / Province / Region</p>
+                      <input class="buyer-info-field buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                    </label>
+                    <label class="buyer-info__item">
+                      <p class="buyer-info__label">Postal code</p>
+                      <input class="buyer-info-field buyer-info-field--code" type="text" name="state" placeholder="XXXXXX">
+                    </label>
+                  </div>
+                </div>
+                <div class="button-container">
+                  <button class="main-btn" id="btnStep-3"> <img class="main-btn__img" src="img/buy-lock.svg" alt="alt">pay $330.20</button>
+                </div>
+              </div>
+              <div class="payment">
+                <div class="button-container">
+                  <button class="main-btn">continue</button>
+                </div>
+              </div>
+              <div class="payment">
+                <div class="button-container">
+                  <button class="main-btn">continue</button>
+                </div>
               </div>
             </section>
           </form>

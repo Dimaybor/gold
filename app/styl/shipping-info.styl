@@ -1,14 +1,8 @@
 //---------------Shipping info
 .cart-summary
   margin-top 5px
-  
-  &__heading
-    font-size 13px
     
-    & .auxiliary-link
-      margin-left 15px
-      
-  &__heading + &__container
+  .form-roadmap + &__container
     margin-top 15px
     padding 30px 55px
     border 1px solid #eaeaea
@@ -18,7 +12,6 @@
     justify-content space-between
     
   &__item
-    display flex
     
     & + &
       margin-top 20px
@@ -29,6 +22,9 @@
       
     & img + .cart-summary__info
       margin-left 10px
+      
+  &__link
+    display flex
 
   &__price
     margin-left 35px
@@ -38,6 +34,12 @@
     display block
     font-size 13px
     color #838383
+
+.form-roadmap
+  font-size 13px
+  
+  & .auxiliary-link
+    margin-left 15px
     
 .summary-amount
   width 100%
@@ -63,9 +65,12 @@
     
 //---------------Shipping form
 .shipping
-  
+
   &-steps
-    padding-top 60px
+    padding 60px 0 170px
+    
+  &-step--hide
+    display none
   
   &-heading
     display flex
@@ -80,8 +85,9 @@
     font-weight normal
   
   &-subtitle
-    margin-bottom 10px
+    padding-bottom 10px
     font-weight bold
+    border-bottom 1px solid #eaeaea
     
 .step-number
   margin-right 10px
@@ -92,7 +98,7 @@
   padding-top 25px
   display flex
   justify-content space-between
-  border-top 1px solid #eaeaea
+  
   
   &__item
     max-width 230px
@@ -103,6 +109,9 @@
       font-size 13px
       font-weight bold
       color #343434
+      
+    & + .checkbox-message
+      margin-top 35px
   
   &__hint
     margin-left 20px
@@ -110,4 +119,170 @@
     font-size 13px
     color #838383
 
+.checkbox-message
+  display flex
+  flex-direction column
+  justify-content center
+  width 100%
+  height 86px
+  
+.checkbox-inner
+  display flex
+  cursor pointer
+  
+  & input + .checkbox-text
+    margin-left 10px
+    
+.checkbox-text
+  font-size 13px
+  color #838383
+
+.button-container
+  padding-top 26px
+  display flex
+  justify-content flex-end
+  border-top 1px solid #d7c099
+  
+  & .main-btn:hover
+      background-color #d7c099
+      
+.shipping-informations
+  
+  &__step
+    margin-top 70px
+    display none
+    
+    &--active
+      display block
+
+  & .form-roadmap
+    margin-bottom 35px
+    height 50px
+    line-height 50px
+    border-bottom 1px solid #eaeaea
+  
+  &__inner
+    display flex
+    
+    & + &
+      margin-top 30px
+
+  &__name
+    width 100%
+    max-width 180px
+    font-weight bold
+    
+  &__content
+    font-size 13px
+    color #838383
+    
+    & p
+      display block
+
+//-------------- Step 2
+.buyer-info
+  padding-top 25px
+  
+  & + .shipping-subtitle
+    margin-top 65px
+  
+  & + .button-container
+    margin-top 70px
+  
+  & + .payment
+    margin-top 65px
+  
+  &-row
+    display flex
+    align-items flex-end
+    width 100%
+    
+    & + &
+      margin-top 10px
+      
+    &--indent
+      padding-left 10px
+  
+  &__item
+    
+    & + .checkbox-inner
+      margin-left 45px
+    
+    & + .input-container
+      margin-left 70px
+
+    & + &
+      margin-left 70px
+
+  &-field
+    margin-top 5px
+    padding 10px 17px 15px
+    max-width 100%
+    height 45px
+    border 1px solid #eaeaea
+    outline none
+    
+    &:focus
+      border-color #d7c099
+    
+    &--long
+      width 290px
+      
+    &--short
+      width 230px
+      
+    &--smaller
+      width 115px
+      
+    &--street
+      width 590px
+      
+    &--code
+      width 100px
+      
+      &::placeholder
+        text-align center
+        color #343434
+        letter-spacing 1.5px
+        
+        :focus&
+          color transparent
+    
+  &__label
+    font-size 13px
+    color #838383
+    
+  & .checkbox-inner
+    height 45px
+    
+  & .checkbox-text
+    line-height 45px
+    
+  &__img
+    max-height 40px
+    line-height 0
+    
+  &__payment
+    cursor pointer
+    opacity 0.5
+
+    & + &
+      margin-left 100px
+
+.input-container
+  display flex
+  
+  .buyer-info__item
+    margin-left 0
+    
+.checkbox-inner + .buyer-info__item
+  margin-left 80px
+  
+.payment
+  margin-top 65px
+  &-active
+    opacity 1
+  
+
+  
   

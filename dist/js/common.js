@@ -113,3 +113,28 @@ $(document).ready(function(){
   $('.slider__item').zoom();
 
 });
+
+
+//----------------- Forms
+
+  $("#btnStep-1").on('click', function(e) {
+    e.preventDefault();
+    $('#step-1').addClass('shipping-step--hide');
+    $('#step-2').removeClass('shipping-step--hide');
+    $('#infoStep-1').addClass('shipping-informations__step--active');
+  });
+  $("#btnStep-2").on('click', function(e) {
+    e.preventDefault();
+    $('#step-2').addClass('shipping-step--hide');
+    $('#step-3').removeClass('shipping-step--hide');
+    $('#infoStep-2').addClass('shipping-informations__step--active');
+  });
+
+//------------------ Cards
+
+  $(".payment").not(":first").hide();
+  $(".buyer-info__payment").click(function() {
+    $(".buyer-info__payment").removeClass("payment-active");
+    $(".buyer-info__payment").eq($(this).index()).addClass("payment-active");
+    $(".payment").hide().eq($(this).index()).fadeIn(100);
+  }).eq(0).addClass("payment-active");
