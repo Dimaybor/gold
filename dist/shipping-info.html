@@ -6,6 +6,7 @@
     <title> Shipping info
     </title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/selectize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
@@ -48,7 +49,7 @@
     <section class="shipping">
       <div class="wrapper">
         <div class="cart-summary">
-          <p class="form-roadmap">Cart summary<a class="auxiliary-link" href="#">Edit</a></p>
+          <p class="form-roadmap">Cart summary<a class="auxiliary-link" href="bag.html">Edit</a></p>
           <div class="cart-summary__container">
             <div class="cart-summary__items">
               <div class="cart-summary__item"><a class="cart-summary__link" href="#"><img src="img/bag-item.png" alt="alt">
@@ -106,7 +107,7 @@
         </div>
         <section class="shipping-steps">
           <form action="#" method="post">
-            <section class="shipping-step shipping-step--hide" id="step-1">
+            <section class="shipping-step" id="step-1">
               <div class="shipping-heading"><span class="step-number">1/3</span>
                 <h1 class="shipping-header">Shipping method & gift options</h1>
               </div>
@@ -126,9 +127,8 @@
                 </label>
               </div>
               <div class="checkbox-message">
-                <label class="checkbox-inner">
-                  <input type="checkbox" name="add-message">
-                  <p class="checkbox-text">Add a gift message to this order</p>
+                <label>
+                  <input class="checkbox" type="checkbox" name="add-message"><span class="checkbox-custom"><span class="check-mark"></span></span><span class="label">Add a gift message to this order</span>
                 </label>
               </div>
               <div class="button-container">
@@ -144,35 +144,52 @@
                 <div class="buyer-info-row">
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Country</p>
-                    <input class="buyer-info-field buyer-info-field--long" type="text" name="country" placeholder="Start typyng or select">
+                    <select class="buyer-info-select buyer-info-field--long" name="country" placeholder="Start typyng or select">
+                      <option>Ukraine</option>
+                      <option>United States</option>
+                      <option>United Kingdom</option>
+                      <option>Uganda</option>
+                      <option>Ukraine</option>
+                    </select>
                   </label>
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">First name</p>
-                    <input class="buyer-info-field buyer-info-field--short" type="text" name="first-name">
+                    <input class="buyer-info-field buyer-info-field--short" type="text" name="first-name" placeholder=" ">
                   </label>
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Last name</p>
-                    <input class="buyer-info-field buyer-info-field--short" type="text" name="last-name">
+                    <input class="buyer-info-field buyer-info-field--short" type="text" name="last-name" placeholder=" ">
                   </label>
                 </div>
                 <div class="buyer-info-row">
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Street address</p>
-                    <input class="buyer-info-field buyer-info-field--street" type="text" name="street">
+                    <input class="buyer-info-field buyer-info-field--street" type="text" name="street" placeholder=" ">
                   </label>
-                  <label class="checkbox-inner">
-                    <input type="checkbox" name="add-message">
-                    <p class="checkbox-text">This is a PO, APO or AE box</p>
+                  <label class="buyer-info__checkbox">
+                    <input class="checkbox" type="checkbox" name="add-message"><span class="checkbox-custom"><span class="check-mark"></span></span><span class="label">This is a PO, APO or AE box</span>
                   </label>
                 </div>
                 <div class="buyer-info-row">
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">City</p>
-                    <input class="buyer-info-field buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                    <select class="buyer-info-select buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                      <option>Kyiv</option>
+                      <option>London</option>
+                      <option>Paris</option>
+                      <option>Moscow</option>
+                      <option>Riga</option>
+                    </select>
                   </label>
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">State / Province / Region</p>
-                    <input class="buyer-info-field buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                    <select class="buyer-info-select buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                      <option>Kyiv</option>
+                      <option>London</option>
+                      <option>Paris</option>
+                      <option>Moscow</option>
+                      <option>Riga</option>
+                    </select>
                   </label>
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Postal code</p>
@@ -185,15 +202,14 @@
                 <div class="buyer-info-row">
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Email</p>
-                    <input class="buyer-info-field buyer-info-field--long" type="email" autocomplete="on" name="login">
+                    <input class="buyer-info-field buyer-info-field--long" type="email" autocomplete="on" name="login" placeholder=" ">
                   </label>
-                  <label class="checkbox-inner">
-                    <input type="checkbox" name="add-message">
-                    <p class="checkbox-text">Join our weekly newsletter</p>
+                  <label class="buyer-info__checkbox">
+                    <input class="checkbox" type="checkbox" name="add-message"><span class="checkbox-custom"><span class="check-mark"></span></span><span class="label">Join our weekly newsletter</span>
                   </label>
                   <label class="buyer-info__item">
                     <p class="buyer-info__label">Phone (international orders only)</p>
-                    <input class="buyer-info-field buyer-info-field--long" type="text" name="phone">
+                    <input class="buyer-info-field buyer-info-field--long" type="text" name="phone" placeholder=" ">
                   </label>
                 </div>
               </div>
@@ -201,7 +217,7 @@
                 <button class="main-btn" id="btnStep-2">continue</button>
               </div>
             </section>
-            <section class="shipping-step" id="step-3">
+            <section class="shipping-step shipping-step--hide" id="step-3">
               <div class="shipping-heading"><span class="step-number">3/3</span>
                 <h1 class="shipping-header">Payment info</h1>
               </div>
@@ -228,22 +244,31 @@
                   <div class="buyer-info-row">
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">Name on card</p>
-                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card">
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card" placeholder=" ">
                     </label>
-                    <label class="buyer-info__item">
+                    <label class="buyer-info__item buyer-info__item--indent">
                       <p class="buyer-info__label">Card number</p>
-                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card">
+                      <input class="buyer-info-field buyer-info-field--long" type="text" name="card" pattern="[0-9]{16}" minlength="16" maxlength="16" placeholder=" ">
                     </label>
                     <div class="input-container">
+                      <div class="security-code">
+                        <p class="security-code__heading">The <span>3 digits</span>on the back of your credit card.</p>
+                        <div class="security-card">
+                          <div class="security-card__line"></div>
+                          <div class="security-card__container">
+                            <div class="security-card__filed"></div>
+                            <div class="security-card__code">123</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="security-toggle">?</div>
                       <label class="buyer-info__item">
-                        <p class="buyer-info__label">Expiry date
-                          <input class="buyer-info-field buyer-info-field--smaller" type="text" placeholder="MM / YY" name=" last-name">
-                        </p>
+                        <p class="buyer-info__label">Expiry date</p>
+                        <input class="buyer-info-field buyer-info-field--smaller" type="text" placeholder="MM / YY" name=" last-name" minlength="4" maxlength="4">
                       </label>
                       <label class="buyer-info__item">
-                        <p class="buyer-info__label">Security code
-                          <input class="buyer-info-field buyer-info-field--smaller" type="text" name=" last-name">
-                        </p>
+                        <p class="buyer-info__label">Security code</p>
+                        <input class="buyer-info-field buyer-info-field--smaller" type="text" name=" last-name" placeholder=" " minlength="3" maxlength="3">
                       </label>
                     </div>
                   </div>
@@ -251,43 +276,59 @@
                 <p class="shipping-subtitle">Billing adress</p>
                 <div class="buyer-info">
                   <div class="buyer-info-row">
-                    <label class="checkbox-inner">
-                      <input type="checkbox" name="add-message">
-                      <p class="checkbox-text">Same as my shipping address</p>
+                    <label class="buyer-info__checkbox">
+                      <input class="checkbox" type="checkbox" name="add-message"><span class="checkbox-custom"><span class="check-mark"></span></span><span class="label">Same as my shipping address</span>
                     </label>
                   </div>
                   <div class="buyer-info-row">
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">Country</p>
-                      <input class="buyer-info-field buyer-info-field--long" type="text" name="  country" placeholder="Start typyng or select">
+                      <select class="buyer-info-select buyer-info-field--long" type="text" name="  country" placeholder="Start typyng or select">
+                        <option>Ukraine</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Uganda</option>
+                        <option>Ukraine</option>
+                      </select>
                     </label>
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">First name</p>
-                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" first-name">
+                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" first-name" placeholder=" ">
                     </label>
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">Last name</p>
-                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" last-name">
+                      <input class="buyer-info-field buyer-info-field--short" type="text" name=" last-name" placeholder=" ">
                     </label>
                   </div>
                   <div class="buyer-info-row">
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">Street address</p>
-                      <input class="buyer-info-field buyer-info-field--street" type="text" name="  street">
+                      <input class="buyer-info-field buyer-info-field--street" type="text" name="  street" placeholder=" ">
                     </label>
-                    <label class="checkbox-inner">
-                      <input type="checkbox" name="add-message">
-                      <p class="checkbox-text">This is a PO, APO or AE box</p>
+                    <label class="buyer-info__checkbox">
+                      <input class="checkbox" type="checkbox" name="add-message"><span class="checkbox-custom"><span class="check-mark"></span></span><span class="label">This is a PO, APO or AE box</span>
                     </label>
                   </div>
                   <div class="buyer-info-row">
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">City</p>
-                      <input class="buyer-info-field buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                      <select class="buyer-info-select buyer-info-field--long" type="text" name="city" placeholder="Start typyng or select">
+                        <option>Kyiv</option>
+                        <option>London</option>
+                        <option>Paris</option>
+                        <option>Moscow</option>
+                        <option>Riga</option>
+                      </select>
                     </label>
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">State / Province / Region</p>
-                      <input class="buyer-info-field buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                      <select class="buyer-info-select buyer-info-field--short" type="text" name="state" placeholder="Start typyng or select">
+                        <option>Kyiv </option>
+                        <option>London</option>
+                        <option>Paris</option>
+                        <option>Moscow</option>
+                        <option>Riga</option>
+                      </select>
                     </label>
                     <label class="buyer-info__item">
                       <p class="buyer-info__label">Postal code</p>
@@ -295,9 +336,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="button-container">
-                  <button class="main-btn" id="btnStep-3"> <img class="main-btn__img" src="img/buy-lock.svg" alt="alt">pay $330.20</button>
-                </div>
+                <div class="button-container"><a class="main-btn" id="btnStep-3" href="successful-payment.html"> <img class="main-btn__img" src="img/buy-lock.svg" alt="alt">pay $330.20</a></div>
               </div>
               <div class="payment">
                 <div class="button-container">
@@ -396,5 +435,6 @@
     <script src="js/common.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.zoom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
   </body>
 </html>

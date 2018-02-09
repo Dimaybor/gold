@@ -138,3 +138,16 @@ $(document).ready(function(){
     $(".buyer-info__payment").eq($(this).index()).addClass("payment-active");
     $(".payment").hide().eq($(this).index()).fadeIn(100);
   }).eq(0).addClass("payment-active");
+
+
+//------------------ securiti code
+
+  $('.security-toggle').click(function() {
+    $(".security-code").toggleClass('security-code--active');
+  });
+
+//------------------ selectize
+  
+  $(function() {
+    $('.buyer-info-select').selectize();
+  });

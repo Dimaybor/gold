@@ -99,6 +99,7 @@
   display inline-block
   vertical-align middle
   color #838383
+  cursor pointer
 
 .radio:checked + .radio-custom
   border-color #d9c39e
@@ -852,3 +853,82 @@
     margin-right 9px
     width 10px
     height 15px 
+    
+//---------------Chekbox
+.checkbox
+  display none
+  
+.checkbox-custom
+  position relative
+  margin-right 10px
+  display inline-block
+  vertical-align middle
+  width 15px
+  height 15px
+  border 1px solid #eaeaea
+  cursor pointer
+  
+  &:hover
+    border-color #d7c099
+  
+.check-mark
+  display none
+  
+  &:after
+    content ''
+    position absolute
+    top 60%
+    right -1px
+    width 8px
+    height 2px
+    background-color #b6926f
+    transform translateY(-100%) rotate(135deg)
+    animation chek2 0.2s linear
+  
+  &:before
+    content ''
+    position absolute
+    top 60% 
+    right 0
+    width 4px
+    height 2px
+    background-color #b6926f
+    transform translate(-120%, -50%) rotate(45deg)
+    animation chek1 0.1s linear
+
+.checkbox:checked + .checkbox-custom
+  border-color #d7c099
+
+.checkbox:checked + .checkbox-custom .check-mark
+  position absolute
+  display block
+  top 2px
+  right 2px
+  bottom 2px
+  left 2px
+  //animation chek3 0.2 ease
+  
+
+@keyframes chek1
+  0%
+    width 0
+    
+  100%
+    width 100%
+    
+@keyframes chek2
+  0%
+    width 0
+    
+  50%
+    width 0
+    
+  100%
+    width 100%
+    
+@keyframes chek3
+  0%
+    transform translateY(-5px)
+    
+  100%
+    transform translateY(0)
