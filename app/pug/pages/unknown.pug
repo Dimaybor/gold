@@ -1,0 +1,14 @@
+extends layout/main.pug
+
+block title
+  | Оплата прошла успешно
+block content
+  include header
+  section.notification.notification-unknown.header-indent
+    .wrapper
+      .notification__chek-mark
+        .notification__img
+          img(src='img/unknown.svg' alt='alt')
+      h1.general-heading Страница не найдена
+      .notification__btn
+        a.main-btn(href='index.html') go to main

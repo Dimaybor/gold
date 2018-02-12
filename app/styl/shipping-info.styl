@@ -273,6 +273,22 @@
     & + &
       margin-left 100px
 
+.card-focus
+  
+  &-container
+    position relative
+
+  &-img
+    position absolute
+    bottom 11.5px
+    right 10px
+    max-width 100%
+    display none
+    line-height 0
+    
+  &:focus + &-img
+    display block
+
 .input-container
   position relative
   display flex

@@ -201,9 +201,11 @@ block content
                   label.buyer-info__item
                     p.buyer-info__label Name on card
                     input.buyer-info-field.buyer-info-field--long(type='text' name='card' placeholder=' ')
-                  label.buyer-info__item.buyer-info__item--indent
+                  label.buyer-info__item.buyer-info__item--indent.card-focus-container
                     p.buyer-info__label Card number
-                    input.buyer-info-field.buyer-info-field--long(type='text' name='card' pattern='[0-9]{16}' minlength="16" maxlength="16" placeholder=' ')
+                    input.buyer-info-field.buyer-info-field--long.card-focus(type='text' name='card' pattern='[0-9]{16}' minlength="16" maxlength="16" placeholder=' ')
+                    .card-focus-img
+                      img(src='img/visa.svg' alt='alt')
                   .input-container
                     .security-code
                       p.security-code__heading The 
