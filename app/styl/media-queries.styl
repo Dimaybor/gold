@@ -1,0 +1,235 @@
+@media screen and (max-width: 1130px)
+  //------------------------header
+    
+  .open-bag
+    left -40%
+    
+    &__container:before
+      left 80%
+
+
+
+@media screen and (max-width: 767px)
+
+  //------------------------header
+ 
+  .header-indent
+    margin-top 50px
+
+  .main-header--scroll
+    height 50px
+
+    & .logo-scroll
+      display none
+      
+    & .main-logo
+      padding 0
+  
+  .logo-static
+    display none
+    
+  .logo-mobile
+    display block
+  
+  .main-logo
+    align-items center
+    height 50px
+    padding 0
+
+  .menu-open
+    display block
+  
+  .open-nav
+    position fixed
+    left -100vw
+    transition all 0.05s
+    
+    &--active
+      transform translate(100vw, -50px)
+      
+  .main-menu
+    flex-direction column
+    
+    &__item
+        width 100%
+        min-height 40px
+        transition all 0.3s
+      
+      &__item + &__item
+        margin-left 0
+        
+    &__link
+      padding 0
+  
+  .main-nav
+    flex-direction column
+    justify-content flex-start
+    width 100vw
+    height 100vh
+    max-width 100%
+    padding 22px
+    background-color #fff
+    
+    .socials
+      display flex
+    
+    .close-menu + .lang
+      margin-top 35px
+      
+    .lang + .main-menu 
+      margin-top 35px
+      
+    .main-menu + .socials
+      margin-top 55px
+    
+  .user-bag
+    display none
+    
+  .close-menu
+    display flex
+    align-items center
+    
+  .bag-mobile
+    display block
+
+  //------------------------main-offer
+    
+  .main-offer
+    
+    &__item:first-child
+      margin-top 100px
+      
+  .main-event
+    padding-bottom 50px
+    
+    &__container
+      flex-direction column
+      align-items center
+      
+  .block-img
+    display flex
+    flex-direction column
+    align-items center
+    width 100%
+      
+  .block-content
+    width 100%
+    
+    &__wrapper
+      padding-top 35px
+      max-width 590px
+      min-height 0
+      
+      & .arrow-link
+        margin 40px 0 0 87%
+
+
+  //------------------------footer
+    
+  .main-footer
+    min-height 256px
+    
+    &__container
+      justify-content center
+    
+    &__list
+      display none
+      
+    &__copyright
+      
+      .main-footer__container
+        justify-content space-between
+      
+      .copyright
+        display none
+        
+      .socials
+        display none
+    
+    &__item
+      display block
+      height 50px
+      line-height 50px
+      
+@media screen and (max-width: 650px)
+
+  //------------------------main-offer
+    
+  .main-offer
+    min-height 480px
+    justify-content center
+    
+    &__content
+      display flex
+      flex-direction column
+    
+    &__link
+      display block
+      
+      & + &
+        margin-top 50px
+      
+      .main-btn
+        margin 0 auto
+        padding-right 30px
+        justify-content center
+        width 270px
+      
+    &__item
+      display none
+
+
+@media screen and (max-width: 480px)
+
+  //------------------------header
+    
+  .menu-open
+    width 13px
+    height 9px
+    
+    &__line
+      height 1px
+      
+      & + &
+        margin-top 3px
+  //------------------------main-offer
+    
+  .main-offer
+    background #ece7dd url('../img/small-bg.png') center no-repeat
+    background-size cover
+    
+    &__link
+      
+      & + &
+        margin-top 17px
+        
+  .sign-up
+    margin-top 55px
+    
+    &__container
+      flex-wrap wrap
+    
+    .form-ask__item
+      width 270px
+      text-align center
+      
+    .form-ask__btn
+      margin-top 17px
+        
+  .block-img
+    width 100vw
+  
+  .block-content
+    align-items flex-start
+    
+    &__wrapper .arrow-link
+      margin-left 80%
+        
+@media screen and (max-width: 320px)
+
+  .block-content__wrapper
+    max-width 235px
+    
+    & .arrow-link
+      margin-left 90%
+    

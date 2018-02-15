@@ -5,6 +5,9 @@
   min-height 306px
   color #fff
   
+  .main-btn
+    border solid transparent
+  
   &__list
     max-width 170px
 
@@ -19,6 +22,9 @@
     height 50px
     background-color #fff
     color #8b8b8b
+    
+  &__item
+    display none
 
 .footer-list
   display flex
@@ -69,13 +75,16 @@
   font-size 13px
   line-height 50px
   
-.footer-socials
+.socials
   display flex
   align-items center
   
-  &__link + &__link
-    display block
-    margin-left 10px
+  &__link
+    height 20px
+
+    & + &
+      display block
+      margin-left 10px
     
   &__title
     display block

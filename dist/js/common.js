@@ -1,5 +1,25 @@
 
 $(document).ready(function(){
+  link         = $('.menu-open');
+  openNav     = $('.open-nav');
+  nav_link     = $('.open-nav a');
+  link.click(function() {
+    link.toggleClass('menu-open--active');
+    openNav.toggleClass('open-nav--active');
+    $("body").addClass("body-inactive");
+  });
+  nav_link.click(function() {
+    link.toggleClass('menu-open--active');
+    openNav.toggleClass('open-nav--active');
+    $("body").removeClass("body-inactive");
+  });
+  $('.close-menu').on('click', function() {
+    link.removeClass('menu-open--active');
+    openNav.removeClass('open-nav--active');
+    $("body").removeClass("body-inactive");
+  });
+
+
   $("#header").removeClass("default");
   $(window).scroll(function(){
     if ($(this).scrollTop() > 20) {

@@ -1,4 +1,7 @@
 //------------------- Filter
+.header-indent
+  margin-top 160px
+  
 .filter
   position relative
   height 50px
@@ -847,7 +850,12 @@
   color #b6926f
   background-color #fff
   border 1px solid #eaeaea
+  box-shadow 0px 0px 30px 1px rgba(0,0,0,0.05)
   text-transform uppercase
+  transition all 0.3s ease
+  
+  &:hover
+    background-color #d7c099
   
   &__img
     margin-right 9px
@@ -877,24 +885,14 @@
   &:after
     content ''
     position absolute
-    top 60%
-    right -1px
-    width 8px
-    height 2px
-    background-color #b6926f
-    transform translateY(-100%) rotate(135deg)
-    animation chek2 0.2s linear
-  
-  &:before
-    content ''
-    position absolute
-    top 60% 
-    right 0
-    width 4px
-    height 2px
-    background-color #b6926f
-    transform translate(-120%, -50%) rotate(45deg)
-    animation chek1 0.1s linear
+    top 0
+    left 0
+    width 7px
+    height 4px
+    transform rotate(-45deg)
+    border solid #b6926f
+    border-width 0 0 2px 2px
+    animation chek1 0.4s ease
 
 .checkbox:checked + .checkbox-custom
   border-color #d7c099
@@ -906,29 +904,20 @@
   right 2px
   bottom 2px
   left 2px
-  //animation chek3 0.2 ease
-  
 
 @keyframes chek1
   0%
+    height 0
     width 0
-    
-  100%
-    width 100%
-    
-@keyframes chek2
-  0%
-    width 0
+    transform rotate(-45deg)
     
   50%
+    height 4px
     width 0
+    transform rotate(-45deg) translate(-2px, 3px)
     
   100%
-    width 100%
+    height 4px
+    width 8px
+    transform rotate(-45deg) translate(0, 0)
     
-@keyframes chek3
-  0%
-    transform translateY(-5px)
-    
-  100%
-    transform translateY(0)

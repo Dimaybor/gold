@@ -1,0 +1,21 @@
+mixin navLink(link, name)
+  li.main-menu__item
+    a.main-menu__link(
+      href=link 
+      class={activeLink: name === current}
+    ) #{name}
+
+mixin product(link, size, img, name, price)
+  li.product-item
+    .product-item__img
+      .product-size
+        a.product-size__link(href=link)
+          p.product-size__content Size
+            span #{size}
+          span.product-size__arrow
+            span.product-size__line
+      img(
+        src=img
+        alt='alt')
+    a.product-title(href='#') #{name}
+    p.product-price #{price}

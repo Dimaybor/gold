@@ -14,15 +14,28 @@
   <body>
     <header class="main-header" id="header">
       <div class="wrapper">
-        <div class="main-logo"><a class="main-logo__link" href="index.html"><img class="logo-static" src="img/big-logo.svg" alt="alt"><img class="logo-scroll" src="img/small-logo.svg" alt="alt"></a></div>
-        <nav class="main-nav">
+        <button class="menu-open"><span class="menu-open__line"></span><span class="menu-open__line"></span><span class="menu-open__line"></span></button>
+        <div class="main-logo"><a class="main-logo__link" href="index.html"><img class="logo-static" src="img/big-logo.svg" alt="alt"><img class="logo-scroll" src="img/small-logo.svg" alt="alt"><img class="logo-mobile" src="img/mobile-logo.svg" alt="alt"></a></div>
+        <div class="bag-mobile">
+          <div class="bag-mobile__quantity">0
+            <div class="bag-mobile__img"><img src="img/mobile-bag.svg" alt="alt"></div>
+          </div>
+        </div>
+        <nav class="main-nav open-nav">
+          <div class="close-menu">
+            <div class="close-menu__arrow"></div>
+            <p class="close-text">Back</p>
+          </div>
           <div class="lang"><a class="lang__item lang__item--active" href="#">eng</a><a class="lang__item" href="#">рус</a></div>
           <ul class="main-menu">
-            <li class="main-menu__item"><a class="main-menu__link" href="vintage.html">vintage collection</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="gold-comission.html">gold comission</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="blog.html">blog</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">contacts and faq</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="vintage.html">vintage collection</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="gold-comission.html">gold comission</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="blog.html">blog</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">contacts and faq</a></li>
           </ul>
+          <div class="socials">
+            <p class="socials__title">Follow us:</p><a class="socials__link" href="#"><img src="img/insta.png" alt="alt"></a><a class="socials__link" href="#"><img src="img/tweet.png" alt="alt"></a><a class="socials__link" href="#"><img src="img/fb.png" alt="alt"></a><a class="socials__link" href="#"><img src="img/vk.png" alt="alt"></a>
+          </div>
           <div class="user-bag">
             <div class="user-bag__container">
               <div class="user-bag__img"><img src="img/bag.png" alt="alt"></div>
@@ -47,7 +60,7 @@
           <div class="notification__img"><img src="img/unknown.svg" alt="alt"></div>
         </div>
         <h1 class="general-heading">Страница не найдена</h1>
-        <div class="notification__btn"><a class="main-btn" href="index.html">go to main</a></div>
+        <div class="notification__btn"><a class="main-btn main-btn--arrow" href="index.html">go to main</a></div>
       </div>
     </section>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

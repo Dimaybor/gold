@@ -5,9 +5,8 @@
   justify-content flex-start
   align-items center
   flex-direction column
-  margin 160px auto 0
+  margin 0 auto
   max-width 1440px
-  min-height 650px
   background #ece7dd url('../img/main-bg.png') center no-repeat
   background-size cover
 
@@ -20,8 +19,8 @@
     padding-right 150px
     text-align left
 
-  &__item:last-child
-    margin-top 50px
+  &__item:nth-child(2)
+    margin 50px 0 35px
     padding-left 150px
     text-align right
 
@@ -34,6 +33,9 @@
   &__info
     margin-bottom 30px
     line-height 26px
+    
+  &__link
+    display none
 
 .offer-header
   margin-bottom 10px
@@ -47,6 +49,7 @@
 //---------------Main Offer
 
 .sign-up
+  margin-top 75px
   width 100%
   min-height 275px
   
@@ -55,7 +58,7 @@
     justify-content center
     
   &__name
-    margin 75px 0 30px
+    margin-bottom 30px
     line-height 18px
     color #000
     text-align center

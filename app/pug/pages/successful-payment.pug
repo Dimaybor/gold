@@ -4,17 +4,17 @@ block title
   | Оплата прошла успешно
 block content
   include header
-  section.successful.header-indent
+  section.notification.header-indent
     .wrapper
-      .successful__chek-mark
-        .successful__img
+      .notification__chek-mark
+        .notification__img
           img(src='img/successful.svg' alt='alt')
       h1.general-heading Оплата прошла успешно
       .manager-message
         p.manager-message__text Номер вашего заказа: 
           span 123456789
         p.manager-message__text В ближайшее время наш менеджер свяжется с вами!
-      .successful__btn
-        a.main-btn(href='index.html') go to main
+      .notification__btn
+        a.main-btn.main-btn--arrow(href='index.html') go to main
       
   include footer

@@ -1,25 +1,30 @@
 extends layout/main.pug
 
+include helpers/mixins
 block title
   | Gold Comission
 block content
+  - var current = 'gold comission'
   include header
   include filter
   section.gold
     .wrapper
       .product
         ul.product-list
-          li.product-item
-            .product-item__img
-              .product-size
-                a.product-size__link(href='one-staff.html')
-                  p.product-size__content Size
-                    span xs
-                  span.product-size__arrow
-                    span.product-size__line
-              img(src='img/product-1.png' alt='alt')
-            a.product-title(href='#') Long printed jumpsuit
-            p.product-price $ 259
+          //li.product-item
+          //  .product-item__img
+          //    .product-size
+          //      a.product-size__link(href='one-staff.html')
+          //        p.product-size__content Size
+          //          span xs
+          //        span.product-size__arrow
+          //          span.product-size__line
+          //    img(src='img/product-1.png' alt='alt')
+          //  a.product-title(href='#') Long printed jumpsuit
+          //  p.product-price $ 259
+
+          
+          +product('one-staff.html', 'xs', 'img/product-1.png', 'Long printed jumpsuit', '$ 259')
           li.product-item
             .product-item__img
               .product-size

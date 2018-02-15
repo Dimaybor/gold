@@ -1,22 +1,41 @@
+include helpers/mixins
 header#header.main-header
   .wrapper
+    button.menu-open
+      span.menu-open__line
+      span.menu-open__line
+      span.menu-open__line
     .main-logo
       a.main-logo__link(href="index.html")
         img.logo-static(src='img/big-logo.svg' alt='alt')
         img.logo-scroll(src='img/small-logo.svg' alt='alt')
-    nav.main-nav
+        img.logo-mobile(src='img/mobile-logo.svg' alt='alt')
+    .bag-mobile
+      .bag-mobile__quantity 0
+        .bag-mobile__img
+          img(src='img/mobile-bag.svg' alt='alt')
+    nav.main-nav.open-nav
+      .close-menu
+        .close-menu__arrow
+        p.close-text Back
       .lang
         a.lang__item.lang__item--active(href='#') eng
         a.lang__item(href='#') рус
       ul.main-menu
-        li.main-menu__item
-          a.main-menu__link(href='vintage.html') vintage collection
-        li.main-menu__item
-          a.main-menu__link(href='gold-comission.html') gold comission
-        li.main-menu__item
-          a.main-menu__link(href='blog.html') blog
-        li.main-menu__item
-          a.main-menu__link(href='contacts.html') contacts and faq
+        +navLink('vintage.html', 'vintage collection')
+        +navLink('gold-comission.html', 'gold comission')
+        +navLink('blog.html', 'blog')
+        +navLink('contacts.html', 'contacts and faq')
+      .socials
+          p.socials__title Follow us:
+          a.socials__link(href='#')
+            img(src='img/insta.png' alt='alt')
+          a.socials__link(href='#')
+            img(src='img/tweet.png' alt='alt')
+          a.socials__link(href='#')
+            img(src='img/fb.png' alt='alt')
+          a.socials__link(href='#')
+            img(src='img/vk.png' alt='alt')
       .user-bag
         .user-bag__container
           .user-bag__img
