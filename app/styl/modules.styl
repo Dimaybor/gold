@@ -27,8 +27,8 @@
       margin-left 5px
       
   &__link
-    padding 0 5px
     display block
+    padding 0 5px
     font-size 13px
     color #838383
     
@@ -121,9 +121,9 @@
   display block
   width 4px
   height 4px
+  border-radius 50%
   background #bf9f81
   transform translate(-50%, -50%)
-  border-radius 50%
   
 .arrow-inactive
   position relative
@@ -197,13 +197,13 @@
   bottom 0
   left 0
   right 0
+  z-index 1
   display none
   margin 0 auto
   width 100%
   max-width 1440px
   border-top 1px solid #ededed
   background-color #343434
-  z-index 1
   transform translateY(100%)
   
   &--small
@@ -497,9 +497,9 @@
   &__wrapper
     display flex
     flex-direction column
+    padding-top 45px
     max-width 235px
     min-height 480px
-    padding-top 45px
     
   &__wrapper .arrow-link
     margin 70px 0 0 170px
@@ -655,10 +655,10 @@
     width 190px
     height 287px
     background-color #3e3e3e
-    opacity 0.95
     text-align center
     transform scale(0)
     visibility hidden
+    opacity 0.95
     
     &__link
       position relative
@@ -788,11 +788,11 @@
     max-height 100%
   
 .product-buy
-  margin-top 15px
-  padding 5px 0
   display flex
   justify-content space-between
   align-items center
+  margin-top 15px
+  padding 5px 0
     
   & .product-price
     font-size 28px
@@ -802,9 +802,9 @@
     margin-top 55px
 
 .description-list
-  margin-bottom 50px
   display flex
   flex-direction column
+  margin-bottom 50px
   
   &__item
     display flex
@@ -873,9 +873,9 @@
   
 .checkbox-custom
   position relative
-  margin-right 10px
   display inline-block
   vertical-align middle
+  margin-right 10px
   width 15px
   height 15px
   border 1px solid #eaeaea
@@ -904,11 +904,11 @@
 
 .checkbox:checked + .checkbox-custom .check-mark
   position absolute
-  display block
   top 2px
   right 2px
   bottom 2px
   left 2px
+  display block
 
 @keyframes chek1
   0%
