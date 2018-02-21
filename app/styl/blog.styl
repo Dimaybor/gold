@@ -17,7 +17,6 @@
     margin-bottom 45px
     padding-bottom 20px
     max-width 470px
-    min-height 700px
 
   &__img
     max-width 470px
@@ -93,7 +92,7 @@
   &__list
     padding-left 55px
     
-    & + img
+    & + .blog-content__img
       margin-top 70px
     
   &__item
@@ -135,14 +134,21 @@
 .blog-content blockquote
   margin-bottom 65px
 
+.share + .blog-content
+  margin-left 10px
+
+.blog-content + .side-bar 
+  margin-left 10px
+  
 .side-bar
-  width 232px
+  width 100%
+  max-width 232px
   
   &__social
     display flex
     justify-content center
     align-items center
-    width 232px
+    width 100%
     height 236px
     border 1px solid #fbfbfb
     text-transform uppercase
@@ -156,7 +162,8 @@
       margin-top 23px
       
   & .sign-up__container
-    flex-wrap wrap
+    flex-direction column
+    align-items center
     
   & .form-ask__item
     width 100%

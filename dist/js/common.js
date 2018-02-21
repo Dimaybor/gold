@@ -13,7 +13,7 @@ $(document).ready(function(){
     openNav.toggleClass('open-nav--active');
     $("body").removeClass("body-inactive");
   });
-  $('.close-menu').on('click', function() {
+  $('#closeMenu').on('click', function() {
     link.removeClass('menu-open--active');
     openNav.removeClass('open-nav--active');
     $("body").removeClass("body-inactive");
@@ -64,7 +64,7 @@ $(document).ready(function(){
     $("body").addClass("body-inactive");
   });
 // Закриття попапа нажаттям на хрестик
-  $('.close').click(function() {
+  $('.close-popup').click(function() {
     $('.overlay').fadeOut(100);
     $("body").removeClass("body-inactive");
   });  
@@ -148,6 +148,21 @@ $(document).ready(function(){
     $('#step-2').addClass('shipping-step--hide');
     $('#step-3').removeClass('shipping-step--hide');
     $('#infoStep-2').addClass('shipping-informations__step--active');
+  });
+  $("#edit1").on('click', function(e) {
+    e.preventDefault();
+    $('#step-1').removeClass('shipping-step--hide');
+    $('#step-2').addClass('shipping-step--hide');
+    $('#step-3').addClass('shipping-step--hide');
+    $('#infoStep-1').removeClass('shipping-informations__step--active');
+    $('#infoStep-2').removeClass('shipping-informations__step--active');
+  });
+    $("#edit2").on('click', function(e) {
+    e.preventDefault();
+    $('#step-2').removeClass('shipping-step--hide');
+    $('#step-1').addClass('shipping-step--hide');
+    $('#step-3').addClass('shipping-step--hide');
+    $('#infoStep-2').removeClass('shipping-informations__step--active');
   });
 
 //------------------ Cards

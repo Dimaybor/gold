@@ -4,6 +4,10 @@ block title
   | Blog
 block content
   include header
+  .back
+    a.close-up(href='blog.html')
+      .close-up__arrow
+      p.close-text Back
   .blog-news-roadmap.header-indent
     .wrapper
       .roadmap
@@ -26,7 +30,8 @@ block content
           p.content-data 17.04.2016 | Events
           h2.main-heading Monday to Friday
           p.blog-content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.
-          img(src='img/blog-news-1.png' alt='alt')
+          .blog-content__img
+            img(src='img/blog-news-1.png' alt='alt')
           p.blog-content__subtitle Lorem ipsum
           p.blog-content__text Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.
           ul.blog-content__list
@@ -35,7 +40,8 @@ block content
             li.blog-content__item Nulla ullamcorper turpis in pretium iaculis. 
             li.blog-content__item Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. 
             li.blog-content__item Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. 
-          img(src='img/blog-news-2.png' alt='alt')
+          .blog-content__img
+            img(src='img/blog-news-2.png' alt='alt')
           p.blog-content__subtitle Lorem ipsum
           p.blog-content__text Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.
           blockquote
@@ -43,7 +49,8 @@ block content
               img.quotes(src='img/quote.svg' alt='alt')
               span.quote__author Ann Jerome
             p.uttering Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien.
-          img(src='img/blog-news-3.png' alt='alt')
+          .blog-content__img
+            img(src='img/blog-news-3.png' alt='alt')
           p.blog-content__text Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.
         aside.side-bar
           a.side-bar__social(href='#') fb
@@ -55,16 +62,17 @@ block content
                   .sign-up__container
                     input.sign-up__email.form-ask__item(type='email' autocomplete='on' name='login' placeholder='Enter your Email')
                     input.form-ask__btn.form-ask__item(type='submit' value='submit')
-          a.side-news(href='#')
-            img(src='img/side-bar-1.png' alt='alt')
-            p.side-news__name Summer portraits
-            p.side-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          a.side-news(href='#')
-            img(src='img/side-bar-2.png' alt='alt')
-            p.side-news__name Summer portraits
-            p.side-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          a.side-news(href='#')
-            img(src='img/side-bar-3.png' alt='alt')
-            p.side-news__name Summer portraits
-            p.side-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .news-container
+            a.side-news(href='#')
+              img(src='img/side-bar-1.png' alt='alt')
+              p.side-news__name Summer portraits
+              p.side-news__text Lorem ipsum dolor sit amet,   consectetur adipiscing elit.
+            a.side-news(href='#')
+              img(src='img/side-bar-2.png' alt='alt')
+              p.side-news__name Summer portraits
+              p.side-news__text Lorem ipsum dolor sit amet,   consectetur adipiscing elit.
+            a.side-news(href='#')
+              img(src='img/side-bar-3.png' alt='alt')
+              p.side-news__name Summer portraits
+              p.side-news__text Lorem ipsum dolor sit amet,   consectetur adipiscing elit.
   include footer

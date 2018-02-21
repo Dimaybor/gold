@@ -22,8 +22,8 @@
           </div>
         </div>
         <nav class="main-nav open-nav">
-          <div class="close-menu">
-            <div class="close-menu__arrow"></div>
+          <div class="close-up" id="closeMenu">
+            <div class="close-up__arrow"></div>
             <p class="close-text">Back</p>
           </div>
           <div class="lang"><a class="lang__item lang__item--active" href="#">eng</a><a class="lang__item" href="#">рус</a></div>
@@ -54,6 +54,9 @@
         </nav>
       </div>
     </header>
+    <div class="back"><a class="close-up" href="blog.html">
+        <div class="close-up__arrow"></div>
+        <p class="close-text">Back</p></a></div>
     <div class="blog-news-roadmap header-indent">
       <div class="wrapper">
         <div class="roadmap"><a class="roadmap__item roadmap__item--inactive" href="#">Main</a><a class="roadmap__item roadmap__item--inactive" href="#">Blog</a><a class="roadmap__item" href="#">Peace of news</a></div>
@@ -68,7 +71,8 @@
           <div class="blog-content">
             <p class="content-data">17.04.2016 | Events</p>
             <h2 class="main-heading">Monday to Friday</h2>
-            <p class="blog-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.</p><img src="img/blog-news-1.png" alt="alt">
+            <p class="blog-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.</p>
+            <div class="blog-content__img"><img src="img/blog-news-1.png" alt="alt"></div>
             <p class="blog-content__subtitle">Lorem ipsum</p>
             <p class="blog-content__text">Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.</p>
             <ul class="blog-content__list">
@@ -77,13 +81,15 @@
               <li class="blog-content__item">Nulla ullamcorper turpis in pretium iaculis. </li>
               <li class="blog-content__item">Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. </li>
               <li class="blog-content__item">Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. </li>
-            </ul><img src="img/blog-news-2.png" alt="alt">
+            </ul>
+            <div class="blog-content__img"><img src="img/blog-news-2.png" alt="alt"></div>
             <p class="blog-content__subtitle">Lorem ipsum</p>
             <p class="blog-content__text">Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.</p>
             <blockquote>
               <p class="quote"><img class="quotes" src="img/quote.svg" alt="alt"><span class="quote__author">Ann Jerome</span></p>
               <p class="uttering">Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien.</p>
-            </blockquote><img src="img/blog-news-3.png" alt="alt">
+            </blockquote>
+            <div class="blog-content__img"><img src="img/blog-news-3.png" alt="alt"></div>
             <p class="blog-content__text">Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.</p>
           </div>
           <aside class="side-bar"><a class="side-bar__social" href="#">fb</a><a class="side-bar__social" href="#">vk</a>
@@ -98,13 +104,14 @@
                   </p>
                 </label>
               </form>
-            </section><a class="side-news" href="#"><img src="img/side-bar-1.png" alt="alt">
-              <p class="side-news__name">Summer portraits</p>
-              <p class="side-news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a><a class="side-news" href="#"><img src="img/side-bar-2.png" alt="alt">
-              <p class="side-news__name">Summer portraits</p>
-              <p class="side-news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a><a class="side-news" href="#"><img src="img/side-bar-3.png" alt="alt">
-              <p class="side-news__name">Summer portraits</p>
-              <p class="side-news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+            </section>
+            <div class="news-container"><a class="side-news" href="#"><img src="img/side-bar-1.png" alt="alt">
+                <p class="side-news__name">Summer portraits</p>
+                <p class="side-news__text">Lorem ipsum dolor sit amet,   consectetur adipiscing elit.</p></a><a class="side-news" href="#"><img src="img/side-bar-2.png" alt="alt">
+                <p class="side-news__name">Summer portraits</p>
+                <p class="side-news__text">Lorem ipsum dolor sit amet,   consectetur adipiscing elit.</p></a><a class="side-news" href="#"><img src="img/side-bar-3.png" alt="alt">
+                <p class="side-news__name">Summer portraits</p>
+                <p class="side-news__text">Lorem ipsum dolor sit amet,   consectetur adipiscing elit.</p></a></div>
           </aside>
         </div>
       </div>
@@ -151,7 +158,11 @@
             <p class="feedback__name">Got vintage stuff?</p>
             <button class="main-btn" id="open-modal">contact us</button>
             <div class="overlay">
-              <div class="popup"><span class="close"></span>
+              <div class="popup">
+                <div class="close-up close-popup">
+                  <div class="close-up__arrow"></div>
+                  <p class="close-text">Back</p>
+                </div><span class="close close-popup"></span>
                 <div class="popup__content">
                   <div class="popup__wrapper">
                     <h1 class="main-heading">Got vintage stuff?</h1>
