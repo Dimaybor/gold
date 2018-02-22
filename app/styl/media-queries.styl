@@ -15,7 +15,7 @@
     &__wrapper
       padding 0 120px 0 100px
 
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 1024px)
 
   //------------------------blog
   
@@ -27,7 +27,7 @@
     &__content .arrow-link
       margin-left 85%
 
-@media screen and (max-width: 959px)
+@media screen and (max-width: 960px)
 
   .selection-list + .selection-list
     margin-left 30px
@@ -36,7 +36,7 @@
     max-width 80%
 
 
-@media screen and (max-width: 767px)
+@media screen and (max-width: 768px)
 
   //------------------------header
 
@@ -147,6 +147,50 @@
     text-align center
     background-color #d7c099
 
+  //----------------------- Product
+  
+  .product
+    padding-top 26px
+    
+    &-size
+      display none
+    
+    &-item
+      margin-bottom 35px
+      max-width 270px
+      
+      &__img
+        width 270px
+        
+        img
+          width 100%
+          max-width 270px
+    
+    &-list
+      justify-content space-around
+  
+  .size-mobile
+    display block
+
+  .pages
+    padding-bottom 60px
+    
+    &__item
+      width 40px
+      height 40px
+      
+      &--hide
+        display none
+    
+    &__container
+      flex-direction column
+      align-items center
+      
+    &__numbers + &-toggle
+      margin-top 30px
+    
+
+
   //------------------------blog
     
   .blog .main-event
@@ -248,6 +292,49 @@
         margin 40px 0 0 87%
 
 
+  //------------------------contacts and faq
+  
+  .faq
+    padding 30px 0
+    
+    &__wrapper
+      flex-direction column
+      align-items center
+      margin-bottom 35px
+      
+    .accordeon-header
+      text-align center
+  
+  .accordeon-header + .accordeon
+    margin-top 35px
+  
+  .our-contacts
+    
+    & + .to-ask
+      margin-top 50px
+      
+    &__address
+      span
+        display block
+      
+    &__item
+      text-align center
+      
+      & + &
+        margin-top 40px
+    
+      .contacts-socials
+        justify-content center
+        
+      &:last-child
+        margin-top 0
+        line-height 26px
+
+  //------------------------offer
+    
+  .accordeon-inner
+    padding-left 60px
+
   //------------------------footer
     
   .main-footer
@@ -299,6 +386,52 @@
       
 @media screen and (max-width: 650px)
 
+  //------------------------offer
+  
+  .offer
+    padding 35px 0
+    
+    &__paragraph
+      padding-right 0
+      
+      & + .accordeon
+        margin-top 35px
+  
+  .arrow-container
+    display flex
+    justify-content flex-end
+
+  .accordeon
+    margin 0 -25px
+    width 100vw
+    
+    &__item
+      min-height 70px
+    
+    &-header
+      font-size 30px
+      line-height 40px
+      padding-right 20px
+      
+    &-trigger
+      padding 0 25px
+      min-height 70px
+      
+      .accordeon-arrow
+        display none
+    
+    &-arrow--inside
+      display block
+      transform rotate(180deg)
+
+    &-inner
+      padding 0 25px
+      
+      &__item
+        margin-top 20px
+     
+
+
   //------------------------main-offer
     
   .main-offer
@@ -325,7 +458,7 @@
       display none
 
 
-@media screen and (max-width: 479px)
+@media screen and (max-width: 480px)
 
   //------------------------header
   
@@ -348,6 +481,13 @@
     
     .main-event
       padding 0
+      
+    .block-content
+      width 110%
+      transform translate(-15px, -60px)
+      
+      &__wrapper
+        padding-left 30px
     
   .blog-content
     padding 0
@@ -362,12 +502,7 @@
     &__content .arrow-link
       margin-left 80%
   
-  .block-content
-    width 110%
-    transform translate(-15px, -60px)
-    
-    &__wrapper
-      padding-left 30px
+  
       
   .content-data + .main-heading
     margin-right 0

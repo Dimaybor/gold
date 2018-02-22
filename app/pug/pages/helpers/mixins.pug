@@ -8,6 +8,9 @@ mixin navLink(link, name)
 mixin product(link, size, img, name, price)
   li.product-item
     .product-item__img
+      .size-mobile
+                a.size-mobile__link(href='one-staff.html')
+                  .size-mobile__item xs
       .product-size
         a.product-size__link(href=link)
           p.product-size__content Size

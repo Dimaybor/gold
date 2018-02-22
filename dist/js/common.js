@@ -108,6 +108,15 @@ $(document).ready(function(){
         itemArrow.removeClass('accordeon-arrow--rotate');
       };
   });
+  // закриття акордеону при нажатті на inside-стрілку
+  $('.accordeon-arrow--inside').on('click', function(){
+    var $this = $(this),
+        item = $this.closest('.accordeon__item'),
+        content = item.find('.accordeon-inner'),
+        duration = 200;
+      item.removeClass('active');
+      content.slideUp(duration);
+  });
 
 
 

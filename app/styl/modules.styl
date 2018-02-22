@@ -602,6 +602,9 @@
     border 2px solid #d7c099
     border-width 0 0 2px 2px
     transform translate(-1px, 3.5px) rotate(-45deg)
+  
+  &--inside
+    display none
     
 //----------------------- Product
 
@@ -614,6 +617,31 @@
     
   100%
     transform scale(1)
+
+.size-mobile
+  position absolute
+  top 0
+  left 0
+  display none
+  width 100%
+  height 100%
+  
+  &__link
+    display block
+    width 100%
+    height 100%
+    
+  &__item
+    position absolute
+    top 10px
+    right 10px
+    width 55px
+    height 36px
+    font-size 13px
+    line-height 36px
+    text-align center
+    text-transform uppercase
+    background-color #fff
 
 .product
   padding 60px 0 10px
