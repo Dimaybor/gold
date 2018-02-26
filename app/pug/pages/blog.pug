@@ -22,8 +22,27 @@ block content
             a.button-new__link(href='#')
               span.accordeon-arrow
               span.button-new__name New
-    .filter-mobile Filter
+    .filter-mobile.filter-main Filter
+    .filter-products
       .wrapper
+        .close-up.filter-products-close
+          .close-up__arrow
+          p.close-text Back
+        .filter-mobile__container
+          .filter-mobile__item
+            label
+              p.filter-mobile__name Type
+              select.main-select(type='text' name='type'   placeholder='Type')
+                option All
+                option News
+                option Interesting
+                option Events
+          .filter-mobile__item
+            label
+              p.filter-mobile__name Time
+              select.main-select(type='text' name='time'   placeholder='Time')
+                option New
+                option Old
   section.blog
     .wrapper
       article.main-event

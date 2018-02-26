@@ -1,131 +1,192 @@
 .gold-filter.header-indent
-    .filter
+  .filter
+    .wrapper
+      .filter__container
+        ul.filter__list
+          li.filter__item
+            a.filter__link.filter__link--active(href='#') All
+          li.filter__item
+            a.filter__link(href='#') Clothes
+          li.filter__item
+            a.filter__link(href='#') Shoes
+          li.filter__item
+            a.filter__link(href='#') Bags
+          li.filter__item
+            a.filter__link(href='#') Accessories
+          li.filter__item
+            a.filter__link(href='#') Sale
+        .filter-sex
+          form(action='#' method='post')
+            label.filter-sex__item
+              input.radio(type='radio' name='sex' value='man')
+              span.radio-custom
+              span.label Man
+            label.filter-sex__item
+              input.radio(type='radio' name='sex' value='woman' checked)
+              span.radio-custom
+              span.label Woman
+        .selection
+          .selection-list#brands Brands
+          .selection-list#sizes All sizes
+            .selection-items.selection-items--small#sizes-items
+              .wrapper
+                ul.selection-items__container
+                  li.selection-items__item
+                    a.selection-items__link(href='#') xs
+                  li.selection-items__item
+                    a.selection-items__link(href='#') s
+                  li.selection-items__item
+                    a.selection-items__link(href='#') m
+                  li.selection-items__item
+                    a.selection-items__link(href='#') l
+                  li.selection-items__item
+                    a.selection-items__link(href='#') xl
+        .button-new
+          a.button-new__link(href='#')
+            span.arrow-inactive
+            span.button-new__name.button-new__name--inactive New
+          a.button-new__link(href='#')
+            span.accordeon-arrow
+            span.button-new__name Price
+    .selection-items#brands-items
       .wrapper
-        .filter__container
-          ul.filter__list
-            li.filter__item
-              a.filter__link.filter__link--active(href='#') All
-            li.filter__item
-              a.filter__link(href='#') Clothes
-            li.filter__item
-              a.filter__link(href='#') Shoes
-            li.filter__item
-              a.filter__link(href='#') Bags
-            li.filter__item
-              a.filter__link(href='#') Accessories
-            li.filter__item
-              a.filter__link(href='#') Sale
+        ul.selection-items__container
+          li.selection-items__item
+            a.selection-items__link(href='#') All brands
+          li.selection-items__item
+            a.selection-items__link(href='#') Alexander McQueen
+          li.selection-items__item
+            a.selection-items__link(href='#') Azzedine Alaia
+          li.selection-items__item
+            a.selection-items__link(href='#') Balenciaga
+          li.selection-items__item
+            a.selection-items__link(href='#') Balmain
+          li.selection-items__item
+            a.selection-items__link(href='#') Brioni
+          li.selection-items__item
+            a.selection-items__link(href='#') Céline
+          li.selection-items__item
+            a.selection-items__link(href='#') Emilio Pucci
+          li.selection-items__item
+            a.selection-items__link(href='#') Fendi
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Balmain
+          li.selection-items__item
+            a.selection-items__link(href='#') Brioni
+          li.selection-items__item
+            a.selection-items__link(href='#') Céline
+          li.selection-items__item
+            a.selection-items__link(href='#') Emilio Pucci
+          li.selection-items__item
+            a.selection-items__link(href='#') Fendi
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Tom Ford
+          li.selection-items__item
+            a.selection-items__link(href='#') Victoria Beckham
+          li.selection-items__item
+            a.selection-items__link(href='#') Vionnet
+          li.selection-items__item
+            a.selection-items__link(href='#') Zilli
+          li.selection-items__item
+            a.selection-items__link(href='#') Balmain
+          li.selection-items__item
+            a.selection-items__link(href='#') Brioni
+          li.selection-items__item
+            a.selection-items__link(href='#') Céline
+          li.selection-items__item
+            a.selection-items__link(href='#') Emilio Pucci
+          li.selection-items__item
+            a.selection-items__link(href='#') Fendi
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Tom Ford
+          li.selection-items__item
+            a.selection-items__link(href='#') Victoria Beckham
+          li.selection-items__item
+            a.selection-items__link(href='#') Vionnet
+          li.selection-items__item
+            a.selection-items__link(href='#') Zilli
+  .filter-mobile.filter-main Filter
+  .filter-products
+    .wrapper
+      .close-up.filter-products-close
+        .close-up__arrow
+        p.close-text Back
+      .filter-mobile__container
+        .filter-mobile__item
+          label
+            p.filter-mobile__name Type
+            select.main-select(type='text' name='type'   placeholder='Type')
+              option All
+              option Clothes
+              option Shoes
+              option Bags
+              option Accessories
+              option Sale
+        .filter-mobile__item
           .filter-sex
             form(action='#' method='post')
               label.filter-sex__item
                 input.radio(type='radio' name='sex' value='man')
-                span.radio-custom
-                span.label Man
+                span.radio-custom-mobile Man
               label.filter-sex__item
                 input.radio(type='radio' name='sex' value='woman' checked)
-                span.radio-custom
-                span.label Woman
-          .selection
-            .selection-list#brands Brands
-            .selection-list#sizes All sizes
-              .selection-items.selection-items--small#sizes-items
-                .wrapper
-                  ul.selection-items__container
-                    li.selection-items__item
-                      a.selection-items__link(href='#') xs
-                    li.selection-items__item
-                      a.selection-items__link(href='#') s
-                    li.selection-items__item
-                      a.selection-items__link(href='#') m
-                    li.selection-items__item
-                      a.selection-items__link(href='#') l
-                    li.selection-items__item
-                      a.selection-items__link(href='#') xl
-          .button-new
-            a.button-new__link(href='#')
-              span.arrow-inactive
-              span.button-new__name.button-new__name--inactive New
-            a.button-new__link(href='#')
-              span.accordeon-arrow
-              span.button-new__name Price
-      .selection-items#brands-items
-        .wrapper
-          ul.selection-items__container
-            li.selection-items__item
-              a.selection-items__link(href='#') All brands
-            li.selection-items__item
-              a.selection-items__link(href='#') Alexander McQueen
-            li.selection-items__item
-              a.selection-items__link(href='#') Azzedine Alaia
-            li.selection-items__item
-              a.selection-items__link(href='#') Balenciaga
-            li.selection-items__item
-              a.selection-items__link(href='#') Balmain
-            li.selection-items__item
-              a.selection-items__link(href='#') Brioni
-            li.selection-items__item
-              a.selection-items__link(href='#') Céline
-            li.selection-items__item
-              a.selection-items__link(href='#') Emilio Pucci
-            li.selection-items__item
-              a.selection-items__link(href='#') Fendi
-            li.selection-items__item
-              a.selection-items__link(href='#') Giorgio Armani
-            li.selection-items__item
-              a.selection-items__link(href='#') Givenchy
-            li.selection-items__item
-              a.selection-items__link(href='#') Lanvin
-            li.selection-items__item
-              a.selection-items__link(href='#') Stella McCartney
-            li.selection-items__item
-              a.selection-items__link(href='#') Balmain
-            li.selection-items__item
-              a.selection-items__link(href='#') Brioni
-            li.selection-items__item
-              a.selection-items__link(href='#') Céline
-            li.selection-items__item
-              a.selection-items__link(href='#') Emilio Pucci
-            li.selection-items__item
-              a.selection-items__link(href='#') Fendi
-            li.selection-items__item
-              a.selection-items__link(href='#') Giorgio Armani
-            li.selection-items__item
-              a.selection-items__link(href='#') Givenchy
-            li.selection-items__item
-              a.selection-items__link(href='#') Lanvin
-            li.selection-items__item
-              a.selection-items__link(href='#') Stella McCartney
-            li.selection-items__item
-              a.selection-items__link(href='#') Tom Ford
-            li.selection-items__item
-              a.selection-items__link(href='#') Victoria Beckham
-            li.selection-items__item
-              a.selection-items__link(href='#') Vionnet
-            li.selection-items__item
-              a.selection-items__link(href='#') Zilli
-            li.selection-items__item
-              a.selection-items__link(href='#') Balmain
-            li.selection-items__item
-              a.selection-items__link(href='#') Brioni
-            li.selection-items__item
-              a.selection-items__link(href='#') Céline
-            li.selection-items__item
-              a.selection-items__link(href='#') Emilio Pucci
-            li.selection-items__item
-              a.selection-items__link(href='#') Fendi
-            li.selection-items__item
-              a.selection-items__link(href='#') Giorgio Armani
-            li.selection-items__item
-              a.selection-items__link(href='#') Givenchy
-            li.selection-items__item
-              a.selection-items__link(href='#') Lanvin
-            li.selection-items__item
-              a.selection-items__link(href='#') Stella McCartney
-            li.selection-items__item
-              a.selection-items__link(href='#') Tom Ford
-            li.selection-items__item
-              a.selection-items__link(href='#') Victoria Beckham
-            li.selection-items__item
-              a.selection-items__link(href='#') Vionnet
-            li.selection-items__item
-              a.selection-items__link(href='#') Zilli
+                span.radio-custom-mobile Woman
+        .filter-mobile__item
+          label
+            p.filter-mobile__name Brands
+            select.main-select(type='text' name='brands'   placeholder='Brands')
+              option All brands
+              option Alexander McQueen
+              option Azzedine Alaia
+              option Balenciaga
+              option Balmain
+              option Brioni
+              option Céline
+              option Emilio Pucci
+              option Fendi
+              option Giorgio Armani
+              option Givenchy
+              option Lanvin
+              option Stella McCartney
+              option Balmain
+              option Brioni
+              option Céline
+        .filter-mobile__item
+          label
+            p.filter-mobile__name All sizes
+            select.main-select.options-uppercase(type='text' name='sizes'   placeholder='All sizes')
+              option xs
+              option s
+              option m
+              option l
+              option xl
+        .filter-mobile__item
+          label
+            p.filter-mobile__name Time
+            select.main-select(type='text' name='time'   placeholder='Time')
+              option New
+              option Old

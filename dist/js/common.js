@@ -57,16 +57,25 @@ $(document).ready(function(){
     $(this).toggleClass('selection-list--active');
   });
 
+  $('.filter-main').on('click', function() {
+    $('.filter-products').fadeIn(0);
+    $('body').addClass('body-inactive');
+  });
+
+  $('.filter-products-close').on('click', function() {
+    $('.filter-products').fadeOut(0);
+    $('body').removeClass('body-inactive');
+  });
 
 // Відкриття попапа нажаттям на button
   $('#open-modal').click(function() {
     $('.overlay').fadeIn(100);
-    $("body").addClass("body-inactive");
+    $('body').addClass('body-inactive');
   });
 // Закриття попапа нажаттям на хрестик
   $('.close-popup').click(function() {
     $('.overlay').fadeOut(100);
-    $("body").removeClass("body-inactive");
+    $('body').removeClass('body-inactive');
   });  
 // Закриття попапа нажаттям на "сіру зону"
   $(document).mouseup(function(e){
@@ -127,8 +136,17 @@ $(document).ready(function(){
     slidesToScroll: 1,
     fade: true,
     arrows: false,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true
+        }
+      }
+    ]
   });
+
   $('.slider-nav').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -138,6 +156,12 @@ $(document).ready(function(){
     centerPadding: '0px',
     focusOnSelect: true,
     vertical: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
   });
   $('.slider__item').zoom();
 
@@ -193,5 +217,5 @@ $(document).ready(function(){
 //------------------ selectize
   
   $(function() {
-    $('.buyer-info-select').selectize();
+    $('.main-select').selectize();
   });
