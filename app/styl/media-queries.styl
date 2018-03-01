@@ -1,5 +1,10 @@
 @media screen and (max-width: 1130px)
 
+  //------------------------vintage collection
+    
+  .collection-head:after
+    height 73%
+    
   //------------------------header
     
   .open-bag
@@ -16,6 +21,39 @@
       padding 0 120px 0 100px
 
 @media screen and (max-width: 1024px)
+
+  //------------------------vintage collection
+  
+  .collection
+    
+    &-img
+      width 50%
+      height 650px
+      transform translateY(0)
+      overflow hidden
+    
+    &-roadmap
+      background-color #f4eee5
+    
+    &-decorate
+      position static
+      margin-top 50px
+      
+    &-bg
+      display none
+      
+    &-head
+      margin-bottom 0
+      background-color #f4eee5
+      
+      &:after
+        display none 
+
+  //------------------------similar-products
+  
+  .recomendations-slider
+    justify-content space-around
+    
 
   //------------------------blog
   
@@ -142,6 +180,26 @@
   .bag-mobile
     display block
 
+    //------------------------vintage collection
+      
+  .arrow-vertical
+    display none
+  
+  .collection
+    
+    &-img
+      position relative
+      height auto
+    
+    &-info
+      padding-top 20px
+    
+    &-content
+      margin-right 10px
+    
+      &__container
+        margin 30px 0 0 30px
+        
   //------------------------filter
   
   .filter
@@ -210,9 +268,32 @@
       
   .one-product__slider
     position relative
+    
+    .auxiliary-info
+      display block
       
   .product-buy__button
     width 150px
+    
+  .recomendations-slider
+    width 270px
+       
+    .product-item
+      margin 0 auto
+      
+    .slick-dots
+      bottom -50px
+      left -18px
+      width 80px
+  
+  .recomendations-container
+    display flex
+    justify-content center
+    
+  .similar-products + .recently-viewed
+    margin-top 60px
+    padding-bottom 120px
+  
     
   //------------------------blog
     
@@ -409,6 +490,40 @@
       
 @media screen and (max-width: 650px)
 
+  //------------------------vintage collection
+  
+  .collection
+    
+    &-head
+      background-color transparent
+      
+      .auxiliary-info
+        display block
+      
+    &-content
+      margin 0
+      padding 0 25px
+      width 100%
+
+      &__container
+        margin-left 0
+        max-width 100%
+   
+    &-info
+      flex-direction column
+      align-items center
+    
+    &-img
+      order -1
+      width 320px
+      transform translateY(0)
+      
+      &__mobile
+        display block
+        
+      &__desktop
+        display none
+
   //------------------------offer
   
   .offer
@@ -453,8 +568,6 @@
       &__item
         margin-top 20px
      
-
-
   //------------------------main-offer
     
   .main-offer
@@ -479,7 +592,17 @@
       
     &__item
       display none
-
+      
+  //------------------------similar product
+    
+  .similar-products
+    position relative
+    padding-bottom 40px
+    
+    &__link
+      position absolute
+      bottom 0
+      right 0
 
 @media screen and (max-width: 480px)
 
@@ -497,6 +620,39 @@
       
       & + &
         margin-top 3px
+        
+  //------------------------vintage collection
+  
+  .collection
+    
+    .one-product
+      padding-top 35px
+    
+    &-photos
+      flex-direction column
+      flex-wrap nowrap
+      align-items center
+      
+      &__video
+        width 320px
+        
+      &__item
+        width 320px
+    
+    &-decorate
+      flex-direction column
+      align-items center
+      
+      &__item
+        width 320px
+      
+    
+    &-content
+      padding 0
+      
+    &-info
+      padding-top 0
+      
   //------------------------blog
     
   .blog
@@ -524,8 +680,6 @@
   .publications
     &__content .arrow-link
       margin-left 80%
-  
-  
       
   .content-data + .main-heading
     margin-right 0

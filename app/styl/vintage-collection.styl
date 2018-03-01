@@ -1,7 +1,6 @@
 //----------------Collection
 .vintage-recommendations
   background-color #f7f6f2
-  transform translateY(-250px)
   
   & .recently-viewed
     padding-bottom 0
@@ -9,7 +8,23 @@
 .collection
   position relative
   z-index 5
-  transform translateY(-350px)
+  
+  &-decorate
+    position absolute
+    left 0
+    right 0
+    bottom -350px
+    z-index 999
+    display flex
+    justify-content center
+    margin 0 auto
+    width 100%
+    max-width 950px
+    line-height 0
+    
+    &__item
+      width 50%
+      height auto
   
   & .one-product
     padding-top 90px
@@ -35,7 +50,7 @@
   &-head
     position relative
     z-index 2
-    margin 0 auto 
+    margin 0 auto 350px
     width 100%
     max-width 1440px
 
@@ -44,12 +59,12 @@
       z-index 3
       position absolute
       display block
-      bottom 0
+      top 0
       right 0
       width 100%
-      height 700px
+      height 66%
       background-color #fff
-      transform skewY(-22.5deg) translateY(200px)
+      transform skewY(-22.5deg) translateY(80%)
       transform-origin 100%
   
   &-info
@@ -71,8 +86,12 @@
   &-img
     z-index 1
     width 498px
-    height 1024px
+    height auto
     transform translateY(-3%)
+    line-height 0
+    
+    &__mobile
+      display none
   
   &-photos
     display flex

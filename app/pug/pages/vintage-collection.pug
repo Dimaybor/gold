@@ -4,6 +4,10 @@ block title
   | Vintage Collection
 block content
   include header
+  .back
+    a.close-up(href='vintage.html')
+      .close-up__arrow
+      p.close-text Back
   .collection-roadmap.header-indent
       .wrapper
         .roadmap
@@ -25,14 +29,18 @@ block content
               a.product-buy__button.main-btn(href='#') shop now
           a.arrow-vertical(href='#')
         .collection-img
-          img(src='img/collection-girl.png' alt='alt')
+          img.collection-img__mobile(src='img/collection-girl-mobile.png' alt='alt')
+          img.collection-img__desktop(src='img/collection-girl.png' alt='alt')
+          .auxiliary-info xs
+          .auxiliary-info.auxiliary-info--price $ 329
+      .collection-decorate
+        .collection-decorate__item
+          img(src='img/collection-1.png' alt='alt')
+        .collection-decorate__item
+          img(src='img/collection-2.png' alt='alt')
   section.collection
     .wrapper
       .collection-photos
-        .collection-photos__item
-          img(src='img/collection-1.png' alt='alt')
-        .collection-photos__item
-          img(src='img/collection-2.png' alt='alt')
         .collection-photos__video
           img(src='img/collection-video.png' alt='alt')
         .collection-photos__item
@@ -96,122 +104,130 @@ block content
           a.similar-products__link(href='#')
             img(src='img/4cub.svg' alt='alt') 
             | all comissions
-        .similar-products__content
-          ul.product-list
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/vintage-1.png' alt='alt')
-              a.product-title(href='#') Long printed jumpsuit
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/vintage-2.png' alt='alt')
-              a.product-title(href='#') Cross-body small bag
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/vintage-3.png' alt='alt')
-              a.product-title(href='#') Long printed jumpsuit
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/vintage-4.png' alt='alt')
-              a.product-title(href='#') Cross-body small bag
-              p.product-price $ 259
+        .similar-products__content.recomendations-container
+          ul.product-list.recomendations-slider
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/vintage-1.png' alt='alt')
+                a.product-title(href='#') Long printed jumpsuit
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/vintage-2.png' alt='alt')
+                a.product-title(href='#') Cross-body small bag
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/vintage-3.png' alt='alt')
+                a.product-title(href='#') Long printed jumpsuit
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/vintage-4.png' alt='alt')
+                a.product-title(href='#') Cross-body small bag
+                p.product-price $ 259
       .recently-viewed
         h2.main-heading Recently viewed
-        .recently-viewed__content
-          ul.product-list
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/product-6.png' alt='alt')
-              a.product-title(href='#') Long printed jumpsuit
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/product-16.png' alt='alt')
-              a.product-title(href='#') Cross-body small bag
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/product-4.png' alt='alt')
-              a.product-title(href='#') Long printed jumpsuit
-              p.product-price $ 259
-            li.product-item
-              .product-item__img
-                .size-mobile
-                  a.size-mobile__link(href='one-staff.html')
-                    .size-mobile__item xs
-                .product-size
-                  a.product-size__link(href='one-staff.html')
-                    p.product-size__content Size
-                      span xs
-                    span.product-size__arrow
-                      span.product-size__line
-                img(src='img/product-15.png' alt='alt')
-              a.product-title(href='#') Long printed jumpsuit
-              p.product-price $ 259
+        .recently-viewed__content.recomendations-container
+          ul.product-list.recomendations-slider
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/product-6.png' alt='alt')
+                a.product-title(href='#') Long printed jumpsuit
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/product-16.png' alt='alt')
+                a.product-title(href='#') Cross-body small bag
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/product-4.png' alt='alt')
+                a.product-title(href='#') Long printed jumpsuit
+                p.product-price $ 259
+            li
+              .product-item
+                .product-item__img
+                  .size-mobile
+                    a.size-mobile__link(href='one-staff.html')
+                      .size-mobile__item xs
+                  .product-size
+                    a.product-size__link(href='one-staff.html')
+                      p.product-size__content Size
+                        span xs
+                      span.product-size__arrow
+                        span.product-size__line
+                  img(src='img/product-15.png' alt='alt')
+                a.product-title(href='#') Long printed jumpsuit
+                p.product-price $ 259
   include footer

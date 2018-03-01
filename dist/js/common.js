@@ -163,9 +163,31 @@ $(document).ready(function(){
       }
     ]
   });
+
   $('.slider__item').zoom();
 
-});
+  function checkWidth() {
+    if ($(window).width() > 768) {
+        $('.recomendations-slider').slick('unslick'),
+        $('.slider__item').trigger('zoom.destroy');
+    } else {
+        $('.recomendations-slider').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          arrows: false,
+          dots: true
+        });
+    }
+  };
+ 
+  $(function(){
+      checkWidth();
+      $(window).on('resize', function(){checkWidth()});
+  });
+
+  
+
 
 
 //----------------- Forms
@@ -219,3 +241,5 @@ $(document).ready(function(){
   $(function() {
     $('.main-select').selectize();
   });
+
+});
