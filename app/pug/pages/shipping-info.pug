@@ -4,6 +4,10 @@ block title
   | Shipping info
 block content
   include header
+  .back
+    a.close-up(href='bag.html')
+      .close-up__arrow
+      p.close-text Cart
   .shipping-roadmap.header-indent
     .wrapper
       .roadmap
@@ -197,7 +201,7 @@ block content
             .payment
               p.shipping-subtitle Card info
               .buyer-info
-                .buyer-info-row
+                .buyer-info-row.buyer-info-row--wrap
                   label.buyer-info__item
                     p.buyer-info__label Name on card
                     input.buyer-info-field.buyer-info-field--long(type='text' name='card' placeholder=' ')

@@ -81,6 +81,36 @@
     &__about
       margin-top 30px
       max-width 650px
+      
+  //------------------------bag
+    
+  .buyer-info
+    
+    &__item + &__item
+      margin-left 40px
+    
+    &-field--street
+      width 470px
+    
+    &-field--long
+      width 230px
+      
+    &-field--short
+      width 200px
+
+    &__item + &__checkbox
+      margin-left 25px
+      
+    &__checkbox + &__item
+      margin-left 35px
+      
+    &-row--wrap
+      flex-wrap wrap
+      align-content space-between
+      min-height 180px
+      
+    //.input-container
+    //  margin-top 30px
 
 
 @media screen and (max-width: 768px)
@@ -180,7 +210,113 @@
   .bag-mobile
     display block
 
-    //------------------------vintage collection
+  //------------------------bag
+  
+  .in-bag
+    
+    &__item
+      width 50%
+    
+    &__item:last-child
+      width 50%
+      
+    &__about
+      
+      & .in-bag__color-size
+        display block
+      
+    &__content--indent
+      display flex
+      flex-direction column
+      justify-content center
+      padding-top 0
+      padding-left 100px
+    
+    &__header--hide
+      display none
+      
+    &__header--indent
+      padding-left 100px
+      
+    &__item:nth-child(2)
+      display none
+      
+    &__container + .bag-payment
+      margin-top 25px
+      
+  .bag-payment
+    flex-direction column-reverse
+    
+    &__money
+      justify-content center
+      width 100%
+      margin-bottom 25px
+      
+  .buyer-info
+    display flex
+    flex-direction column
+    align-items center
+    padding-top 15px
+    
+    & + .button-container
+      margin-top 30px
+    
+    &-row
+      flex-direction column
+      align-items flex-start
+      width 270px
+      
+      & + &
+        margin-top 0
+    
+    &-field--street
+      width 270px
+    
+    &-field--long
+      width 270px
+      
+    &-field--short
+      width 270px
+      
+    &__item + &__item
+      margin 15px 0 0
+      
+    &__item + &__checkbox
+      margin-left 0
+      margin-top 10px
+    
+    &__checkbox + &__item
+      margin-left 0
+      
+    & + .shipping-subtitle
+      margin-top 40px
+      
+  //------------------------shipping
+    
+  .shipping
+    padding-top 30px
+    
+    &-subtitle
+      border-bottom none
+      
+    &-header
+      font-size 30px
+      line-height 40px
+      
+  .form-roadmap
+    display flex
+    justify-content space-between
+    
+    .auxiliary-link
+      margin-left 0
+
+  .cart-summary
+    margin-top 0
+      
+    &__container
+      padding 25px 15px
+
+  //------------------------vintage collection
       
   .arrow-vertical
     display none
@@ -364,6 +500,7 @@
     
     &__quantity
       margin 0 10px 0 0
+      
   //------------------------main-offer
     
   .main-offer
@@ -489,6 +626,86 @@
     
       
 @media screen and (max-width: 650px)
+
+  //------------------------shipping
+    
+  .cart-summary
+    
+    &__container
+      flex-direction column
+      align-items center
+      padding 0
+      border-width 1px 0
+      
+    &__items
+      display none
+    
+  .summary-amount
+    padding 20px 0
+    max-width 90%
+  
+  .shipping
+
+    &-steps
+      padding 35px 0 55px
+      
+    &-heading + &-subtitle
+      margin-top 30px
+      
+  .choose-method
+    flex-direction column
+    padding-top 10px
+    
+    &__hint
+      margin-left 15px
+    
+    &__item + &__item
+      margin-top 20px
+
+  //------------------------bag
+    
+  .buyer-info
+    padding-top 0
+  
+  .in-bag  
+    
+    &__content--indent
+      padding-left 50px
+    
+    &__header--indent
+      padding-left 50px
+  
+    &__item
+      width 100%
+
+      &:last-child
+        display none
+        
+    &__about
+      
+      .price-inner
+        display flex
+    
+    &__img + &__about
+      margin-left 10px
+      
+    .bag-payment
+      
+      .auxiliary-link
+        margin-top 25px
+      
+      &__inner
+        margin 0 0 25px
+      
+      &__money
+        flex-direction column-reverse
+        margin-bottom 0
+        
+      &__pay
+        margin-left 35px
+      
+      &__amount span
+        margin-left 12px
 
   //------------------------vintage collection
   
@@ -621,6 +838,38 @@
       & + &
         margin-top 3px
         
+  //------------------------bag
+    
+  .shipping-heading
+    flex-direction column
+    
+  .step-number
+    margin 0
+    padding 0 0 10px
+    
+
+  //------------------------shipping
+    
+  .shipping
+    padding-top 25px
+    
+  .button-container
+    justify-content center
+    border none
+    
+    .main-btn
+      width 270px
+    
+  .cart-summary__container
+    margin 0 -25px
+    
+  .summary-amount
+    padding 20px 25px 25px
+    max-width 100%
+    
+    &__item--line
+      border-width 2px
+    
   //------------------------vintage collection
   
   .collection

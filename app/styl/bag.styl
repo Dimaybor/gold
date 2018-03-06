@@ -19,20 +19,20 @@
     font-size 13px
     line-height 50px
     color #838383
-    border 0px solid #eaeaea
-    border-bottom-width 1px
     
   &__content
     display flex
     align-items center
     min-height 126px
+    border 0px solid #eaeaea
+    border-top-width 1px
     
     &--indent
       padding-top 35px
       align-items flex-start
     
-    & .in-bag__img + .in-bag__about
-      margin-left 32px
+  &__img + &__about
+    margin-left 32px
 
   &__img 
     width 88px
@@ -46,7 +46,16 @@
     & span
       display block
       font-size 13px
+      line-height 18px
       color #838383
+      
+    .in-bag__color-size
+      display none
+      font-size 14px
+      line-height 26px
+      
+    .price-inner
+      display none
       
   &__price
     font-weight bold
@@ -56,6 +65,9 @@
     
   & a
     font-weight normal
+
+.price-inner
+  display flex
 
 .bag-payment
   display flex
@@ -71,8 +83,9 @@
     display block
     width 228px
     height 44px
-    
-  &__paypal + &__amount
+  
+  &__inner
+    display flex
     margin-left 35px
 
   &__amount
@@ -84,14 +97,12 @@
       font-size 28px 
       font-weight bold
       color #b6926f
-  
-  &__amount + &__pay
-    margin-left 45px
 
   &__pay
     display flex
     justify-content center
     align-items center
+    margin-left 45px
     width 110px
     height 55px
     color #b6926f
