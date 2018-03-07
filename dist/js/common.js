@@ -128,8 +128,7 @@ $(document).ready(function(){
   });
 
 
-
-//----------------Slider-some-product
+  //----------------Slider-some-product
 
   $('.slider').slick({
     slidesToShow: 1,
@@ -186,11 +185,7 @@ $(document).ready(function(){
       $(window).on('resize', function(){checkWidth()});
   });
 
-  
-
-
-
-//----------------- Forms
+  //----------------- Forms
 
   $("#btnStep-1").on('click', function(e) {
     e.preventDefault();
@@ -220,7 +215,7 @@ $(document).ready(function(){
     $('#infoStep-2').removeClass('shipping-informations__step--active');
   });
 
-//------------------ Cards
+  //------------------ Cards
 
   $(".payment").not(":first").hide();
   $(".buyer-info__payment").click(function() {
@@ -229,14 +224,20 @@ $(document).ready(function(){
     $(".payment").hide().eq($(this).index()).fadeIn(100);
   }).eq(0).addClass("payment-active");
 
+  //----------------form show
 
-//------------------ securiti code
+  //$('.auxiliary-link__show').click(function(e) {
+  //  e.preventDefault();
+  //  $(".security-code").toggleClass('security-code--active');
+  //});
+
+  //------------------ securiti code
 
   $('.security-toggle').click(function() {
     $(".security-code").toggleClass('security-code--active');
   });
 
-//------------------ selectize
+  //------------------ selectize
   
   $(function() {
     $('.main-select').selectize();

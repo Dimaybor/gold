@@ -103,14 +103,15 @@
       
     &__checkbox + &__item
       margin-left 35px
-      
-    &-row--wrap
-      flex-wrap wrap
-      align-content space-between
-      min-height 180px
-      
-    //.input-container
-    //  margin-top 30px
+
+
+@media screen and (max-width: 819px)
+
+  .buyer-info-row--wrap
+    flex-wrap wrap
+    align-content space-between
+    justify-content space-around
+    min-height 180px
 
 
 @media screen and (max-width: 768px)
@@ -213,6 +214,7 @@
   //------------------------bag
   
   .in-bag
+    padding-bottom 45px
     
     &__item
       width 50%
@@ -266,6 +268,10 @@
       align-items flex-start
       width 270px
       
+      &--indent
+        flex-direction row
+        width 100%
+      
       & + &
         margin-top 0
     
@@ -284,6 +290,9 @@
     &__item + &__checkbox
       margin-left 0
       margin-top 10px
+      
+    &__item + .input-container
+      margin 15px 0 0
     
     &__checkbox + &__item
       margin-left 0
@@ -291,10 +300,22 @@
     & + .shipping-subtitle
       margin-top 40px
       
+  .auxiliary-link__show
+    display block
+      
   //------------------------shipping
     
   .shipping
     padding-top 30px
+    
+    &-informations
+      margin-top 20px
+      
+      &__item
+        display none
+      
+      &__step
+        margin-top 0
     
     &-subtitle
       border-bottom none
@@ -304,11 +325,30 @@
       line-height 40px
       
   .form-roadmap
+    position relative
     display flex
     justify-content space-between
+    padding-left 20px
+    
+    &:before
+      content ''
+      position absolute
+      bottom 45%
+      left 0
+      width 9px
+      height 5px
+      border 3px solid #b6926f
+      border-width 0 0 3px 3px
+      transform rotate(-45deg)
     
     .auxiliary-link
       margin-left 0
+      
+    &__container
+      display flex
+    
+      .auxiliary-link
+        display block
 
   .cart-summary
     margin-top 0
@@ -341,14 +381,14 @@
   .filter
     display none
     
-  .filter-mobile
-    display block
-    height 50px
-    font-size 13px
-    line-height 50px
-    color #fff
-    text-align center
-    background-color #d7c099
+    &-mobile
+      display block
+      height 50px
+      font-size 13px
+      line-height 50px
+      color #fff
+      text-align center
+      background-color #d7c099
 
   //----------------------- Product
   
@@ -430,7 +470,6 @@
     margin-top 60px
     padding-bottom 120px
   
-    
   //------------------------blog
     
   .blog .main-event
@@ -623,8 +662,7 @@
     
   .close
     display none
-    
-      
+     
 @media screen and (max-width: 650px)
 
   //------------------------shipping
@@ -666,6 +704,17 @@
     
   .buyer-info
     padding-top 0
+    
+    & + .payment
+      margin-top 40px
+    
+    &-row--indent
+      flex-direction column
+      padding-left 0
+      width 270px
+    
+    &__payment + &__payment
+      margin 20px 0 0
   
   .in-bag  
     
@@ -689,23 +738,23 @@
     &__img + &__about
       margin-left 10px
       
-    .bag-payment
+  .bag-payment
+    
+    .auxiliary-link
+      margin-top 25px
+    
+    &__inner
+      margin 0 0 25px
+    
+    &__money
+      flex-direction column-reverse
+      margin-bottom 0
       
-      .auxiliary-link
-        margin-top 25px
-      
-      &__inner
-        margin 0 0 25px
-      
-      &__money
-        flex-direction column-reverse
-        margin-bottom 0
-        
-      &__pay
-        margin-left 35px
-      
-      &__amount span
-        margin-left 12px
+    &__pay
+      margin-left 35px
+    
+    &__amount span
+      margin-left 12px
 
   //------------------------vintage collection
   
@@ -1011,4 +1060,10 @@
     
     & .arrow-link
       margin-left 90%
+      
+  .security-code
+    left -3.5%
+    
+    &:after
+      right 19.5%
     
