@@ -1,4 +1,4 @@
-.gold-filter.header-indent
+.gold-filter
   .filter
     .wrapper
       .filter__container
@@ -30,7 +30,7 @@
           .selection-list#sizes All sizes
             .selection-items.selection-items--small#sizes-items
               .wrapper
-                ul.selection-items__container
+                ul.selection-items__container.selection-items__container--small
                   li.selection-items__item
                     a.selection-items__link(href='#') xs
                   li.selection-items__item
@@ -50,9 +50,9 @@
             span.button-new__name Price
     .selection-items#brands-items
       .wrapper
-        ul.selection-items__container
+        ul.selection-items__container.selection-items__container--big
           li.selection-items__item
-            a.selection-items__link(href='#') All brands
+            a.selection-items__link.selection-items__link--active(href='#') All brands
           li.selection-items__item
             a.selection-items__link(href='#') Alexander McQueen
           li.selection-items__item
@@ -129,6 +129,66 @@
             a.selection-items__link(href='#') Vionnet
           li.selection-items__item
             a.selection-items__link(href='#') Zilli
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Balmain
+          li.selection-items__item
+            a.selection-items__link(href='#') Brioni
+          li.selection-items__item
+            a.selection-items__link(href='#') Céline
+          li.selection-items__item
+            a.selection-items__link(href='#') Emilio Pucci
+          li.selection-items__item
+            a.selection-items__link(href='#') Fendi
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Tom Ford
+          li.selection-items__item
+            a.selection-items__link(href='#') Victoria Beckham
+          li.selection-items__item
+            a.selection-items__link(href='#') Vionnet
+          li.selection-items__item
+            a.selection-items__link(href='#') Zilli
+          li.selection-items__item
+            a.selection-items__link(href='#') Balmain
+          li.selection-items__item
+            a.selection-items__link(href='#') Brioni
+          li.selection-items__item
+            a.selection-items__link(href='#') Céline
+          li.selection-items__item
+            a.selection-items__link(href='#') Emilio Pucci
+          li.selection-items__item
+            a.selection-items__link(href='#') Fendi
+          li.selection-items__item
+            a.selection-items__link(href='#') Giorgio Armani
+          li.selection-items__item
+            a.selection-items__link(href='#') Givenchy
+          li.selection-items__item
+            a.selection-items__link(href='#') Lanvin
+          li.selection-items__item
+            a.selection-items__link(href='#') Stella McCartney
+          li.selection-items__item
+            a.selection-items__link(href='#') Tom Ford
+          li.selection-items__item
+            a.selection-items__link(href='#') Victoria Beckham
+          li.selection-items__item
+            a.selection-items__link(href='#') Vionnet
+          li.selection-items__item
+            a.selection-items__link(href='#') Zilli
   .filter-mobile.filter-main Filter
   .filter-products
     .wrapper
@@ -137,9 +197,10 @@
         p.close-text Back
       .filter-mobile__container
         .filter-mobile__item
-          label
-            p.filter-mobile__name Type
-            select.main-select(type='text' name='type'   placeholder='Type')
+          label.filter-mobile__name
+            span.filter-mobile__label Type
+            select.main-select(name='type')
+              option.option-hide(value='') Type
               option All
               option Clothes
               option Shoes
@@ -156,9 +217,10 @@
                 input.radio(type='radio' name='sex' value='woman' checked)
                 span.radio-custom-mobile Woman
         .filter-mobile__item
-          label
-            p.filter-mobile__name Brands
-            select.main-select(type='text' name='brands'   placeholder='Brands')
+          label.filter-mobile__name 
+            span.filter-mobile__label Brands
+            select.main-select(name='brands')
+              option.option-hide(value='') Brands
               option All brands
               option Alexander McQueen
               option Azzedine Alaia
@@ -176,17 +238,19 @@
               option Brioni
               option Céline
         .filter-mobile__item
-          label
-            p.filter-mobile__name All sizes
-            select.main-select.options-uppercase(type='text' name='sizes'   placeholder='All sizes')
+          label.filter-mobile__name 
+            span.filter-mobile__label All sizes
+            select.main-select.options-uppercase(name='sizes')
+              option.option-hide(value='') Size
               option xs
               option s
               option m
               option l
               option xl
         .filter-mobile__item
-          label
-            p.filter-mobile__name Time
-            select.main-select(type='text' name='time'   placeholder='Time')
+          label.filter-mobile__name 
+            span.filter-mobile__label Time
+            select.main-select(name='time')
+              option.option-hide(value='') Time
               option New
               option Old

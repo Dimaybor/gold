@@ -72,6 +72,9 @@
     
   &-step--hide
     display none
+    
+  &-step:last-child
+    min-height 313px
   
   &-heading
     display flex
@@ -166,9 +169,10 @@
       display block
       
   .form-roadmap
-    height 50px
-    line-height 50px
+    align-items center
+    min-height 50px
     border-bottom 1px solid #eaeaea
+    line-height 16px
 
 //-------------- Step 2
 
@@ -255,13 +259,13 @@
           color transparent
     
   &__label
+    display block
     margin-bottom 5px
     font-size 13px
     color #838383
     
   &__img
     max-height 40px
-    line-height 0
     
   &__payment
     cursor pointer
@@ -269,6 +273,9 @@
 
     & + &
       margin-left 100px
+      
+    .label
+      line-height 0
 
 .main-select
   max-width 100%

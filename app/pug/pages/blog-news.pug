@@ -8,7 +8,7 @@ block content
     a.close-up(href='blog.html')
       .close-up__arrow
       p.close-text Back
-  .blog-news-roadmap.header-indent
+  .blog-news-roadmap
     .wrapper
       .roadmap
         a.roadmap__item.roadmap__item--inactive(href='#') Main
@@ -55,13 +55,12 @@ block content
         aside.side-bar
           a.side-bar__social(href='#') fb
           a.side-bar__social(href='#') vk
-          section.sign-up
+          .sign-up
             form(action='#' method='post')
-              label
-                p.sign-up__name Sign up for our exclusive newsletter
-                  .sign-up__container
-                    input.sign-up__email.form-ask__item(type='email' autocomplete='on' name='login' placeholder='Enter your Email')
-                    input.form-ask__btn.form-ask__item(type='submit' value='submit')
+              label.sign-up__name Sign up for our exclusive newsletter
+              .sign-up__container
+                input.sign-up__email.form-ask__item(type='email' autocomplete='on' name='login' placeholder='Enter your Email')
+                input.form-ask__btn.form-ask__item(type='submit' value='submit')
           .news-container
             a.side-news(href='#')
               img(src='img/side-bar-1.png' alt='alt')

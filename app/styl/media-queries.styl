@@ -49,12 +49,6 @@
       &:after
         display none 
 
-  //------------------------similar-products
-  
-  .recomendations-slider
-    justify-content space-around
-    
-
   //------------------------blog
   
   .publications
@@ -62,8 +56,8 @@
     justify-content flex-start
     align-items center
     
-    &__content .arrow-link
-      margin-left 85%
+    &__content .link-container
+      left 85%
 
 @media screen and (max-width: 960px)
 
@@ -114,7 +108,15 @@
     min-height 180px
 
 
+@media screen and (min-width: 768px)
+
+  .filter-products
+    display none
+    
 @media screen and (max-width: 768px)
+
+  body
+    padding-top 50px
 
   //------------------------header
 
@@ -131,9 +133,6 @@
     
     .close-up
       height 50px
-    
-  .header-indent
-    margin-top 50px
 
   .main-header--scroll
     height 50px
@@ -161,7 +160,7 @@
   .open-nav
     position fixed
     left -100vw
-    transition all 0.05s
+    transition all 0.2s ease-out
     
     &--active
       transform translate(100vw, -50px)
@@ -311,8 +310,22 @@
     &-informations
       margin-top 20px
       
+      .form-roadmap:before
+        content ''
+        position absolute
+        top 30%
+        left 0
+        width 9px
+        height 5px
+        border 3px solid #b6926f
+        border-width 0 0 3px 3px
+        transform translateY(50%) rotate(-45deg)
+      
       &__item
         display none
+        
+        &--active
+          display block
       
       &__step
         margin-top 0
@@ -329,17 +342,6 @@
     display flex
     justify-content space-between
     padding-left 20px
-    
-    &:before
-      content ''
-      position absolute
-      bottom 45%
-      left 0
-      width 9px
-      height 5px
-      border 3px solid #b6926f
-      border-width 0 0 3px 3px
-      transform rotate(-45deg)
     
     .auxiliary-link
       margin-left 0
@@ -568,8 +570,8 @@
       max-width 590px
       min-height 0
       
-      & .arrow-link
-        margin 40px 0 0 87%
+      & .link-container
+        left 87%
 
 
   //------------------------contacts and faq
@@ -615,6 +617,12 @@
   .accordeon-inner
     padding-left 60px
 
+  //------------------------notification
+    
+  .general-heading
+    font-size 30px
+    line-height 40px
+    
   //------------------------footer
     
   .main-footer
@@ -683,6 +691,9 @@
     max-width 90%
   
   .shipping
+    
+    &-step:last-child
+      min-height 412px
 
     &-steps
       padding 35px 0 55px
@@ -902,6 +913,9 @@
   .shipping
     padding-top 25px
     
+    &-step:last-child
+      min-height 447px
+    
   .button-container
     justify-content center
     border none
@@ -976,8 +990,8 @@
       margin 0 -25px
 
   .publications
-    &__content .arrow-link
-      margin-left 80%
+    &__content .link-container
+      left 80%
       
   .content-data + .main-heading
     margin-right 0
@@ -1021,9 +1035,14 @@
   .block-content
     align-items flex-start
     
-    &__wrapper .arrow-link
-      margin-left 80%
+    &__wrapper .link-container
+      left 80%
       
+  //------------------------notification
+    
+  .notification
+    padding 50px 0 120px
+
   //------------------------footer
    
   .popup

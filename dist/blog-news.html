@@ -7,8 +7,8 @@
     </title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/selectize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
   </head>
   <body>
@@ -40,8 +40,14 @@
               <div class="user-bag__number">My bag (4)</div>
             </div>
             <div class="open-bag">
-              <div class="open-bag__container"><span class="open-bag__close"></span>
-                <div class="open-bag__product"><img src="img/bag-photo.png" alt="alt">
+              <div class="open-bag__container">
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
+                  <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
+                </div>
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
+                  <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
+                </div>
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
                   <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
                 </div>
                 <div class="open-bag__price">Total:<span>$ 330.00</span></div>
@@ -55,7 +61,7 @@
     <div class="back"><a class="close-up" href="blog.html">
         <div class="close-up__arrow"></div>
         <p class="close-text">Back</p></a></div>
-    <div class="blog-news-roadmap header-indent">
+    <div class="blog-news-roadmap">
       <div class="wrapper">
         <div class="roadmap"><a class="roadmap__item roadmap__item--inactive" href="#">Main</a><a class="roadmap__item roadmap__item--inactive" href="#">Blog</a><a class="roadmap__item" href="#">Peace of news</a></div>
       </div>
@@ -91,18 +97,15 @@
             <p class="blog-content__text">Donec pharetra gravida leo vitae pretium. Curabitur mauris libero, vehicula at euismod sit amet, porta vitae ante. Nulla ullamcorper turpis in pretium iaculis. Vestibulum pulvinar, sapien sit amet venenatis eleifend, ante felis gravida diam, eu pellentesque dui velit nec sapien. Nam sodales tincidunt rhoncus. Praesent sit amet tempus elit, non fermentum nisi. Morbi ut vulputate ligula. Cras iaculis tincidunt est, quis ultrices erat iaculis ut. Mauris vulputate maximus fringilla. Quisque id est in justo laoreet auctor. Sed tincidunt porttitor nulla a tincidunt. Ut viverra fermentum diam eu eleifend. Donec lorem nulla, dignissim eu malesuada quis, ullamcorper vitae erat.</p>
           </div>
           <aside class="side-bar"><a class="side-bar__social" href="#">fb</a><a class="side-bar__social" href="#">vk</a>
-            <section class="sign-up">
+            <div class="sign-up">
               <form action="#" method="post">
-                <label>
-                  <p class="sign-up__name">Sign up for our exclusive newsletter
-                    <div class="sign-up__container">
-                      <input class="sign-up__email form-ask__item" type="email" autocomplete="on" name="login" placeholder="Enter your Email">
-                      <input class="form-ask__btn form-ask__item" type="submit" value="submit">
-                    </div>
-                  </p>
-                </label>
+                <label class="sign-up__name">Sign up for our exclusive newsletter</label>
+                <div class="sign-up__container">
+                  <input class="sign-up__email form-ask__item" type="email" autocomplete="on" name="login" placeholder="Enter your Email">
+                  <input class="form-ask__btn form-ask__item" type="submit" value="submit">
+                </div>
               </form>
-            </section>
+            </div>
             <div class="news-container"><a class="side-news" href="#"><img src="img/side-bar-1.png" alt="alt">
                 <p class="side-news__name">Summer portraits</p>
                 <p class="side-news__text">Lorem ipsum dolor sit amet,   consectetur adipiscing elit.</p></a><a class="side-news" href="#"><img src="img/side-bar-2.png" alt="alt">
@@ -198,10 +201,10 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.zoom.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

@@ -31,11 +31,22 @@ $(document).ready(function(){
 
 
 // -------- Корзина
+
   $(".user-bag__container").on('click', function() {
     $('.open-bag').toggleClass('open-bag--active');
   });
+
   $(".open-bag__close").on('click', function() {
-    $('.open-bag').removeClass('open-bag--active');
+    var $this = $(this),
+        $closeProduct = $this.parent('.open-bag__product');
+    $closeProduct.remove();
+  });
+
+  $(document).mouseup(function(e){
+    var other = $('.open-bag, .user-bag__container');
+    if(e.target!=other[0]&&other.has(e.target).length === 0) {
+      $('.open-bag').removeClass('open-bag--active');
+    };
   });
 
 // -------- Фільтр
@@ -57,15 +68,28 @@ $(document).ready(function(){
     $(this).toggleClass('selection-list--active');
   });
 
+  $(document).mouseup(function(e){
+    var selectList = $('.selection-list, .selection-items');
+    if(e.target!=selectList[0]&&selectList.has(e.target).length === 0) {
+      $('.selection-list').removeClass('selection-list--active');
+      $('.selection-items').removeClass('selection-items--active');
+    };
+  });
+
+
   $('.filter-main').on('click', function() {
-    $('.filter-products').fadeIn(0);
+    $('.filter-products').addClass('filter-products--active');
     $('body').addClass('body-inactive');
   });
 
   $('.filter-products-close').on('click', function() {
-    $('.filter-products').fadeOut(0);
+    $('.filter-products').removeClass('filter-products--active');
     $('body').removeClass('body-inactive');
   });
+
+//  $(window).width() > 768 {
+//    $('body').removeClass('body-inactive');
+//  }
 
 // Відкриття попапа нажаттям на button
   $('#open-modal').click(function() {
@@ -226,21 +250,24 @@ $(document).ready(function(){
 
   //----------------form show
 
-  //$('.auxiliary-link__show').click(function(e) {
-  //  e.preventDefault();
-  //  $(".security-code").toggleClass('security-code--active');
-  //});
+  $('.auxiliary-link__show').click(function(e) {
+    e.preventDefault();
+    var $formRoadmap = $(this).closest('.form-roadmap'),
+        $itemShow = $formRoadmap.siblings('.shipping-informations__item');
+    $itemShow.toggleClass('shipping-informations__item--active');
+  });
 
   //------------------ securiti code
 
   $('.security-toggle').click(function() {
-    $(".security-code").toggleClass('security-code--active');
+    $('.security-code').toggleClass('security-code--active');
   });
 
   //------------------ selectize
   
   $(function() {
     $('.main-select').selectize();
+      placeholder: true
   });
 
 });

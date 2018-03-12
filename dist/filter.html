@@ -1,5 +1,5 @@
 
-<div class="gold-filter header-indent">
+<div class="gold-filter">
   <div class="filter">
     <div class="wrapper">
       <div class="filter__container">
@@ -26,7 +26,7 @@
           <div class="selection-list" id="sizes">All sizes
             <div class="selection-items selection-items--small" id="sizes-items">
               <div class="wrapper">
-                <ul class="selection-items__container">
+                <ul class="selection-items__container selection-items__container--small">
                   <li class="selection-items__item"><a class="selection-items__link" href="#">xs</a></li>
                   <li class="selection-items__item"><a class="selection-items__link" href="#">s</a></li>
                   <li class="selection-items__item"><a class="selection-items__link" href="#">m</a></li>
@@ -42,8 +42,8 @@
     </div>
     <div class="selection-items" id="brands-items">
       <div class="wrapper">
-        <ul class="selection-items__container">
-          <li class="selection-items__item"><a class="selection-items__link" href="#">All brands</a></li>
+        <ul class="selection-items__container selection-items__container--big">
+          <li class="selection-items__item"><a class="selection-items__link selection-items__link--active" href="#">All brands</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Alexander McQueen</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Azzedine Alaia</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Balenciaga</a></li>
@@ -52,6 +52,36 @@
           <li class="selection-items__item"><a class="selection-items__link" href="#">Céline</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Emilio Pucci</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Fendi</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Giorgio Armani</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Givenchy</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Lanvin</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Stella McCartney</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Balmain</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Brioni</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Céline</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Emilio Pucci</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Fendi</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Giorgio Armani</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Givenchy</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Lanvin</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Stella McCartney</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Tom Ford</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Victoria Beckham</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Vionnet</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Zilli</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Balmain</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Brioni</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Céline</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Emilio Pucci</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Fendi</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Giorgio Armani</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Givenchy</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Lanvin</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Stella McCartney</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Tom Ford</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Victoria Beckham</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Vionnet</a></li>
+          <li class="selection-items__item"><a class="selection-items__link" href="#">Zilli</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Giorgio Armani</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Givenchy</a></li>
           <li class="selection-items__item"><a class="selection-items__link" href="#">Lanvin</a></li>
@@ -95,9 +125,9 @@
       </div>
       <div class="filter-mobile__container">
         <div class="filter-mobile__item">
-          <label>
-            <p class="filter-mobile__name">Type</p>
-            <select class="main-select" type="text" name="type" placeholder="Type">
+          <label class="filter-mobile__name"><span class="filter-mobile__label">Type</span>
+            <select class="main-select" name="type">
+              <option class="option-hide" value="">Type</option>
               <option>All</option>
               <option>Clothes</option>
               <option>Shoes</option>
@@ -120,9 +150,9 @@
           </div>
         </div>
         <div class="filter-mobile__item">
-          <label>
-            <p class="filter-mobile__name">Brands</p>
-            <select class="main-select" type="text" name="brands" placeholder="Brands">
+          <label class="filter-mobile__name"> <span class="filter-mobile__label">Brands</span>
+            <select class="main-select" name="brands">
+              <option class="option-hide" value="">Brands</option>
               <option>All brands</option>
               <option>Alexander McQueen</option>
               <option>Azzedine Alaia</option>
@@ -143,9 +173,9 @@
           </label>
         </div>
         <div class="filter-mobile__item">
-          <label>
-            <p class="filter-mobile__name">All sizes</p>
-            <select class="main-select options-uppercase" type="text" name="sizes" placeholder="All sizes">
+          <label class="filter-mobile__name"> <span class="filter-mobile__label">All sizes</span>
+            <select class="main-select options-uppercase" name="sizes">
+              <option class="option-hide" value="">Size</option>
               <option>xs</option>
               <option>s</option>
               <option>m</option>
@@ -155,9 +185,9 @@
           </label>
         </div>
         <div class="filter-mobile__item">
-          <label>
-            <p class="filter-mobile__name">Time</p>
-            <select class="main-select" type="text" name="time" placeholder="Time">
+          <label class="filter-mobile__name"> <span class="filter-mobile__label">Time</span>
+            <select class="main-select" name="time">
+              <option class="option-hide" value="">Time</option>
               <option>New</option>
               <option>Old</option>
             </select>

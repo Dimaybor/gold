@@ -8,13 +8,13 @@ block content
     a.close-up(href='bag.html')
       .close-up__arrow
       p.close-text Cart
-  .shipping-roadmap.header-indent
+  .shipping-roadmap
     .wrapper
       .roadmap
         a.roadmap__item.roadmap__item--inactive(href='#') Main
         a.roadmap__item.roadmap__item--inactive(href='#') My bag
         a.roadmap__item(href='#') Shipping info
-  section.shipping
+  .shipping
     .wrapper
       .cart-summary
         p.form-roadmap Cart summary
@@ -77,7 +77,7 @@ block content
                 p +380931430064
       section.shipping-steps
         form(action='#' method='post')
-          section#step-1.shipping-step
+          #step-1.shipping-step
             .shipping-heading
               span.step-number 1/3
               h1.shipping-header Shipping method & gift options
@@ -111,7 +111,7 @@ block content
                 span.label Add a gift message to this order
             .button-container
               button#btnStep-1.main-btn continue
-          section#step-2.shipping-step.shipping-step--hide
+          #step-2.shipping-step.shipping-step--hide
             .shipping-heading
               span.step-number 2/3
               h1.shipping-header Shipping info
@@ -119,22 +119,23 @@ block content
             .buyer-info
               .buyer-info-row
                 label.buyer-info__item
-                  p.buyer-info__label Country
-                  select.main-select.buyer-info-field--long( name='country'   placeholder='Start typyng or select')
-                    option Ukraine
-                    option United States
-                    option United Kingdom
-                    option Uganda
-                    option Ukraine
+                  span.buyer-info__label Country
+                  select.main-select.buyer-info-field--long(name='country')
+                    option.option-hide(value='') Start typyng or select
+                    option(value='1') Ukraine
+                    option(value='2') United States
+                    option(value='3') United Kingdom
+                    option(value='4') Uganda
+                    option(value='5') Ukraine
                 label.buyer-info__item
-                  p.buyer-info__label First name
+                  span.buyer-info__label First name
                   input.buyer-info-field.buyer-info-field--short(type='text' name='first-name' placeholder=' ')
                 label.buyer-info__item
-                  p.buyer-info__label Last name
+                  span.buyer-info__label Last name
                   input.buyer-info-field.buyer-info-field--short(type='text' name='last-name' placeholder=' ')
               .buyer-info-row
                 label.buyer-info__item
-                  p.buyer-info__label Street address
+                  span.buyer-info__label Street address
                   input.buyer-info-field.buyer-info-field--street(type='text' name='street' placeholder=' ')
                 label.buyer-info__checkbox
                   input.checkbox(type='checkbox' name='add-message')
@@ -143,29 +144,31 @@ block content
                   span.label This is a PO, APO or AE box
               .buyer-info-row
                 label.buyer-info__item
-                  p.buyer-info__label City
-                  select.main-select.buyer-info-field--long(type='text' name='city' placeholder='Start typyng or select')
-                    option Kyiv
-                    option London
-                    option Paris
-                    option Moscow
-                    option Riga
+                  span.buyer-info__label City
+                  select.main-select.buyer-info-field--long(name='city')
+                    option.option-hide(value='') Start typyng or select
+                    option(value='1') Kyiv
+                    option(value='2') London
+                    option(value='3') Paris
+                    option(value='4') Moscow
+                    option(value='5') Riga
                 label.buyer-info__item
-                  p.buyer-info__label State / Province / Region
-                  select.main-select.buyer-info-field--short(type='text' name='state' placeholder='Start typyng or select')
-                    option Kyiv
-                    option London
-                    option Paris
-                    option Moscow
-                    option Riga
+                  span.buyer-info__label State / Province / Region
+                  select.main-select.buyer-info-field--short(name='state')
+                    option.option-hide(value='') Start typyng or select
+                    option(value='1') Kyiv
+                    option(value='2') London
+                    option(value='3') Paris
+                    option(value='4') Moscow
+                    option(value='5') Riga
                 label.buyer-info__item
-                  p.buyer-info__label Postal code
+                  span.buyer-info__label Postal code
                   input.buyer-info-field.buyer-info-field--code(type='text' name='state' placeholder='XXXXXX')
             p.shipping-subtitle Contact info
             .buyer-info
               .buyer-info-row
                 label.buyer-info__item
-                  p.buyer-info__label Email
+                  span.buyer-info__label Email
                   input.buyer-info-field.buyer-info-field--long(type='email' autocomplete='on' name='login' placeholder=' ')
                 label.buyer-info__checkbox
                   input.checkbox(type='checkbox' name='add-message')
@@ -173,11 +176,11 @@ block content
                     span.check-mark
                   span.label Join our weekly newsletter
                 label.buyer-info__item
-                  p.buyer-info__label Phone (international orders only)
+                  span.buyer-info__label Phone (international orders only)
                   input.buyer-info-field.buyer-info-field--long(type='text' name='phone' placeholder=' ')
             .button-container
               button#btnStep-2.main-btn continue
-          section#step-3.shipping-step.shipping-step--hide
+          #step-3.shipping-step.shipping-step--hide
             .shipping-heading
               span.step-number 3/3
               h1.shipping-header Payment info
@@ -188,31 +191,28 @@ block content
                   input.radio(type='radio' name='choice-payment' checked)
                   span.radio-custom
                   span.label
-                    .buyer-info__img
-                      img(src='img/card.png' alt='alt')
+                    img.buyer-info__img(src='img/card.png' alt='alt')
                 label.buyer-info__payment
                   input.radio(type='radio' name='choice-payment')
                   span.radio-custom
                   span.label
-                    .buyer-info__img
-                      img(src='img/paypal.png' alt='alt')
+                    img.buyer-info__img(src='img/paypal.png' alt='alt')
                 label.buyer-info__payment
                   input.radio(type='radio' name='choice-payment')
                   span.radio-custom
                   span.label
-                    .buyer-info__img
-                      img(src='img/liqpay.png' alt='alt')
+                    img.buyer-info__img(src='img/liqpay.png' alt='alt')
             .payment
               p.shipping-subtitle Card info
               .buyer-info
                 .buyer-info-row.buyer-info-row--wrap
                   label.buyer-info__item
-                    p.buyer-info__label Name on card
+                    span.buyer-info__label Name on card
                     input.buyer-info-field.buyer-info-field--long(type='text' name='card' placeholder=' ')
                   label.buyer-info__item.buyer-info__item--indent.card-focus-container
-                    p.buyer-info__label Card number
+                    span.buyer-info__label Card number
                     input.buyer-info-field.buyer-info-field--long.card-focus(type='text' name='card' pattern='[0-9]{16}' minlength="16" maxlength="16" placeholder=' ')
-                    .card-focus-img
+                    span.card-focus-img
                       img(src='img/visa.svg' alt='alt')
                   .input-container
                     .security-code
@@ -226,10 +226,10 @@ block content
                           .security-card__code 123
                     .security-toggle ?
                     label.buyer-info__item
-                      p.buyer-info__label Expiry date
+                      span.buyer-info__label Expiry date
                       input.buyer-info-field.buyer-info-field--smaller(type='text'  placeholder='MM / YY' name=' last-name' minlength="4" maxlength="4")
                     label.buyer-info__item
-                      p.buyer-info__label Security code
+                      span.buyer-info__label Security code
                       input.buyer-info-field.buyer-info-field--smaller(type='text' name=' last-name' placeholder=' ' minlength="3" maxlength="3")
               p.shipping-subtitle Billing adress
               .buyer-info
@@ -241,22 +241,23 @@ block content
                     span.label Same as my shipping address
                 .buyer-info-row
                   label.buyer-info__item
-                    p.buyer-info__label Country
-                    select.main-select.buyer-info-field--long(type='text' name='country'   placeholder='Start typyng or select')
-                      option Ukraine
-                      option United States
-                      option United Kingdom
-                      option Uganda
-                      option Ukraine
+                    span.buyer-info__label Country
+                    select.main-select.buyer-info-field--long(name='country')
+                      option.option-hide(value='') Start typyng or select
+                      option(value='1') Ukraine
+                      option(value='2') United States
+                      option(value='3') United Kingdom
+                      option(value='4') Uganda
+                      option(value='5') Ukraine
                   label.buyer-info__item
-                    p.buyer-info__label First name
+                    span.buyer-info__label First name
                     input.buyer-info-field.buyer-info-field--short(type='text' name=' first-name' placeholder=' ')
                   label.buyer-info__item
-                    p.buyer-info__label Last name
+                    span.buyer-info__label Last name
                     input.buyer-info-field.buyer-info-field--short(type='text' name=' last-name' placeholder=' ')
                 .buyer-info-row
                   label.buyer-info__item
-                    p.buyer-info__label Street address
+                    span.buyer-info__label Street address
                     input.buyer-info-field.buyer-info-field--street(type='text' name='  street' placeholder=' ')
                   label.buyer-info__checkbox
                     input.checkbox(type='checkbox' name='add-message')
@@ -265,23 +266,25 @@ block content
                     span.label This is a PO, APO or AE box
                 .buyer-info-row
                   label.buyer-info__item
-                    p.buyer-info__label City
-                    select.main-select.buyer-info-field--long(type='text' name='city' placeholder='Start typyng or select')
-                      option Kyiv
-                      option London
-                      option Paris
-                      option Moscow
-                      option Riga
+                    span.buyer-info__label City
+                    select.main-select.buyer-info-field--long(name='city')
+                      option.option-hide(value='') Start typyng or select
+                      option(value='1') Kyiv
+                      option(value='2') London
+                      option(value='3') Paris
+                      option(value='4') Moscow
+                      option(value='5') Riga
                   label.buyer-info__item
-                    p.buyer-info__label State / Province / Region
-                    select.main-select.buyer-info-field--short(type='text' name='state' placeholder='Start typyng or select')
-                      option Kyiv 
-                      option London
-                      option Paris
-                      option Moscow
-                      option Riga
+                    span.buyer-info__label State / Province / Region
+                    select.main-select.buyer-info-field--short(name='state')
+                      option.option-hide(value='') Start typyng or select
+                      option(value='1') Kyiv 
+                      option(value='2') London
+                      option(value='3') Paris
+                      option(value='4') Moscow
+                      option(value='5') Riga
                   label.buyer-info__item
-                    p.buyer-info__label Postal code
+                    span.buyer-info__label Postal code
                     input.buyer-info-field.buyer-info-field--code(type='text' name='state' placeholder='XXXXXX')
               .button-container
                 a#btnStep-3.main-btn(href='successful-payment.html') 

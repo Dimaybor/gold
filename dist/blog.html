@@ -7,8 +7,8 @@
     </title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/selectize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
   </head>
   <body>
@@ -40,8 +40,14 @@
               <div class="user-bag__number">My bag (4)</div>
             </div>
             <div class="open-bag">
-              <div class="open-bag__container"><span class="open-bag__close"></span>
-                <div class="open-bag__product"><img src="img/bag-photo.png" alt="alt">
+              <div class="open-bag__container">
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
+                  <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
+                </div>
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
+                  <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
+                </div>
+                <div class="open-bag__product"><span class="open-bag__close"></span><img src="img/bag-photo.png" alt="alt">
                   <p class="open-bag__name">Leather stripes clutch<span>$ 160.00</span></p>
                 </div>
                 <div class="open-bag__price">Total:<span>$ 330.00</span></div>
@@ -52,7 +58,7 @@
         </nav>
       </div>
     </header>
-    <div class="blog-filter header-indent">
+    <div class="blog-filter">
       <div class="filter">
         <div class="wrapper">
           <div class="filter__container">
@@ -75,22 +81,22 @@
           </div>
           <div class="filter-mobile__container">
             <div class="filter-mobile__item">
-              <label>
-                <p class="filter-mobile__name">Type</p>
-                <select class="main-select" type="text" name="type" placeholder="Type">
-                  <option>All</option>
-                  <option>News</option>
-                  <option>Interesting</option>
-                  <option>Events</option>
+              <label class="filter-mobile__name"> <span class="filter-mobile__label">Type</span>
+                <select class="main-select" name="type">
+                  <option class="option-hide" value="">Type</option>
+                  <option value="1">All</option>
+                  <option value="2">News</option>
+                  <option value="3">Interesting</option>
+                  <option value="4">Events</option>
                 </select>
               </label>
             </div>
             <div class="filter-mobile__item">
-              <label>
-                <p class="filter-mobile__name">Time</p>
-                <select class="main-select" type="text" name="time" placeholder="Time">
-                  <option>New</option>
-                  <option>Old</option>
+              <label class="filter-mobile__name"><span class="filter-mobile__label">Time</span>
+                <select class="main-select" name="time">
+                  <option class="option-hide" value="">Time</option>
+                  <option value="1">New</option>
+                  <option value="2">Old</option>
                 </select>
               </label>
             </div>
@@ -98,7 +104,7 @@
         </div>
       </div>
     </div>
-    <section class="blog">
+    <div class="blog">
       <div class="wrapper">
         <article class="main-event">
           <div class="main-event__container">
@@ -107,7 +113,8 @@
               <div class="block-content__wrapper">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h2 class="main-heading">Monday to Friday</h2>
-                <p class="block-content__text">Lorem ipsum dolor sit amet,   consectetur adipiscing elit. Vivamus ut augue a dui   volutpat sodales rhoncus at lorem. Mauris dolor ante,   elementum quis leo id, dictum convallis erat. Vestibulum at   lorem at nisi tempor convallis. Ut at mauris maximus,   facilisis nibh vitae, mollis elit. </p><a class="arrow-link arrow-link--normal" href="#"></a>
+                <p class="block-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.</p>
+                <div class="link-container"><a class="arrow-link arrow-link--normal" href="#"></a></div>
               </div>
             </div>
           </div>
@@ -118,47 +125,59 @@
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">Summer portraits</h3>
-                <p class="publications__text">Lorem ipsum dolor sit amet,    consectetur adipiscing elit. Quisque scelerisque    ullamcorper ipsum, elementum efficitur ipsum efficitur   vel. </p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <p class="publications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel.</p>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a><a class="publications__item" href="blog-news.html">
               <div class="publications__img"><img src="img/blog-2.png" alt="alt"></div>
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">All about details</h3>
-                <p class="publications__text">Nulla malesuada lacinia efficitur.   Interdum et malesuada fames ac ante ipsum primis in   faucibus.</p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <p class="publications__text">Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a><a class="publications__item" href="blog-news.html">
               <div class="publications__img"><img src="img/blog-3.png" alt="alt"></div>
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">Summer portraits</h3>
-                <p class="publications__text">Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Quisque scelerisque   ullamcorper ipsum, elementum efficitur ipsum efficitur  vel. </p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <p class="publications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel. </p>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a><a class="publications__item" href="blog-news.html">
               <div class="publications__img"><img src="img/blog-4.png" alt="alt"></div>
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">All about details</h3>
-                <p class="publications__text">Nulla malesuada lacinia efficitur.   Interdum et malesuada fames ac ante ipsum primis in   faucibus.</p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <p class="publications__text">Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a><a class="publications__item" href="blog-news.html">
               <div class="publications__img"><img src="img/blog-5.png" alt="alt"></div>
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">Summer portraits</h3>
                 <p class="publications__text">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsuefficitur  vel. </p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a><a class="publications__item" href="blog-news.html">
               <div class="publications__img"><img src="img/blog-6.png" alt="alt"></div>
               <div class="publications__content">
                 <p class="content-data">17.04.2016 | Events</p>
                 <h3 class="publications-heading">All about details</h3>
-                <p class="publications__text">Nulla malesuada lacinia efficitur.   Interdum et malesuada fames ac ante ipsum primis in   faucibus.</p>
-                <div class="arrow-link arrow-link--normal"></div>
+                <p class="publications__text">Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <div class="link-container">
+                  <div class="arrow-link arrow-link--normal"></div>
+                </div>
               </div></a></div>
         </section>
       </div>
-    </section>
+    </div>
     <footer class="main-footer">
       <div class="wrapper">
         <div class="main-footer__container">
@@ -243,10 +262,10 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.zoom.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
