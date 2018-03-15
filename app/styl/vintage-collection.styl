@@ -96,15 +96,40 @@
   &-photos
     display flex
     flex-wrap wrap
+    justify-content center
     line-height 0
     
     &__item
       width 50%
       height auto
       
-    &__video
+  &-video
+    position relative
+    padding-bottom 56.25%
+    width 100%
+    height 0
+    overflow hidden
+
+    & iframe
+      position absolute
+      top 0
+      left 0
       width 100%
-      height auto
+      height 100%
+      
+.mask-player
+  z-index 9
+  position absolute
+  top 0
+  left 0
+  display flex
+  width 100%
+  height 100%
+  background url('../img/mask-player-bg.png') center no-repeat
+  background-size cover
+  
+  &__item
+    margin auto
 
 .main-heading + .collection-content__text
   margin-top 35px

@@ -76,7 +76,6 @@ $(document).ready(function(){
     };
   });
 
-
   $('.filter-main').on('click', function() {
     $('.filter-products').addClass('filter-products--active');
     $('body').addClass('body-inactive');
@@ -86,10 +85,6 @@ $(document).ready(function(){
     $('.filter-products').removeClass('filter-products--active');
     $('body').removeClass('body-inactive');
   });
-
-//  $(window).width() > 768 {
-//    $('body').removeClass('body-inactive');
-//  }
 
 // Відкриття попапа нажаттям на button
   $('#open-modal').click(function() {
@@ -103,7 +98,7 @@ $(document).ready(function(){
   });  
 // Закриття попапа нажаттям на "сіру зону"
   $(document).mouseup(function(e){
-    var pop = $('.popup');
+    var pop = $('.popup, .filter-products');
     if(e.target!=pop[0]&&pop.has(e.target).length === 0) {
       $('.overlay').fadeOut(100);
       $("body").removeClass("body-inactive");
@@ -189,24 +184,45 @@ $(document).ready(function(){
 
   $('.slider__item').zoom();
 
+  console.log($('.recomendations-slider.slick-slider').length);
+
   function checkWidth() {
-    if ($(window).width() > 768) {
-        $('.recomendations-slider').slick('unslick'),
-        $('.slider__item').trigger('zoom.destroy');
+    if ($(window).width() > 768 && $('.recomendations-slider.slick-slider').length) {
+        
     } else {
-        $('.recomendations-slider').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          fade: true,
-          arrows: false,
-          dots: true
-        });
+        
     }
   };
- 
-  $(function(){
-      checkWidth();
-      $(window).on('resize', function(){checkWidth()});
+
+  checkWidth();
+
+  function initRecomendSlider() {
+    $('.recomendations-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+  };
+
+  function destroyRecSlider() {
+    console.log('slider slider')
+    if($('.recomendations-slider.slick-slider').length) {
+      console.log('slider destroyed')
+      $('.recomendations-slider').slick('unslick');
+    };
+  }
+
+  $(window).on('resize', function(){
+    console.log('width', $(window).width())
+   if ($(window).width() <= 768) {
+      initRecomendSlider();
+    } else {
+      destroyRecSlider();
+      $('.slider__item').trigger('zoom.destroy');     
+    }
+    checkWidth();
   });
 
   //----------------- Forms
@@ -268,6 +284,15 @@ $(document).ready(function(){
   $(function() {
     $('.main-select').selectize();
       placeholder: true
+  });
+
+  //------------------ player mask
+
+  $('.mask-player').click(function() {
+
+    $('.mask-player').remove();
+
+
   });
 
 });

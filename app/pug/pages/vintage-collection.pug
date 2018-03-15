@@ -41,8 +41,11 @@ block content
   .collection
     .wrapper
       .collection-photos
-        .collection-photos__video
-          img(src='img/collection-video.png' alt='alt')
+        .collection-video
+          .mask-player
+            .mask-player__item
+              img(src='img/mask-player.svg' alt='alt')
+          iframe(type='text/html' src="https://www.youtube.com/embed/MtcUqGNTpK4" frameborder="0" allowfullscreen)
         .collection-photos__item
           img(src='img/collection-3.png' alt='alt')
         .collection-photos__item
