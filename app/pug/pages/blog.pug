@@ -5,113 +5,114 @@ block title
 block content
   - var current = 'blog'
   include header
-  .blog-filter
-    .filter
+  main.site-content
+    .blog-filter
+      .filter
+        .wrapper
+          .filter__container
+            ul.filter__list
+              li.filter__item
+                a.filter__link.filter__link--active(href='#') All
+              li.filter__item
+                a.filter__link(href='#') News
+              li.filter__item
+                a.filter__link(href='#') Interesting
+              li.filter__item
+                a.filter__link(href='#') Events
+            .button-new
+              a.button-new__link(href='#')
+                span.accordeon-arrow
+                span.button-new__name New
+      .filter-mobile.filter-main Filter
+      .filter-products
+        .wrapper
+          .close-up.filter-products-close
+            .close-up__arrow
+            p.close-text Back
+          .filter-mobile__container
+            .filter-mobile__item
+              label.filter-mobile__name 
+                span.filter-mobile__label Type
+                select.main-select(name='type')
+                  option.option-hide(value='') Type
+                  option(value='1') All
+                  option(value='2') News
+                  option(value='3') Interesting
+                  option(value='4') Events
+            .filter-mobile__item
+              label.filter-mobile__name
+                span.filter-mobile__label Time
+                select.main-select(name='time')
+                  option.option-hide(value='') Time
+                  option(value='1') New
+                  option(value='2') Old
+    .blog
       .wrapper
-        .filter__container
-          ul.filter__list
-            li.filter__item
-              a.filter__link.filter__link--active(href='#') All
-            li.filter__item
-              a.filter__link(href='#') News
-            li.filter__item
-              a.filter__link(href='#') Interesting
-            li.filter__item
-              a.filter__link(href='#') Events
-          .button-new
-            a.button-new__link(href='#')
-              span.accordeon-arrow
-              span.button-new__name New
-    .filter-mobile.filter-main Filter
-    .filter-products
-      .wrapper
-        .close-up.filter-products-close
-          .close-up__arrow
-          p.close-text Back
-        .filter-mobile__container
-          .filter-mobile__item
-            label.filter-mobile__name 
-              span.filter-mobile__label Type
-              select.main-select(name='type')
-                option.option-hide(value='') Type
-                option(value='1') All
-                option(value='2') News
-                option(value='3') Interesting
-                option(value='4') Events
-          .filter-mobile__item
-            label.filter-mobile__name
-              span.filter-mobile__label Time
-              select.main-select(name='time')
-                option.option-hide(value='') Time
-                option(value='1') New
-                option(value='2') Old
-  .blog
-    .wrapper
-      article.main-event
-        .main-event__container
-          .block-img
-            img(src='img/main-post.png' alt='alt')
-          .block-content
-            .block-content__wrapper
-              p.content-data 17.04.2016 | Events
-              h2.main-heading Monday to Friday
-              p.block-content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.
-              .link-container
-                a.arrow-link.arrow-link--normal(href='#')
-      section.blogs-content
-        .publications
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-1.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading Summer portraits
-              p.publications__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel.
-              .link-container
-                .arrow-link.arrow-link--normal
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-2.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading All about details
-              p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              .link-container
-                .arrow-link.arrow-link--normal
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-3.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading Summer portraits
-              p.publications__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel. 
-              .link-container
-                .arrow-link.arrow-link--normal
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-4.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading All about details
-              p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              .link-container
-                .arrow-link.arrow-link--normal
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-5.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading Summer portraits
-              p.publications__text Lorem ipsum dolor sit amet,consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsuefficitur  vel. 
-              .link-container
-                .arrow-link.arrow-link--normal
-          a.publications__item(href='blog-news.html')
-            .publications__img
-              img(src='img/blog-6.png' alt='alt')
-            .publications__content
-              p.content-data 17.04.2016 | Events
-              h3.publications-heading All about details
-              p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              .link-container
-                .arrow-link.arrow-link--normal
+        article.main-event
+          .main-event__container
+            .block-img
+              img(src='img/main-post.png' alt='alt')
+            .block-content
+              .block-content__wrapper
+                p.content-data 17.04.2016 | Events
+                h2.main-heading Monday to Friday
+                p.block-content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut augue a dui volutpat sodales rhoncus at lorem. Mauris dolor ante, elementum quis leo id, dictum convallis erat. Vestibulum at lorem at nisi tempor convallis. Ut at mauris maximus, facilisis nibh vitae, mollis elit.
+                .link-container
+                  a.arrow-link.arrow-link--normal(href='#')
+        section.blogs-content
+          .publications
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-1.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading Summer portraits
+                p.publications__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel.
+                .link-container
+                  .arrow-link.arrow-link--normal
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-2.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading All about details
+                p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                .link-container
+                  .arrow-link.arrow-link--normal
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-3.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading Summer portraits
+                p.publications__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsum efficitur vel. 
+                .link-container
+                  .arrow-link.arrow-link--normal
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-4.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading All about details
+                p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                .link-container
+                  .arrow-link.arrow-link--normal
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-5.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading Summer portraits
+                p.publications__text Lorem ipsum dolor sit amet,consectetur adipiscing elit. Quisque scelerisque ullamcorper ipsum, elementum efficitur ipsuefficitur  vel. 
+                .link-container
+                  .arrow-link.arrow-link--normal
+            a.publications__item(href='blog-news.html')
+              .publications__img
+                img(src='img/blog-6.png' alt='alt')
+              .publications__content
+                p.content-data 17.04.2016 | Events
+                h3.publications-heading All about details
+                p.publications__text Nulla malesuada lacinia efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                .link-container
+                  .arrow-link.arrow-link--normal
   include footer
