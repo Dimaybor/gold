@@ -291,8 +291,11 @@ $(document).ready(function(){
   $('.mask-player').click(function() {
 
     $('.mask-player').remove();
-
-
   });
+
+  // $('.mask-player').click(function() {
+  //   $('.mask-player').hide();
+  //   $("#eee iframe").attr('src', $("#eee iframe", parent).attr('src') + '?autoplay=1'); 
+  // });
 
 });

@@ -76,6 +76,11 @@
       margin-top 30px
       max-width 650px
       
+  //------------------------main-offer
+    
+  .block-content__wrapper
+    padding-bottom 35px
+      
   //------------------------bag
     
   .buyer-info
@@ -159,11 +164,12 @@
   
   .open-nav
     position fixed
+    top 0
     left -100vw
     transition all 0.2s ease-out
     
     &--active
-      transform translate(100vw, -50px)
+      transform translateX(100vw)
       
   .main-menu
     flex-direction column
@@ -560,7 +566,8 @@
     display flex
     flex-direction column
     align-items center
-    width 100%
+    width 400px
+    height 400px
       
   .block-content
     width 100%
@@ -1031,9 +1038,14 @@
         
   .block-img
     width 100vw
+    height auto
   
   .block-content
     align-items flex-start
+    margin 0 -25px
+    padding 0 25px
+    width 100vw
+    
     
     &__wrapper .link-container
       left 80%
